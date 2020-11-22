@@ -1,0 +1,33 @@
+.splash{
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100%;
+    background: #94CBF1;
+}
+.splash>div{
+    width:  100vw;
+    height: 100vh;
+    background: url(../imgs/logo-01.png) no-repeat 50% 50%;
+}
+
+.index{
+    width: 100vw;
+    height: 100vh;
+    background: #94CBF1;
+}
+.index>div{
+
+}
+.index>div>div:nth-of-type(1){
+
+}
+.index>div>div:nth-of-type(1)>p{}
+.index>div>div:nth-of-type(1)>h1{}
+.index>div>div:nth-of-type(1)>h2{}
+
+.index>div>div:nth-of-type(1)>form{}
+.index>div>div:nth-of-type(1)>form>input{}
+.index>div>div:nth-of-type(1)>form>input[^=pa]{}
+
+.index>div>div:nth-of-type(2){}
