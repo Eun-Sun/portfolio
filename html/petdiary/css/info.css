@@ -9,16 +9,16 @@
     text-align: center;
 }
 .header_1 > div > header > h1 {
-    padding-top: 2.5rem;
     box-sizing: border-box;
     font-size: 1.5rem;
+    line-height: 8vh;
     color: white;
 }
 
 /* 이전버튼 */
 .header_1 > div > header > p {
     position: absolute;
-    top: 35px;
+    top: 30%;
     left: 20px;
     display: inline-block;
 }
@@ -34,9 +34,6 @@
 }
 
 /* 사진등록 */
-.header_1 > div > main > form > fieldset{
-    overflow: hidden;
-}
 .header_1 > div > main > form > fieldset > div.m_photo {
     margin: 0 auto;
     width: 11rem;
@@ -64,7 +61,6 @@
     margin: 2rem auto;
     width: 20rem;
     height: 15vh;
-    overflow: hidden;
 }
 .header_1 > div > main > form > fieldset > .pet_1 > label.pet > img {
     width: 9rem;
@@ -84,6 +80,7 @@
 /* 이름, 생년월일 */
 
 .header_1 > div > main > form > fieldset > div.box_1 {
+    padding-top: 1rem;
     margin: 0 auto;
     width: 80vw;
 }
@@ -143,6 +140,7 @@ div.radio-items>input[type="radio"]:checked + label{
 }
 .sub_c{
     margin-top: 3rem;
+    padding-bottom: 3rem;
     text-align: center;
 }
 
