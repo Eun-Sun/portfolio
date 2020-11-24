@@ -1,0 +1,93 @@
+.header_1{
+    width: 100vw;
+    height: 100vh;
+}
+.header_1>div:first-of-type{
+}
+.header_1>div>header{
+    position: relative;
+    background: #3d7ebc;
+    height: 10vh;
+    text-align: center;
+}
+.header_1>div>header>h1{
+    padding-top: 2.2rem;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    color: white;
+}
+.header_1>div>header>p{
+    position: absolute;
+    top:35px; left: 20px;
+    float: left;
+    display: inline-block;
+}
+.header_1>div>header>p>a{    
+    display: inline-block;
+}
+.header_1>div>header>p>a>img{
+    width: 2rem;
+}
+
+.header_1>div>main{
+    margin-top: 4rem;
+}
+.header_1>div>main>form{}
+.header_1>div>main>form>fieldset{}
+.header_1>div>main>form>fieldset>div.m_photo{
+    margin: 0 auto;
+    width: 12rem;
+    height: 12rem;
+    border: 0.4rem solid #3d7ebc;
+    border-radius: 50%;
+}
+.header_1>div>main>form>fieldset>div.m_photo>p{    
+    text-align: center;
+    color: #3d7ebc;
+    cursor: pointer;
+    
+}
+.header_1>div>main>form>fieldset>div.m_photo>p.more{
+    font-size: 6rem;
+    line-height: 7.5rem;
+    
+}
+.header_1>div>main>form>fieldset>div.m_photo>p.photo{
+    font-size: 1.8rem;
+}
+.header_1>div>main>form>fieldset>.pet_1{
+    position: relative;
+    margin: 0 auto;
+    margin-top: 1rem;
+    width: 20rem;
+    height: 16vh;
+    border: 1px solid red;
+
+}
+.header_1>div>main>form>fieldset>.pet_1>label.pet{
+}
+.header_1>div>main>form>fieldset>.pet_1>label.pet>img{
+    width: 8rem;
+}
+.header_1>div>main>form>fieldset>.pet_1>input[type^='ra']:nth-child(2){
+    position: absolute;
+    bottom: 0; left: 0;
+}
+.header_1>div>main>form>fieldset>.pet_1>input[type^='ra']:nth-child(4){
+    position: absolute;
+    bottom: 0; right: 0;
+}
+
+.header_1>div>main>form>fieldset>label[for^='na'], label[for^='bi']{}
+.header_1>div>main>form>fieldset>input[type^='te']{}
+
+.header_1>div>main>form>fieldset>p{}
+.header_1>div>main>form>fieldset>div{}
+
+.header_1>div>main>form>fieldset>div>div.radio-items{}
+
+.header_1>div>main>form>fieldset>div>div.radio-items>div.col-1{}
+
+.header_1>div>main>form>fieldset>div>div.radio-items>div.col-1>.only-sr{}
+
+/* https://hyc7575.github.io/2017/09/19/2017-09-19-custom-radio-button/ */

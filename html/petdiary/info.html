@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/info.css">
+        <title>반려동물 정보 등록</title>
+        <style>
+            body{
+                font-size: 62.5%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header_1">
+            <div>
+                <header>
+                    <h1>반려동물 정보 등록</h1>
+                    <p>
+                        <a href="index.html">
+                            <img src="imgs/prev_01.png" alt="이전으로">
+                        </a>
+                    </p>
+                </header>
+                <main>
+                    <h1 class="hidden">정보 상세 입력</h1>
+                    
+                    <form action="petdiary.jsp">
+                        <fieldset>
+                            <div class="m_photo">
+                                <p class="more">+</p>
+                                <p class="photo">사진등록</p>
+                            </div>
+
+                            <div class="pet_1">
+                                <label for="cat" class="pet"><img src="imgs/i_cat.png" alt="고양이"></label>
+                                <input type="radio" name="pet" id="cat">
+                                <label for="dog" class="pet"><img src="imgs/i_dog.png" alt="강아지"></label>
+                                <input type="radio" name="pet" id="dog">
+                            </div>
+                            
+                            <label for="names">· 이름</label>
+                            <input type="text" name="names" id="names">
+                            <label for="birth">· 생년월일</label>
+                            <input type="text" name="birth" id="birth">                        
+                            
+                            <p>· 성별</p>
+                            <div style="width: 200px;">
+                                <div class="radio-items">
+                                        <div class="col-1">
+                                            <input id="a1" class="only-sr checked" type="radio" name="gender" value="m" checked="checked">
+                                            <label for="a1">남자아이</label>
+                                        </div>
+                                        <div class="col-1">
+                                            <input id="a2" class="only-sr" type="radio" name="gender" value="f">
+                                            <label for="a2">여자아이</label>
+                                        </div>
+                                </div>
+                            </div>
+                            
+                            <label for="weights">· 몸무게</label>
+                            <p>kg</p>
+                            <input type="text" name="weights" id="weights"> 
+                            
+                            <p>· 중성화여부</p>
+                            <div style="width: 200px;">
+                                <div class="radio-items">
+                                        <div class="col-2">
+                                            <input id="a3" class="only-sr checked" type="radio" name="Neut" value="y" checked="checked">
+                                            <label for="a3">예</label>
+                                        </div>
+                                        <div class="col-2">
+                                            <input id="a4" class="only-sr" type="radio" name="Neut" value="n">
+                                            <label for="a4">아니오</label>
+                                        </div>
+                                </div>
+                            </div>
+                            
+                            <input type="submit" value="등록">
+                        </fieldset>                    
+                    </form>
+                </main>
+            </div>
+        </div>
+    </body>
+</html>

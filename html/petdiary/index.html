@@ -1,43 +1,64 @@
 <!DOCTYPE html>
 <html lang="ko">
     <head>
-        <meta charset="UTF-8">
         <meta
             name="viewport"
             content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
         <link rel="stylesheet" href="../css/reset.css">
         <link rel="stylesheet" href="css/index.css">
         <title>펫대학비법서</title>
+        <style>
+            body {
+                font-size: 62.5%;
+            }
+        </style>
     </head>
     <body>
-        <h1 class="hidden">splash</h1>
-        <div class="splash">
-            <div>
-                <span class="hidden">펫다이어리 로고</span></div>
-        </div>
-
         <div class="index">
             <div>
                 <div>
                     <p>
+                        <img src="imgs/logo-01.png" alt="펫대학비법서 로고">
                         <span class="hidden">펫다이어리 로고</span></p>
                     <h1>펫대학비법서</h1>
                     <h2>-내 새끼 대학보내기 프로젝트-</h2>
                     <form action="petdiary.jsp">
-                        <input type="text" id="names" class="names">
-                        <input type="password" id="passw" class="passw">
-                        <input type="button" name="join" id="join" value="JOIN">
-                        <input type="submit" name="logins" id="logins" value="LOGIN">
+                        <fieldset>
+                            <label for="id" class="hidden">id</label>
+                            <input type="text" id="id" name="id" placeholder="ID">
+                            <label for="pw" class="hidden">password</label>
+                            <input type="password" id="pw" name="pw" placeholder="PASSWORD">
+                            <input type="button" value="JOIN">
+                            <input type="submit" value="LOGIN" class="log">
+                        </fieldset>
                     </form>
                 </div>
                 <div>
-                    <a href="#"><img src="imgs/i_kakao.png" alt="카카오톡"></a>
-                    <a href="#"><img src="imgs/i_face.png" alt="페이스북"></a>
-                    <a href="#"><img src="imgs/i_insta.png" alt="인스타그램"></a>
-                    <a href="#"><img src="imgs/i_twitter.png" alt="트위터"></a>
+                    <ul>
+                        <li>
+                            <a href="https://accounts.kakao.com/login?continue=https%3A%2F%2Fkauth.kakao.com%2Foauth%2Fauthorize%3Fproxy%3DeasyXDM_Kakao_rvh69xkph3_provider%26ka%3Dsdk%252F1.39.10%2520os%252Fjavascript%2520sdk_type%252Fjavascript%2520lang%252Fko%2520device%252FWin32%2520origin%252Fhttps%25253A%25252F%25252Fwww.epis.or.kr%26origin%3Dhttps%253A%252F%252Fwww.epis.or.kr%26response_type%3Dcode%26redirect_uri%3Dkakaojs%26state%3Drs8rmo1oqebbsaf2n8s95%26client_id%3D950f3ae1f2f550e5ba7ff7d9fffc7781"><img src="imgs/i_kakao.png" alt="카카오톡"></a>
+                        </li>
+                        <li>
+                            <a href="https://ko-kr.facebook.com/"><img src="imgs/i_face.png" alt="페이스북"></a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/accounts/login/"><img src="imgs/i_insta.png" alt="인스타그램"></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/login?lang=ko"><img src="imgs/i_twitter.png" alt="트위터"></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
 
+        <script>
+            var login = document.querySelector(".log");
+            login.addEventListener("click", function(e){
+                e.preventDefault();
+                window.location.href = "info.html";
+                
+            });
+        </script>
     </body>
 </html>

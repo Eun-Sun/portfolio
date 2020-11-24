@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <link rel="stylesheet" href="css/reset.css">
+        <title>펫대학비법서</title>
+        <style>
+            .splash {                      
+                position: relative;  
+                padding-top:1px;     
+                width: 100vw;
+                height: calc(100vh - 1px);
+                background: #94CBF1;
+            }
+            .splash > div{
+                margin:0 auto; 
+                margin-top:calc(50vh - 20vw );
+                position:relative; 
+                width:60vw; height:40vw;
+                text-align:center;
+            }
+            .splash > div > p.body {
+                
+                text-align:center;
+            }
+            .splash > div > p.body > img{
+                left:calc(50% - 30vw); bottom:10px;
+                position:absolute; 
+                width: 60vw;
+            }
+            .splash > div > p.c_head > img {
+                position: absolute;
+                left:0; top:-11px; 
+                width: 29vw;
+                transform-origin: 50% 100%;
+                animation: head 1s linear infinite alternate;
+            }
+            .splash > div > p.d_head > img {
+                position: absolute;
+                right:9px; top:5px;
+                width: 28vw;
+                transform-origin: 50% 100%;
+                animation: head 1s linear infinite alternate;
+            }
+
+            @keyframes head{
+                0%{transform: rotate(0deg);}
+                50%{transform: rotate(5deg);}
+                100%{transform: rotate(10deg);}
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="hidden">splash</h1>
+        <div class="splash">
+            <div>
+                <p class="body">
+                    <img src="imgs/pet_logo-05.png" alt="몸">
+                    <span class="hidden">로고 몸</span></p>
+                <p class="c_head">
+                    <img src="imgs/pet_logo-01.png" alt="얼굴">
+                    <span class="hidden">고양이 얼굴</span>
+                </p>
+                <p class="d_head">
+                    <img src="imgs/pet_logo-02.png" alt="얼굴">
+                    <span class="hidden">강아지 얼굴</span>
+                </p>
+            </div>
+        </div>
+    </body>
