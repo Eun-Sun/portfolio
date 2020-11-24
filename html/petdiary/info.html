@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="css/info.css">
         <title>반려동물 정보 등록</title>
         <style>
-            body{
+            body {
                 font-size: 62.5%;
             }
         </style>
@@ -27,7 +27,7 @@
                 </header>
                 <main>
                     <h1 class="hidden">정보 상세 입력</h1>
-                    
+
                     <form action="petdiary.jsp">
                         <fieldset>
                             <div class="m_photo">
@@ -37,50 +37,50 @@
 
                             <div class="pet_1">
                                 <label for="cat" class="pet"><img src="imgs/i_cat.png" alt="고양이"></label>
-                                <input type="radio" name="pet" id="cat">
                                 <label for="dog" class="pet"><img src="imgs/i_dog.png" alt="강아지"></label>
-                                <input type="radio" name="pet" id="dog">
+                                
+                                <input type="radio" name="pet" id="cat" class="pet1">
+                                <input type="radio" name="pet" id="dog" class="pet1">
                             </div>
-                            
-                            <label for="names">· 이름</label>
-                            <input type="text" name="names" id="names">
-                            <label for="birth">· 생년월일</label>
-                            <input type="text" name="birth" id="birth">                        
-                            
-                            <p>· 성별</p>
-                            <div style="width: 200px;">
-                                <div class="radio-items">
-                                        <div class="col-1">
-                                            <input id="a1" class="only-sr checked" type="radio" name="gender" value="m" checked="checked">
-                                            <label for="a1">남자아이</label>
-                                        </div>
-                                        <div class="col-1">
-                                            <input id="a2" class="only-sr" type="radio" name="gender" value="f">
-                                            <label for="a2">여자아이</label>
-                                        </div>
+
+                            <div class="box_1">
+                                <div>
+                                    <label for="names" class="ment">· 이름</label>
+                                    <input type="text" name="names" id="names">
+                                </div>
+                                <div>
+                                    <label for="birth" class="ment">· 생년월일</label>
+                                    <input type="text" name="birth" id="birth">
+                                </div>
+
+                                <div>
+                                    <p class="ment">· 성별</p>
+                                    <div class="radio-items">
+                                        <input type="radio" name="opt" id="opt1">
+                                        <label for="opt1">남자아이</label>
+                                        <input type="radio" name="opt" id="opt2">
+                                        <label for="opt2">여자아이</label>
+                                    </div>
+                                </div>
+
+                                <label for="weights" class="ment">· 몸무게</label>
+                                <input type="text" name="weights" id="weights" class="weig">
+
+                                
+                                <div>
+                                    <p class="ment">· 중성화여부</p>
+                                    <div class="radio-items">
+                                        <input type="radio" name="opt1" id="opt3">
+                                        <label for="opt3">예</label>
+                                        <input type="radio" name="opt1" id="opt4">
+                                        <label for="opt4">아니오</label>
+                                    </div>
+                                </div>
+                                <div class="sub_c">
+                                <input type="submit" value="등록" class="sub">
                                 </div>
                             </div>
-                            
-                            <label for="weights">· 몸무게</label>
-                            <p>kg</p>
-                            <input type="text" name="weights" id="weights"> 
-                            
-                            <p>· 중성화여부</p>
-                            <div style="width: 200px;">
-                                <div class="radio-items">
-                                        <div class="col-2">
-                                            <input id="a3" class="only-sr checked" type="radio" name="Neut" value="y" checked="checked">
-                                            <label for="a3">예</label>
-                                        </div>
-                                        <div class="col-2">
-                                            <input id="a4" class="only-sr" type="radio" name="Neut" value="n">
-                                            <label for="a4">아니오</label>
-                                        </div>
-                                </div>
-                            </div>
-                            
-                            <input type="submit" value="등록">
-                        </fieldset>                    
+                        </fieldset>
                     </form>
                 </main>
             </div>
