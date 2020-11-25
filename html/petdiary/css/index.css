@@ -5,11 +5,11 @@
 }
 .index>div{
     margin: 0 auto;
-    width: 60vw;
+    width: 20rem;
     height: 60vw;
 }
 .index>div>div:nth-of-type(1){
-    padding-top: 130px;
+    padding-top: 30%;
     box-sizing: border-box;
 }
 .index>div>div:nth-of-type(1)>p>img{
@@ -50,7 +50,7 @@
     border: 0.2rem solid #2CA2EF;
 }
 .index>div>div:nth-of-type(1)>form>fieldset>input.btn, input.log{
-    -webkit-appearance: none;
+    appearance: none;
     border: 0 none;
 }
 .index>div>div:nth-of-type(1)>form>fieldset>input[type^="bu"], input[type^="su"]{
