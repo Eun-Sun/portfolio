@@ -6,7 +6,6 @@
             name="viewport"
             content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
         <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/common_month.css">        
         <link rel="stylesheet" href="css/month.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" href="js/calendar/docs/simple-calendar.css">
@@ -42,11 +41,13 @@
                 $("#event-cal-container").simpleCalendar({
                     displayYear:true,
                     fixedStartDay: 0,//달력에서 시작하는 요일 
-                    minDate: "", // 달력에서 기간을 표기할 경우 시작 minimum date
-                    maxDate: "", //달력에서 기간을 표기할 경우 종료 maximum date
+                    minDate: "2020-11-26", // 달력에서 기간을 표기할 경우 시작 minimum date
+                    maxDate: "2020-11-28", //달력에서 기간을 표기할 경우 종료 maximum date
                     events: [
+                        '2020-11-20', '2020-11-30'
                     ], //[이벤트1, 이벤트2,,,, ]
                     eventsInfo: [
+                        'Event 1', '이벤트 발생'
                     ], //[각 이벤트에 해당하는 글자]
                     selectCallback: function (date) { //달력의 일반 날짜를 클릭했을 때 이벤트 발생 함수
                         console.log('date selected ' + date);
@@ -85,7 +86,7 @@
             <h1 class="hidden">달력</h1>
             <div id="event-cal-container" class="calendar-container">
                 <div class="week">
-                    <a href="week.html"><img src="imgs/i_week.png" alt="주간달력"></a>
+                    <img src="imgs/i_week.png" alt="주간달력">
                 </div>
             </div>
             <!-- 달력 -->

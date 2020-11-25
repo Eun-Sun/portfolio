@@ -18,8 +18,8 @@
 /* 이전버튼 */
 .header_1 > div > header > p {
     position: absolute;
-    top: 1.2rem;
-    left: 20px;
+    top: 1.1rem;
+    left: 1.5rem;
     display: inline-block;
 }
 .header_1 > div > header > p > a {
@@ -30,15 +30,23 @@
 }
 
 .header_1 > div > main {
-    margin-top: 3rem;
+    margin-top: 1.5rem;
 }
 
 /* 사진등록 */
 .header_1 > div > main > form > fieldset > div.m_photo {
+    position: relative;
     margin: 0 auto;
-    width: 11rem;
-    height: 11rem;
+    width: 10rem;
+    height: 10rem;    
     border: 0.4rem solid #3d7ebc;
+    border-radius: 50%;
+}
+.header_1 > div > main > form > fieldset > div.m_photo > div.maro{
+    position: absolute;
+    top: 0; left: -1px;
+    width: 10.1rem;
+    height: 10.1rem;
     border-radius: 50%;
 }
 .header_1 > div > main > form > fieldset > div.m_photo > p {
@@ -48,7 +56,7 @@
 
 }
 .header_1 > div > main > form > fieldset > div.m_photo > p.more {
-    margin-top: 1.2rem;
+    margin-top: 0.4rem;
     font-size: 6rem;
 
 }
@@ -59,9 +67,9 @@
 /* 강아지 고양이 선택 */
 .header_1 > div > main > form > fieldset > .pet_1 {
     margin: 0 auto;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     width: 20rem;
-    height: 15vh;
+    height: 10rem;
 }
 .header_1 > div > main > form > fieldset > .pet_1 > label.pet > img {
     width: 9rem;
@@ -71,23 +79,23 @@
 }
 .pet1{
     margin-top: 1rem;    
-    margin-left: 4rem;
+    margin-left: 4.1rem;
+    margin-bottom: 0.8rem;
 }
 .pet1:nth-of-type(2){
     float: right;
-    margin-right: 4rem;
+    margin-right: 4.1rem;
 }
 
 /* 이름, 생년월일 */
 
 .header_1 > div > main > form > fieldset > div.box_1 {
-    padding-top: 1rem;
     margin: 0 auto;
-    width: 80vw;
+    width: 20rem;
 }
 .ment{    
     display: flex;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.5rem;
     margin-top: 0.8rem;
     font-size: 1rem;
     color: #43689A;
@@ -104,16 +112,16 @@
 
 /* 성별 */
 
-div.radio-items{ 
-    /* 수정하기~~~!!! */
+div.radio-items{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 79vw;
-    height: 2.2rem;
+    width: 20rem;
+    height: 2.4rem;
     background-color: #43689a;
     border: 0.15rem solid #43689A;
     border-radius: 0.3rem;
+    box-sizing: border-box;
     
 }
 div.radio-items>input[type="radio"]{
@@ -123,25 +131,29 @@ div.radio-items>label{
     font-size: 1.2rem;
     line-height: 2rem;
     color: white;
-    width: 38vw;
+    width: 9.7rem;
     border-radius: 0.2rem;
     text-align: center;
 }
 div.radio-items>input[type="radio"]:checked + label{
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255,241,255,0.5);
+    /* box-shadow: 
+        inset -10px -10px -15px  rgba(23,50,63,0.5),
+        inset 10px 10px 15px rgba(84,129,189,0.5); */
 }
 .weig{
     background: url(../imgs/kg-01.png) no-repeat 97% 50%;
     background-size: 1.2rem;
 }
 .sub_c{
-    margin-top: 3rem;
+    margin-top: 2rem;
     padding-bottom: 3rem;
     text-align: center;
 }
 
-.sub{
-    border: 0 none;
+.sub{    
+    -webkit-appearance:none;
+	border:0 none;
     border-radius: 0.3rem;
     background-color: #CA6F42;
     color: white;
@@ -151,7 +163,6 @@ div.radio-items>input[type="radio"]:checked + label{
     width: 7rem;
     height: 2.5rem;
     text-align: center;
-    appearance: 0 none;
 }
 
 /* https://hyc7575.github.io/2017/09/19/2017-09-19-custom-radio-button/ */

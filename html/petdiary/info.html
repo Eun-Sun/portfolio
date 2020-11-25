@@ -8,6 +8,17 @@
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/info.css">
         <title>반려동물 정보 등록</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(function(){
+                $('.box').click(function(){
+                    $(this).css('background-color','#FFF1D2');
+                });
+                $('.maro').click(function(){
+                    $(this).css({'background-image':'url(imgs/maro.png)','background-size':'10.4rem','background-color':'#FFF1D2'});
+                });
+            });
+        </script>
         <style>
             body {
                 font-size: 62.5%;
@@ -33,6 +44,9 @@
                             <div class="m_photo">
                                 <p class="more">+</p>
                                 <p class="photo">사진등록</p>
+                            
+                                <div class="maro">
+                                </div>
                             </div>
 
                             <div class="pet_1">
@@ -46,11 +60,11 @@
                             <div class="box_1">
                                 <div>
                                     <label for="names" class="ment">· 이름</label>
-                                    <input type="text" name="names" id="names">
+                                    <input type="text" name="names" id="names" class="box">
                                 </div>
                                 <div>
                                     <label for="birth" class="ment">· 생년월일</label>
-                                    <input type="text" name="birth" id="birth">
+                                    <input type="text" name="birth" id="birth" class="box">
                                 </div>
 
                                 <div>
@@ -64,7 +78,7 @@
                                 </div>
 
                                 <label for="weights" class="ment">· 몸무게</label>
-                                <input type="text" name="weights" id="weights" class="weig">
+                                <input type="text" name="weights" id="weights" class="weig box">
 
                                 
                                 <div>
@@ -90,7 +104,7 @@
             subM.addEventListener("click", function(e){
                 e.preventDefault();
                 window.location.href = "month.html";
-            })
+            });
         </script>
     </body>
 </html>

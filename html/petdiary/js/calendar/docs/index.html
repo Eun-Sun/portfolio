@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Animated Event Calendar Example</title>
+    <!-- <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'> -->
+
+	<link rel="stylesheet" href="simple-calendar.css"><!-- calendar.js 플러그인과 함께 연결해야 하는 css -->
+    <link rel="stylesheet" href="demo.css">
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@4/themes/light-border.css" /><!-- 달력에서 툴팁 이벤트가 필요하면 사용해야 하는 css 첫번째-->
+  <link    rel="stylesheet"  href="https://unpkg.com/tippy.js@4/themes/translucent.css"  /><!-- 달력에서 툴팁 이벤트가 필요하면 사용해야 하는 css 두번째-->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/popper.js@1/dist/umd/popper.min.js"></script><!-- 달력에서 이벤트가 필요하면 사용해야 하는 js -->
+    <script src="https://unpkg.com/tippy.js@4"></script><!-- 달력에서 툴팁 이벤트가 필요하면 사용해야 하는 js -->
+    <script src="jquery.simple-calendar.js"></script>
+	<script>
+        $(function () {
+            // Event Demo init
+            $("#event-cal-container").simpleCalendar({
+				minDate: "2020-11-26", // 달력에서 기간을 표기할 경우 시작 minimum date
+	            maxDate: "2020-11-28", //달력에서 기간을 표기할 경우 종료 maximum date
+                events: ['2020-11-20','2020-11-30'], //[이벤트1, 이벤트2,,,, ]
+                eventsInfo: ['Event 1','이벤트 발생'], //[각 이벤트에 해당하는 글자]
+                selectCallback: function(date){ //달력의 일반 날짜를 클릭했을 때 이벤트 발생 함수 
+                    console.log('date selected '+date);
+                },
+				evtBox:true, // 이벤트가 있는 날짜에 툴팁과 이벤트 관련 내용을  eventsInfo의 속성에 적으면 div와 함께 내용이 나타난다. 물론 false라면 나타나지 않는다. 
+				months: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'], //달을 표기하는 방식 숫자나 영어로
+				days: ['일', '월', '화', '수', '목', '금', '토']
+				//,targetDate:'2019/09' //작성자가 플러그인 수정 - 지정된 년과 달로 지정하는 속성, "년/월'만 작성한다. 
+            });
+
+			//이벤트가 생성된 달력의 날짜에는 a요소와 class="day event" 도 함께 생성된다. 
+            tippy('.day.event', {
+                theme: 'translucent'
+            });
+
+            
+            //--------------------구분선---------------------
+			
+        });
+ 
+    </script>
+</head>
+
+<body>
+<div id="jquery-script-menu">
+	<div class="jquery-script-center">
+		<ul>
+			<li><a href="https://www.jqueryscript.net/time-clock/animated-event-calendar.html">Download This Plugin</a></li>
+			<li><a href="https://www.jqueryscript.net/">Back To jQueryScript.Net</a></li>
+		</ul>
+
+		<script type="text/javascript" 
+src="https://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+	</div>
+	<div class="jquery-script-clear"></div>
+</div>
+    <h1 class="title" style="margin-top:150px;">Simple Animated Event Calendar Example</h1>
+    <div id="container" class="calendar-container" data-tippy-content="content tip"></div>
+
+    <h4 class="title">(Tooltips added with <a href="https://www.cssscript.com/customizable-interactive-tooltips-pure-javascript-tippy-js/">Tippy.js</a>)</h4>
+    
+	<!-- 칼렌더가 들어갈 공간. 즉 태그 만들고 css에서 크기 설정하면 된다. -->
+   <!-- 달력은 table 형식으로 만들어 진다. 
+       1. .calendar > header > h2.month { 달을 가리킨다. }
+       2. .calendar > .btn-prev {이전 달을 가리킨다.}
+       3. .calendar > .btn-next {다음 달을 가리킨다.}
+   thead의 td가 요일을 나타낸다.-->
+   <!-- 이벤트가 지정된 날짜를 만들었을 때 가 발생하는 div요소이다. -->
+    <div id="event-cal-container" class="calendar-container"></div>
+
+  
+</body>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</html>

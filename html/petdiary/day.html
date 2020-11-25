@@ -1,40 +1,109 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta
-        name="viewport"
-        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="">
-    <title>일력</title>
-</head>
-<body>
-    <header>
-        <h1>다이어리</h1>
-        <p><span class="hidden">목록</span></p>
-        <div>
-            <a href="month.html"><img src="imgs/diary_icon-01.png" alt="다이어리"></a>
-            <a href="#"><img src="imgs/diary_icon-02.png" alt="체크리스트"></a>
-            <a href="#"><img src="imgs/diary_icon-03.png" alt=공유></a>
-        </div>
-    </header>
-    
-    <main>
-        <div>            
-            <p>2020.11</p>
-            <p><span class="hidden">주간달력</span></p>            
-        </div>
-        <div>
-            <!-- 달력 -->
-        </div>
-        <div>
-            <!-- 일력 -->
-            <p>18.수<span class="hidden">해당요일</span></p>
-        </div>
-        <p><img src="imgs/i_smile.png" alt="아이콘일정등록"></p>
-        <p><img src="imgs/more_orange.png" alt="일정등록"></p>
+    <head>
+        <meta charset="UTF-8">
+        <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/common_month.css">        
+        <link rel="stylesheet" href="css/day.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="js/calendar/docs/simple-calendar-day.css">
+        <!-- calendar.js 플러그인과 함께 연결해야 하는 css -->
+        <link rel="stylesheet" href="js/calendar/docs/demo.css">
+        <link
+            href="https://www.jqueryscript.net/css/jquerysctipttop.css"
+            rel="stylesheet"
+            type="text/css">
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/tippy.js@4/themes/light-border.css"/>
+        <!-- 달력에서 툴팁 이벤트가 필요하면 사용해야 하는 css 첫번째-->
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/tippy.js@4/themes/translucent.css"/>
+        <!-- 달력에서 툴팁 이벤트가 필요하면 사용해야 하는 css 두번째-->
 
-    </main>
+        <title>달력</title>
+
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+            crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/popper.js@1/dist/umd/popper.min.js"></script>
+        <!-- 달력에서 이벤트가 필요하면 사용해야 하는 js -->
+        <script src="https://unpkg.com/tippy.js@4"></script>
+        <!-- 달력에서 툴팁 이벤트가 필요하면 사용해야 하는 js -->
+        <script src="js/calendar/docs/jquery.simple-calendar.js"></script>
+        <script>
+            $(function () {
+                // Event Demo init
+                $("#event-cal-container").simpleCalendar({
+                    displayYear:true,
+                    fixedStartDay: 0,//달력에서 시작하는 요일 
+                    minDate: "", // 달력에서 기간을 표기할 경우 시작 minimum date
+                    maxDate: "", //달력에서 기간을 표기할 경우 종료 maximum date
+                    events: [
+                    ], //[이벤트1, 이벤트2,,,, ]
+                    eventsInfo: [
+                    ], //[각 이벤트에 해당하는 글자]
+                    selectCallback: function (date) { //달력의 일반 날짜를 클릭했을 때 이벤트 발생 함수
+                        console.log('date selected ' + date);
+                    },
+                    evtBox: true, // 이벤트가 있는 날짜에 툴팁과 이벤트 관련 내용을  eventsInfo의 속성에 적으면 div와 함께 내용이 나타난다. 물론 false라면 나타나지 않는다.
+                    months: [
+                        '01','02','03','04','05','06','07','08','09','10','11','12'
+                    ], //달을 표기하는 방식 숫자나 영어로
+                    days: [
+                        'SUN','MON','TUE','WED','THU','FRI','SAT'
+                    ]
+                    //,targetDate:'2019/09' 작성자가 플러그인 수정 - 지정된 년과 달로 지정하는 속성, "년/월'만 작성한다.
+                });
+
+                //이벤트가 생성된 달력의 날짜에는 a요소와 class="day event" 도 함께 생성된다.
+                tippy('.day.event', {theme: 'translucent'});
+
+                //--------------------구분선---------------------
+
+            });
+        </script>
+        <script>
+            $(function(){
+
+            });
+        </script>
+    </head>
+    <body>
+        <header class="first_H">
+            <h1>다이어리</h1>
+            <p>
+                <span class="hidden">목록</span></p>
+            <div>
+                <a href="month.html"><img src="imgs/diary_icon-01.png" alt="다이어리"></a>
+                <a href="#"><img src="imgs/diary_icon-02.png" alt="체크리스트"></a>
+                <a href="#"><img src="imgs/diary_icon-03.png" alt="공유"></a>
+            </div>
+        </header>
+
+        <main>
+            <h1 class="hidden">달력</h1>
+            <div id="event-cal-container" class="calendar-container">
+                <div class="week">
+                    <a href="week.html"><img src="imgs/i_week.png" alt="주간달력"></a>
+                </div>
+            </div>
+            <!-- 달력 -->
+            <div class="day_L">
+                <!-- 일력 -->
+                <a href="month.html"><img src="imgs/i_arrow.png" alt="돌아가기"></a>
+                <p class="day_D"><span class="hidden">해당요일</span></p>
+                <div class="schd"></div>
+            </div>
+            <p><a href="#"><img src="imgs/i_smile.png" alt="아이콘일정등록"></a></p>
+            <p><a href="#"><img src="imgs/more_blue.png" alt="일정등록"></a></p>
+
+        </main>
+    
 </body>
 </html>

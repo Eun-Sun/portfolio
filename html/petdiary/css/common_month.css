@@ -1,0 +1,50 @@
+body{
+    font-size: 62.5%;
+}
+
+header.first_H{
+    position: relative;
+    padding-top: 0.1rem;
+    width: 100vw;
+    height: 6.9rem;
+    background: #3d7ebc;
+}
+header.first_H>h1{
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1.4rem;
+    color: white;
+}
+header.first_H>p{
+    position: absolute;
+    left: 1.5rem; top: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url(../imgs/menu.png) no-repeat 0 0;
+    background-size: 1.5rem;
+    cursor: pointer;
+}
+header.first_H>div{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+header.first_H>div>a>img{
+    width: 1.8rem;
+}
+header.first_H>div>a:last-of-type>img{
+    width: 1.6rem;
+}
+
+main{
+    position: relative;
+}
+.calendar-container .week{    
+    position: absolute;
+    right: 2rem; top: 0.8rem;
+    z-index: 100;
+}
+.calendar-container .week img{
+    cursor: pointer;
+}
+

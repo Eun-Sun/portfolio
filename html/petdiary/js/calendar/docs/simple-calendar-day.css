@@ -1,0 +1,123 @@
+
+.calendar {
+	padding: 1rem; 
+    position: relative;
+    overflow: hidden;
+    
+	text-transform: capitalize; /*대문자로 변환시키는 속성*/
+    text-align: center;
+    font-size: 1rem;
+    color: #545A5C; 
+    
+}
+/* 달력 내 링크 */
+.calendar a {
+    text-decoration: none;
+    color: inherit; 
+}
+/**************** 달력 내 이전 달 다음 달로 이동하는 버튼 ******************/
+.calendar header .btn {
+	position: absolute;
+    display: inline-block;
+    
+    width: 30px;    height: 30px;
+
+    text-align: center; line-height: 30px;
+    font-size: 1.4rem;
+    font-weight: bold;
+	color: #3d7ebc;
+}
+ /* 다음 달로 이동하는 버튼 */
+.calendar header .btn-next { right: 100px; top: 12px; }
+ /* 이전 달로 이동하는 버튼 */
+.calendar header .btn-prev {  left: 100px;   top: 12px; }
+.calendar header .btn:hover {    background: #CBD1D2;    color: white; }
+
+/* 몇 월달 표시하는 제목 */
+.calendar header .month {
+    padding: 0;
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #3d7ebc;
+}
+
+/* 달력 날짜를 나타내는 전체 테이블 */
+
+.calendar table { 
+    margin-top: 20px;	
+    width: 100%;     border-spacing: 0px; 
+}
+/* 요일을 나타내는 thead */
+.calendar thead { 
+    font-size: 1em; font-weight: 600; 
+}
+
+.calendar thead td{ padding:0.4rem 0; }
+.calendar thead td:first-of-type{ 
+    color: #d96a34;    
+}
+/* 각 요일 날짜 나타내는 td(칸)의 여백 조정 */
+.calendar td { 
+    padding: .4em .1em;
+}
+.calendar tr:not(:last-of-type){
+    border-bottom: 0.1rem solid #80b4e15b;
+}
+/* 달력 내의 모든 날짜 */
+.calendar .day { 
+	display: inline-block; 
+	width: 2em; height: 2em; 
+    line-height: 1.9em; 
+    border-radius: 50%; border: 2px solid transparent; /*transparent는 투명함*/
+}
+/* 기간을 설정했을 때 색상 스타일링 */
+.calendar .term{background: #b7ebd5;}
+
+/* 날짜에 커서 올렸을 때 */
+.calendar .day:hover { border: 2px solid #6691CC; }
+
+/* 오늘 날짜 */
+.calendar .day.today { background: #6691CC; color: white; }
+
+/* 이벤트를 부여하고 싶은 날짜 */
+.calendar .day.event { color: rgb(26, 26, 26); border: 2px solid #f77721; }
+.calendar .day.event:hover {  color: rgb(22, 23, 24); border: 2px solid #ffab2e; }
+
+.calendar .day.wrong-month { color: #CBD1D2; }
+.calendar .day.wrong-month:hover { border: 2px solid transparent; }
+
+/* 이벤트 지정 날짜가 있는 경우 */
+.calendar .event-container { 
+	display: none;
+    position: absolute;  top: 0; left: 0;
+    width: 100%; height: 100%;
+    color: white; background: #545A5C; 
+}
+.calendar .filler {
+    position: absolute;
+    width: 0; height: 0;
+    border-radius: 50%; background: #545A5C;
+	transform: translate(-50%, -50%); 
+}
+
+/* Event Close button - ref : https://codepen.io/brissmyr/pen/egidw */
+.event-container>p{      margin-top: 35%;      font-size: 1.2rem;     }
+.event-container>.close {
+	  position: absolute;  right: 32px;  top: 32px;
+      width: 32px; height: 32px;
+      opacity: 0.3;
+ }
+.event-container>.close:hover {     opacity: 1;    }
+
+/* 가상요소 */
+.event-container>.close:before, 
+.event-container>.close:after {
+      content: ' '; 
+	  position: absolute;     left: 15px;
+	  height: 33px;
+      width: 2px;
+      background-color: rgb(235, 235, 235);
+}
+.event-container>.close:before { transform: rotate(45deg);  }
+.event-container>.close:after {  transform: rotate(-45deg); }
