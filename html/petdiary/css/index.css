@@ -51,7 +51,7 @@
 }
 
 .index>div>div:nth-of-type(1)>form>fieldset>input[type^="bu"], input[type^="su"]{
-    -webkit-appearance: 0 none;
+    -webkit-appearance: none;
     border: 0 none;
     float: left;
     display:block;
