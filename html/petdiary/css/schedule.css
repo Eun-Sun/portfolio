@@ -246,7 +246,7 @@ main .day_L div.blue_B p:last-child{
     float: right;
     margin-right: 2rem;
 }
-main .day_L div.blue_B p:last-child a img{
+main .day_L div.blue_B p:last-child img{
     width: 1.2rem;
 }
 
