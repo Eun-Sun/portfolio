@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <link rel="stylesheet" href="css/reset.css">      
+        <link rel="stylesheet" href="css/schedule.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" />
+        <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+        <link rel="stylesheet" href="/resources/demos/style.css" />
+        
+        
+        <title>일정등록</title>
+        <script>
+            $(function() {
+                $( "#theDate" ).datepicker({
+                });
+            });
+            $("#theDate").ready(function() {
+                var date = new Date();
+
+                var day = date.getDate();
+                var month = date.getMonth() + 1;
+                var year = date.getFullYear();
+                var dates = date.getDay();
+                var week = new Array('일','월','화','수','목','금','토');                
+
+                if (month < 10) month = "0" + month;
+                if (day < 10) day = "0" + day;
+
+                var today = month + "월 " + day + "일 " + week[dates] ;  
+                $("#theDate").attr("value", today);
+            });            
+        </script>
+    </head>
+    <body>
+        <header class="first_H">
+            <h1>일정</h1>
+            <p><a href="month.html"><img src="imgs/arrow_left.png" alt="이전으로"></a></p>
+            <p><a href="#"><img src="imgs/i_check.png" alt="확인"></a></p>
+        </header>
+        <main>
+            <div>
+                <form action="petdiary.jsp">
+                    <fieldset>
+                        <p><img src="imgs/arrow_s.png" alt="색변경"></p>
+                        <input type="text" name="sched" id="sched" placeholder="일정 제목">
+                        <ul>
+                            <li>
+                                <input type="text" id="theDate">
+                            </li>
+                            <li>
+                                시간설정
+                                <span class="on">ON</span>
+                            </li>
+                            <li>
+                                이벤트 당일(9시)
+                            </li>
+                            <li>
+                                <input type="text" name="memo" id="memo" placeholder="메모"></li>
+                                <li>
+                                    <select name="repeat" id="repeat">
+                                        <option value="">반복</option>
+                                        <option value="매일">매일</option>
+                                        <option value="매주">매주</option>
+                                        <option value="매월">매월</option>
+                                        <option value="매년">매년</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </li>
+                            </ul>                            
+                    </fieldset>
+                </form>
+            </div>
+            <div class="day_L">
+                <div class="blue_B">
+                    <p>아이콘</p>
+                    <p><a href="day.html"><img src="imgs/x.png" alt="닫기"></a></p>
+                </div>    
+                <div class="icon_tab">
+                    <div class="first_L">
+                        <p><a href="#"><img src="imgs/icon_c-05.png" alt="고양이"><span>고양이</span></a></p>
+                        <p><a href="#"><img src="imgs/icon_c-01.png" alt="주사"><span>주사</span></a></p>
+                        <p><a href="#"><img src="imgs/icon_c-06.png" alt="이동"><span>이동</span></a></p>
+                        <p><a href="#"><img src="imgs/icon_c-08.png" alt="빗질"><span>빗질</span></a></p>
+                        <p><a href="#"><img src="imgs/icon_c-09.png" alt="약"><span>약</span></a></p>
+                    </div>
+                    <div class="second_L">
+                        <p><a href="#"><img src="imgs/icon_c-02.png" alt="양치"><span>양치</span></a></p>
+                        <p><a href="#"><img src="imgs/icon_c-03.png" alt="화장실"><span>화장실</span></a></p>
+                        <p><a href="#"><img src="imgs/icon_c-04.png" alt="샤워"><span>샤워</span></a></p>
+                        <p><a href="#"><img src="imgs/icon_c-07.png" alt="병원"><span>병원</span></a></p>
+                        <p><a href="#"><img src="imgs/icon_c-10.png" alt="사료"><span>사료</span></a></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        </main>
+    
+</body>
