@@ -216,7 +216,7 @@ input:checked + .slider:before {
     display: none;
     position: absolute;
     z-index: 100;
-    top: 32rem;
+    top: 40rem;
 }
 main .day_L{
     width: 100vw;
