@@ -11,7 +11,6 @@
         <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" />
         <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
         <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
-        <link rel="stylesheet" href="/resources/demos/style.css" />
         
         
         <title>일정등록</title>
@@ -20,49 +19,66 @@
                 $( "#theDate" ).datepicker({
                 });
             });
-            $("#theDate").ready(function() {
-                var date = new Date();
+                $("#theDate").ready(function() {
+                    var date = new Date();
 
-                var day = date.getDate();
-                var month = date.getMonth() + 1;
-                var year = date.getFullYear();
-                var dates = date.getDay();
-                var week = new Array('일','월','화','수','목','금','토');                
+                    var day = date.getDate();
+                    var month = date.getMonth() + 1;
+                    var year = date.getFullYear();
+                    var dates = date.getDay();
+                    var week = new Array('일','월','화','수','목','금','토');                
 
-                if (month < 10) month = "0" + month;
-                if (day < 10) day = "0" + day;
+                    if (month < 10) month = "0" + month;
+                    if (day < 10) day = "0" + day;
 
-                var today = month + "월 " + day + "일 " + week[dates] ;  
-                $("#theDate").attr("value", today);
-            });            
+                    var today = month + "월 " + day + "일 " + week[dates] ;  
+                    $("#theDate").attr("value", today);
+                });  
+        </script>
+        <script>
+            $(function(){
+                $(".click_i").click(function(){
+                    $("#icon_box").css('display','block');
+                });
+                $(".close").click(function(){
+                    $("#icon_box").css('display','none');
+                });
+                $(".back_P").click(function(){
+                    window.history.back();
+                });
+            });
         </script>
     </head>
     <body>
         <header class="first_H">
-            <h1>일정</h1>
-            <p><a href="month.html"><img src="imgs/arrow_left.png" alt="이전으로"></a></p>
-            <p><a href="#"><img src="imgs/i_check.png" alt="확인"></a></p>
+            <div>
+                <p class="back_P"><a href="#"><img src="imgs/arrow_left.png" alt="이전으로"></a></p>
+                <h1>일정</h1>
+                <p><a href="#"><img src="imgs/i_check.png" alt="확인"></a></p>
+            </div>
         </header>
         <main>
-            <div>
+            <div class="sched_main">
                 <form action="petdiary.jsp">
                     <fieldset>
-                        <p><img src="imgs/arrow_s.png" alt="색변경"></p>
-                        <input type="text" name="sched" id="sched" placeholder="일정 제목">
+                        <p class="colors"><img src="imgs/arrow_s.png" alt="색변경"></p>
+                        <input type="text" name="sched" id="sched" placeholder="일정 제목" class="non tit">
+                        <p class="click_i"><img src="imgs/i_smileL.png" alt="아이콘일정등록"></p>
                         <ul>
                             <li>
-                                <input type="text" id="theDate">
+                                <input type="text" id="theDate" class="non dates">
                             </li>
-                            <li>
+                            <li class="dates">
                                 시간설정
                                 <span class="on">ON</span>
                             </li>
-                            <li>
+                            <li class="dates_1">
                                 이벤트 당일(9시)
                             </li>
                             <li>
-                                <input type="text" name="memo" id="memo" placeholder="메모"></li>
-                                <li>
+                                <input type="text" name="memo" id="memo" placeholder="메모" class="non dates_1">
+                            </li>
+                                <li class="select_box">
                                     <select name="repeat" id="repeat">
                                         <option value="">반복</option>
                                         <option value="매일">매일</option>
@@ -81,10 +97,10 @@
                     </fieldset>
                 </form>
             </div>
-            <div class="day_L">
+            <div class="day_L" id="icon_box">
                 <div class="blue_B">
                     <p>아이콘</p>
-                    <p><a href="day.html"><img src="imgs/x.png" alt="닫기"></a></p>
+                    <p class="close"><a href="#"><img src="imgs/x.png" alt="닫기"></a></p>
                 </div>    
                 <div class="icon_tab">
                     <div class="first_L">
@@ -104,6 +120,14 @@
                 </div>
             </div>
         </main>
-        </main>
-    
-</body>
+        <!-- <script>
+            var date = new Date();
+            var yyyy = date.getFullYear();
+            var mm = date.getMonth()+1 > 9 ? date.getMonth()+1 : '0' + date.getMonth()+1;
+            var dd = date.getDate() > 9 ? date.getDate() : '0' + date.getDate();
+
+            $("input[type=date]").val(yyyy+"-"+mm+"-"+dd);
+
+        </script> -->
+    </body>
+</html>
