@@ -42,10 +42,11 @@ main{
 }
 .calendar-container .week{    
     position: absolute;
-    right: 2rem; top: 0.8rem;
+    right: 1.5rem; top: 0.8rem;
     z-index: 100;
 }
 .calendar-container .week img{
+    width: 1.8rem;
     cursor: pointer;
 }
 
