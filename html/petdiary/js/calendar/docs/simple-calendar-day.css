@@ -64,6 +64,9 @@
 .calendar tr:not(:last-of-type){
     border-bottom: 0.1rem solid #80b4e15b;
 }
+.calendar tr td:first-child{
+    color:  #d96a34;
+}
 /* 달력 내의 모든 날짜 */
 .calendar .day { 
 	display: inline-block; 
@@ -104,9 +107,9 @@
 /* Event Close button - ref : https://codepen.io/brissmyr/pen/egidw */
 .event-container>p{      margin-top: 35%;      font-size: 1.2rem;     }
 .event-container>.close {
-	  position: absolute;  right: 32px;  top: 32px;
-      width: 32px; height: 32px;
-      opacity: 0.3;
+    position: absolute;  right: 32px;  top: 32px;
+    width: 32px; height: 32px;
+    opacity: 0.3;
  }
 .event-container>.close:hover {     opacity: 1;    }
 

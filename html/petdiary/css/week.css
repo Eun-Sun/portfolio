@@ -1,0 +1,45 @@
+main{
+    position: relative;
+    height: 86vh;
+}
+.grid-container{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, minmax(10rem, auto));
+}
+
+.month_i{
+    position: absolute;
+    right:1rem; top: .5rem;
+}
+.top{
+    border-top: 0.1rem solid lightgray;
+}
+.left1{
+    box-sizing: border-box;
+    padding-bottom: 0.5rem;
+    margin-left: .4rem;
+    padding-left: .6rem;
+}
+.right1{
+    box-sizing: border-box;
+    padding-bottom: 0.5rem;
+    padding-left: .5rem;
+    margin-right: .4rem;
+    padding-right: .6rem;
+    border-left: 0.1rem solid lightgray;
+}
+.sun{
+    margin-top: .8rem;
+    padding-top: 1.2rem;
+    color: #d96a34;
+}
+
+.enroll{
+    position: absolute;
+    bottom:1.2rem; right:1.2rem;
+}
+.enroll img{
+    width: 14vw;
+}

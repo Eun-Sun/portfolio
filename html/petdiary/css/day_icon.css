@@ -1,0 +1,63 @@
+main{
+    height: 85vh;
+}
+main .day_L{
+    width: 100vw;
+    height: 80vw;
+    background-color: white;
+    border-radius: 4% 4% 0 0;
+}
+
+/* 아이콘메뉴바 */
+main .day_L div.blue_B{
+    width: 100vw;
+    height: 4rem;
+    background-color: #85B7E4;
+    border-radius: 1.2rem 1.2rem 0 0 ;
+    box-shadow: 0 -10px .8rem rgba(70, 70, 70, 0.5);
+}
+main .day_L div.blue_B p{
+    margin-top: 1.4rem;
+}
+main .day_L div.blue_B p:first-child{
+    margin-left: 44vw;
+    float: left;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: white;
+
+}
+main .day_L div.blue_B p:last-child{
+    float: right;
+    margin-right: 2rem;
+}
+main .day_L div.blue_B p:last-child a img{
+    width: 1.2rem;
+}
+
+/* 아이콘 */
+.icon_tab div{
+    display: flex;
+    margin: 0 auto;
+    margin-top: 2rem;
+    width: 96vw;
+    height: 7rem;
+    overflow: hidden;
+}
+.icon_tab  p{
+    position: relative;
+    flex: 1 0 auto;
+    text-align: center;
+}
+.day_L a{
+    color: black;
+}
+
+.day_L a span{
+    position: absolute;
+    bottom: 0; left: 1.8rem;
+}
+
+.day_L img{
+    width: 5rem;
+}

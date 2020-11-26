@@ -68,6 +68,13 @@
 
             });
         </script>
+        <script language='javascript'>
+            $(document).ready(function() {            
+                $('.day').click(function() {            
+                    $(location).attr('href','day.html');            
+                });            
+            });           
+        </script>
     </head>
     <body>
         <header class="first_H">
@@ -89,7 +96,7 @@
                 </div>
             </div>
             <!-- 달력 -->
-            <p class="enroll"><img src="imgs/more_orange.png" alt="일정등록"></p>
+            <p class="enroll"><a href="#"><img src="imgs/more_orange.png" alt="일정등록"></a></p>
 
         </main>
     </body>
