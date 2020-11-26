@@ -213,7 +213,7 @@ input:checked + .slider:before {
 
 /* 아이콘메뉴바 */
 #icon_box{
-    /* display: none; */
+    display: none;
     position: absolute;
     z-index: 100;
     bottom: 13rem;
