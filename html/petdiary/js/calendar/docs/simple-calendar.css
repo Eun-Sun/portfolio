@@ -20,24 +20,24 @@
 	position: absolute;
     display: inline-block;
     
-    width: 30px;    height: 30px;
+    width: 2rem;    height: 2rem;
 
-    text-align: center; line-height: 30px;
-    font-size: 1.4rem;
+    text-align: center; line-height: 1.6rem;
+    font-size: 1.6rem;
     font-weight: bold;
 	color: #3d7ebc;
 }
  /* 다음 달로 이동하는 버튼 */
-.calendar header .btn-next { right: 100px; top: 12px; }
+.calendar header .btn-next { right: 100px; top: 1rem; }
  /* 이전 달로 이동하는 버튼 */
-.calendar header .btn-prev {  left: 100px;   top: 12px; }
+.calendar header .btn-prev {  left: 100px;   top: 1rem; }
 .calendar header .btn:hover {    background: #CBD1D2;    color: white; }
 
 /* 몇 월달 표시하는 제목 */
 .calendar header .month {
     padding: 0;
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     font-weight: bold;
     color: #3d7ebc;
 }
@@ -50,7 +50,7 @@
 }
 /* 요일을 나타내는 thead */
 .calendar thead { 
-    font-size: 1em; font-weight: 600; 
+    font-size: 1.2rem; font-weight: 600; 
 }
 
 .calendar thead td{ padding:0.4rem 0; }
@@ -59,12 +59,13 @@
 }
 /* 각 요일 날짜 나타내는 td(칸)의 여백 조정 */
 .calendar td { 
-    padding: .5em .1em 3.3em .1em;
+    font-size: 1.2rem;
+    padding: .5rem .1rem 5.2rem .1rem;
 }
 .calendar tr:not(:last-of-type){
     border-bottom: 0.1rem solid #80b4e15b;
 }
-.calendar thead td:first-of-type{ 
+.calendar tr td:first-of-type{ 
     color: #d96a34;    
 }
 /* 달력 내의 모든 날짜 */

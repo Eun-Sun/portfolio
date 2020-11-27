@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+        <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <link rel="stylesheet" href="css/reset.css">      
+        <link rel="stylesheet" href="css/icon_edit.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" />
+        <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+    <title>아이콘 편집</title>
+    <script>
+        $(function(){            
+            $(".btn_icon").click(function(){
+                $(location).attr('href','month.html');
+            });
+            $(".close").click(function(){
+                window.history.back();
+            });
+        });
+    </script>
+</head>
+<body>
+    <main>
+        <h1 class="hidden">아이콘 편집창</h1>
+        <div class="bg_g">
+            <form action="petdiary.jsp">
+                <fieldset>
+                    <p><img src="../imgs/medi-03.png" alt="약아이콘"></p>
+                    <label for="pill" class="edit"><input type="text" name="pill" id="pill" placeholder="   영양제">
+                    <img src="imgs/pencil.png" alt="수정"></label>
+                    <ul class="color_list">
+                        <li class="color_click"><img src="imgs/red.png" alt="빨"></li>
+                        <li class="color_click"><img src="imgs/yellow.png" alt="노"></li>
+                        <li class="color_click"><img src="imgs/deepyellow.png" alt="진노"></li>
+                        <li class="color_click"><img src="imgs/orange.png" alt="주"></li>
+                        <li class="color_click"><img src="imgs/green.png" alt="초"></li>
+                        <li class="color_click"><img src="imgs/blue.png" alt="파"></li>
+                        <li class="color_click"><img src="imgs/navy.png" alt="남"></li>
+                        <li class="color_click"><img src="imgs/purple.png" alt="보"></li>
+                    </ul>
+                    <div class="btn_box">
+                        <input type="button" value="확인" class="btn_icon">
+                    </div>
+                    
+                </fieldset>
+            </form>
+        </div>        
+        <div class="day_L" id="icon_box">
+            <div class="blue_B">
+                <p>아이콘</p>
+                <p class="close"><img src="imgs/x.png" alt="닫기"></p>
+            </div>    
+            <div class="icon_tab">
+                <ul class="first_L">
+                    <li class="push_icon"><img src="imgs/icon_c-05.png" alt="고양이"><span>고양이</span></li>
+                    <li class="push_icon"><img src="imgs/icon_c-01.png" alt="주사"><span>주사</span></li>
+                    <li class="push_icon"><img src="imgs/icon_c-06.png" alt="이동"><span>이동</span></li>
+                    <li class="push_icon"><img src="imgs/icon_c-08.png" alt="빗질"><span>빗질</span></li>
+                    <li class="push_icon"><img src="imgs/icon_c-09.png" alt="약"><span>약</span></li>
+                </ul>
+                <ul class="second_L">
+                    <li class="push_icon"><img src="imgs/icon_c-02.png" alt="양치"><span>양치</span></li>
+                    <li class="push_icon"><img src="imgs/icon_c-03.png" alt="화장실"><span>화장실</span></li>
+                    <li class="push_icon"><img src="imgs/icon_c-04.png" alt="샤워"><span>샤워</span></li>
+                    <li class="push_icon"><img src="imgs/icon_c-07.png" alt="병원"><span>병원</span></li>
+                    <li class="push_icon"><img src="imgs/icon_c-10.png" alt="사료"><span>사료</span></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>

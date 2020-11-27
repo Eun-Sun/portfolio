@@ -1,0 +1,142 @@
+html{
+    font-size: 62.5%;
+}
+.bg_g{
+    width: 100vw;
+    height: 100vh;
+    background-color: #f3f3f3;
+}
+.icon_medi{
+    margin: 0 auto;
+    margin-top: 8rem;
+    width: 25rem;
+    overflow: hidden;
+}
+.icon_medi li{
+    float: left;
+}
+.icon_medi li:first-child label{
+    margin-left: 1rem;
+}
+.icon_medi li div{
+    margin-top: 2rem;
+    font-size: 1.3rem;
+}
+.icon_medi li:last-child{
+    float: right;
+}
+label img.medi_im{
+    width: 10rem;
+}
+div.etc{
+    margin: 0 auto;
+    margin-top: 3rem;
+    width: 25rem;
+    font-size: 1.3rem;
+}
+div.etc span{
+    position: relative;
+    padding: 0 2.5rem;
+    text-decoration: underline;
+    cursor: pointer;
+    background: url(../imgs/pencil.png) no-repeat 85% 50%;
+    background-size: 1.4rem;
+}
+div.etc span:before{
+    position: absolute;
+    bottom: .1rem; left: .5rem;
+    content: "+";
+    width: 1.4rem;
+    height: 1.4rem;
+    font-size: 1.3rem;
+    line-height: 1.2rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    background-color: #5c5c5c;
+    border-radius: 50%;
+}
+
+/* 확인버튼 */
+.btn_box{
+    text-align: center;
+}
+.btn_icon{
+    appearance: none;
+    border: 0 none;
+    outline: none;
+    margin-top: 5rem;
+    width: 8rem;
+    height: 3rem;
+    border-radius: 0.3rem;
+    background-color: #CA6F42;
+    color: white;    
+}
+
+/* 아이콘메뉴바 */
+#icon_box{
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+}
+main .day_L{
+    width: 100vw;
+    height: 50vh;
+    background-color: white;
+    border-radius: 4% 4% 0 0;
+}
+main .day_L div.blue_B{
+    width: 100vw;
+    height: 4rem;
+    background-color: #85B7E4;
+    border-radius: 1.2rem 1.2rem 0 0 ;
+    box-shadow: 0 -10px .8rem rgba(70, 70, 70, 0.5);
+}
+main .day_L div.blue_B p{
+    margin-top: 1.4rem;
+}
+main .day_L div.blue_B p:first-child{
+    margin-left: 44vw;
+    float: left;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: white;
+
+}
+main .day_L div.blue_B p:last-child{
+    float: right;
+    margin-right: 2rem;
+}
+main .day_L div.blue_B p:last-child img{
+    width: 1.2rem;
+}
+
+
+/* 아이콘 */
+.icon_tab ul{
+    display: flex;
+    margin: 0 auto;
+    margin-top: 2rem;
+    width: 96vw;
+    height: 9rem;
+    overflow: hidden;
+}
+.icon_tab .second_L{
+    margin-top: 4rem;
+}
+.icon_tab  li{
+    position: relative;
+    flex: 1 0 auto;
+    text-align: center;
+}
+
+.day_L span{    
+    font-size: 1.2rem;
+    color: black;
+    position: absolute;
+    bottom: 0; left: 33%;
+}
+
+.day_L img{
+    width: 6rem;
+}

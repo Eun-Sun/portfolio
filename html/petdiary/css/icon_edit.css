@@ -1,0 +1,135 @@
+html{
+    font-size: 62.5%;
+}
+.bg_g{
+    width: 100vw;
+    height: 100vh;
+    background-color: #f3f3f3;
+    text-align: center;
+}
+.bg_g p img{
+    margin: 0 auto;
+    margin-top: 8rem;
+    width: 10rem;
+    overflow: hidden;
+}
+input[type^="te"]{
+    appearance: none;
+    border: 0 none;
+    outline: none;
+    background-color: #f3f3f3;
+    margin-top: 2rem;
+    width: 8rem;
+}
+input::placeholder{
+    font-size: 1.3rem;
+    text-align: center;
+}
+.edit img{
+    width: 1.4rem;
+}
+
+.color_list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 3rem;
+    width: 66vw;
+}
+.color_list li{
+    font-size: 0;
+    line-height: 0;
+
+}
+.color_list li img{
+    width: 2.2rem;
+    border: 0.2rem solid transparent;
+}
+
+.color_list li:hover img{
+    border: 0.2rem solid black;
+}
+/* 확인버튼 */
+.btn_box{
+    text-align: center;
+}
+.btn_icon{
+    appearance: none;
+    border: 0 none;
+    outline: none;
+    margin-top: 4rem;
+    width: 8rem;
+    height: 3rem;
+    border-radius: 0.3rem;
+    background-color: #CA6F42;
+    color: white;    
+}
+
+/* 아이콘메뉴바 */
+#icon_box{
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+}
+main .day_L{
+    width: 100vw;
+    height: 50vh;
+    background-color: white;
+    border-radius: 4% 4% 0 0;
+}
+main .day_L div.blue_B{
+    width: 100vw;
+    height: 4rem;
+    background-color: #85B7E4;
+    border-radius: 1.2rem 1.2rem 0 0 ;
+    box-shadow: 0 -10px .8rem rgba(70, 70, 70, 0.5);
+}
+main .day_L div.blue_B p{
+    margin-top: 1.4rem;
+}
+main .day_L div.blue_B p:first-child{
+    margin-left: 44vw;
+    float: left;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: white;
+
+}
+main .day_L div.blue_B p:last-child{
+    float: right;
+    margin-right: 2rem;
+}
+main .day_L div.blue_B p:last-child img{
+    width: 1.2rem;
+}
+
+
+/* 아이콘 */
+.icon_tab ul{
+    display: flex;
+    margin: 0 auto;
+    margin-top: 2rem;
+    width: 96vw;
+    height: 9rem;
+    overflow: hidden;
+}
+.icon_tab .second_L{
+    margin-top: 4rem;
+}
+.icon_tab  li{
+    position: relative;
+    flex: 1 0 auto;
+    text-align: center;
+}
+
+.day_L span{    
+    font-size: 1.2rem;
+    color: black;
+    position: absolute;
+    bottom: 0; left: 33%;
+}
+
+.day_L img{
+    width: 6rem;
+}

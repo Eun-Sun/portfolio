@@ -1,4 +1,6 @@
-
+html{
+    font-size: 62.5%;
+}
 main{
     position: relative;
     height: 86vh;
@@ -7,17 +9,21 @@ main{
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, minmax(10rem, auto));
+    grid-template-rows: repeat(4, minmax(18rem, auto));
 }
 
 .month_i{
     position: absolute;
-    right:1rem; top: .5rem;
+    right:2.2rem; top: .8rem;
 }
 .month_i img{
-    width: 1.8rem;
+    width: 2.2rem;
+}
+.day1 p{
+    font-size: 1.2rem;
 }
 .top{
+    padding-top: 1rem;
     border-top: 0.1rem solid lightgray;
 }
 .left1{
@@ -42,8 +48,8 @@ main{
 
 .enroll{
     position: absolute;
-    bottom:1.2rem; right:1.2rem;
+    bottom:1rem; right:1.5rem;
 }
 .enroll img{
-    width: 14vw;
+    width: 4rem;
 }

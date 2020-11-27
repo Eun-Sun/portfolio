@@ -1,15 +1,17 @@
+html{
+    font-size: 62.5%;
+}
 #event-cal-container{
     display: inline-block;
+    padding: 1rem;
 }
 .calendar {
     display: inline-block;
-	padding: .5rem .5rem 0 .5rem; 
     position: relative;
-    overflow: hidden;
     
 	text-transform: capitalize; /*대문자로 변환시키는 속성*/
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.4rem;
     color: #545A5C; 
     
 }
@@ -23,24 +25,26 @@
 	position: absolute;
     display: inline-block;
     
-    width: 1.5rem;    height: 1.5rem;
+    width: 1.3rem;    height: 1.3rem;
 
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: bold;
 	color: #3d7ebc;
 }
  /* 다음 달로 이동하는 버튼 */
-.calendar header .btn-next { right:40px; top: 8px; }
+.calendar header .btn-next { right:0; top: .5rem; }
  /* 이전 달로 이동하는 버튼 */
-.calendar header .btn-prev {  left: 40px;   top: 8px; }
+.calendar header .btn-prev {  left: 0;   top: .5rem; }
 .calendar header .btn:hover {    background: #CBD1D2;    color: white; }
 
 /* 몇 월달 표시하는 제목 */
 .calendar header .month {
     padding: 0;
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.4rem;
+    margin-top: .5rem;
+    line-height: 1.5rem;
     font-weight: bold;
     color: #3d7ebc;
 }

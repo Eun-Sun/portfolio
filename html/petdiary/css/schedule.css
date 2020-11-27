@@ -48,6 +48,7 @@ html{
     box-sizing: border-box;
     padding-top: .3rem;
     padding-left: .1rem;
+    margin-left: 1.2rem;
     width: 1.6rem;
     height: 1.6rem;
     background-color: #3d7ebc;
@@ -71,7 +72,8 @@ html{
     border: 0 none;
 }
 .tit{
-    margin-left: 2rem;
+    font-size: 1.3rem;
+    margin-left: .8rem;
     margin-bottom: 2rem;
 }
 .dates, .dates_1{
@@ -99,10 +101,10 @@ li.dates_1{
     background: url(../imgs/alarm-01.png) no-repeat 0 0;
     background-size: 1.8rem;
 }
-
-input#memo{
+#memo{
     position: relative;
-    height: 1.8rem;
+    height:4rem;
+    resize: none;
     background: url(../imgs/note.png) no-repeat 0 0;
     background-size: 1.8rem;
 }
@@ -214,9 +216,9 @@ input:checked + .slider:before {
 /* 아이콘메뉴바 */
 #icon_box{
     display: none;
-    position: absolute;
+    position: fixed;
     z-index: 100;
-    top: 48%;
+    bottom: 0;
 }
 main .day_L{
     width: 100vw;
@@ -252,7 +254,7 @@ main .day_L div.blue_B p:last-child img{
 
 
 /* 아이콘 */
-.icon_tab div{
+.icon_tab ul{
     display: flex;
     margin: 0 auto;
     margin-top: 2rem;
@@ -263,17 +265,17 @@ main .day_L div.blue_B p:last-child img{
 .icon_tab .second_L{
     margin-top: 4rem;
 }
-.icon_tab  p{
+.icon_tab  li{
     position: relative;
     flex: 1 0 auto;
     text-align: center;
 }
-.day_L a{
+.day_L{
     font-size: 1.2rem;
     color: black;
 }
 
-.day_L a span{
+.day_L span{
     position: absolute;
     bottom: 0; left: 33%;
 }

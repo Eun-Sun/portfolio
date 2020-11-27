@@ -2,8 +2,10 @@ main{
     height: 85vh;
 }
 main .day_L{
+    position: fixed;
+    bottom: 0;
     width: 100vw;
-    height: 90vw;
+    height: 100vw;
     background-color: white;
     border-radius: 4% 4% 0 0;
 }
@@ -36,28 +38,30 @@ main .day_L div.blue_B p:last-child a img{
 }
 
 /* 아이콘 */
-.icon_tab div{
+.icon_tab ul{
     display: flex;
     margin: 0 auto;
     margin-top: 2rem;
     width: 96vw;
-    height: 7rem;
+    height: 9rem;
     overflow: hidden;
 }
-.icon_tab  p{
+.icon_tab .second_L{
+    margin-top: 4rem;
+}
+.icon_tab  li{
     position: relative;
     flex: 1 0 auto;
     text-align: center;
 }
-.day_L a{
-    color: black;
-}
 
-.day_L a span{
+.day_L span{    
+    font-size: 1.2rem;
+    color: black;
     position: absolute;
     bottom: 0; left: 33%;
 }
 
 .day_L img{
-    width: 4rem;
+    width: 6rem;
 }

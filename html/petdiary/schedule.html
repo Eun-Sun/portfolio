@@ -5,6 +5,8 @@
         <meta
             name="viewport"
             content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <link rel="stylesheet" href="css/reset.css">      
         <link rel="stylesheet" href="css/schedule.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -48,6 +50,15 @@
                 $(".back_P").click(function(){
                     window.history.back();
                 });
+                $(".on").click(function(){
+                    $("span.on").text("OFF");
+                    $("span.on").css('color','rgb(109, 109, 109)');
+                    
+                });
+                $(".push_icon").click(function(){
+                    $(location).attr('href','icon.html');
+                    
+                });
             });
         </script>
     </head>
@@ -78,7 +89,7 @@
                                 이벤트 당일(9시)
                             </li>
                             <li>
-                                <input type="text" name="memo" id="memo" placeholder="메모" class="non dates_1">
+                                <textarea name="memo" id="memo" cols="30" rows="10" class="non dates_1" placeholder="메모"></textarea>
                             </li>
                                 <li class="select_box">
                                     <select name="repeat" id="repeat">
@@ -105,20 +116,20 @@
                     <p class="close"><img src="imgs/x.png" alt="닫기"></p>
                 </div>    
                 <div class="icon_tab">
-                    <div class="first_L">
-                        <p><a href="#"><img src="imgs/icon_c-05.png" alt="고양이"><span>고양이</span></a></p>
-                        <p><a href="#"><img src="imgs/icon_c-01.png" alt="주사"><span>주사</span></a></p>
-                        <p><a href="#"><img src="imgs/icon_c-06.png" alt="이동"><span>이동</span></a></p>
-                        <p><a href="#"><img src="imgs/icon_c-08.png" alt="빗질"><span>빗질</span></a></p>
-                        <p><a href="#"><img src="imgs/icon_c-09.png" alt="약"><span>약</span></a></p>
-                    </div>
-                    <div class="second_L">
-                        <p><a href="#"><img src="imgs/icon_c-02.png" alt="양치"><span>양치</span></a></p>
-                        <p><a href="#"><img src="imgs/icon_c-03.png" alt="화장실"><span>화장실</span></a></p>
-                        <p><a href="#"><img src="imgs/icon_c-04.png" alt="샤워"><span>샤워</span></a></p>
-                        <p><a href="#"><img src="imgs/icon_c-07.png" alt="병원"><span>병원</span></a></p>
-                        <p><a href="#"><img src="imgs/icon_c-10.png" alt="사료"><span>사료</span></a></p>
-                    </div>
+                    <ul class="first_L">
+                        <li class="push_icon"><img src="imgs/icon_c-05.png" alt="고양이"><span>고양이</span></li>
+                        <li class="push_icon"><img src="imgs/icon_c-01.png" alt="주사"><span>주사</span></li>
+                        <li class="push_icon"><img src="imgs/icon_c-06.png" alt="이동"><span>이동</span></li>
+                        <li class="push_icon"><img src="imgs/icon_c-08.png" alt="빗질"><span>빗질</span></li>
+                        <li class="push_icon"><img src="imgs/icon_c-09.png" alt="약"><span>약</span></li>
+                    </ul>
+                    <ul class="second_L">
+                        <li class="push_icon"><img src="imgs/icon_c-02.png" alt="양치"><span>양치</span></li>
+                        <li class="push_icon"><img src="imgs/icon_c-03.png" alt="화장실"><span>화장실</span></li>
+                        <li class="push_icon"><img src="imgs/icon_c-04.png" alt="샤워"><span>샤워</span></li>
+                        <li class="push_icon"><img src="imgs/icon_c-07.png" alt="병원"><span>병원</span></li>
+                        <li class="push_icon"><img src="imgs/icon_c-10.png" alt="사료"><span>사료</span></li>
+                    </ul>
                 </div>
             </div>
         </main>

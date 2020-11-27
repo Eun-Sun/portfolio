@@ -1,36 +1,39 @@
+html{
+    font-size: 62.5%;
+}
 header.first_H{
     position: relative;
     padding-top: 0.1rem;
     width: 100vw;
-    height: 6.9rem;
+    height: 8.5rem;
     background: #3d7ebc;
 }
 header.first_H>h1{
     margin-top: 2rem;
     text-align: center;
-    font-size: 1.4rem;
-    font-weight: bold;
+    font-size: 2rem;
+    font-weight: 500;
     color: white;
 }
 header.first_H>p{
     position: absolute;
     left: 1.5rem; top: 2rem;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 2rem;
+    height: 2rem;
     background: url(../imgs/menu.png) no-repeat 0 0;
-    background-size: 1.5rem;
+    background-size: 2rem;
     cursor: pointer;
 }
 header.first_H>div{
     display: flex;
     justify-content: space-around;
-    margin-top: 1rem;
+    margin-top: 1.8rem;
 }
 header.first_H>div>a>img{
-    width: 1.8rem;
+    width: 2.5rem;
 }
 header.first_H>div>a:last-of-type>img{
-    width: 1.6rem;
+    width: 2.1rem;
 }
 
 main{
@@ -38,11 +41,11 @@ main{
 }
 .calendar-container .week{    
     position: absolute;
-    right: 1.5rem; top: 0.8rem;
+    right: 2.2rem; top: 0.8rem;
     z-index: 100;
 }
 .calendar-container .week img{
-    width: 1.8rem;
+    width: 2.2rem;
     cursor: pointer;
 }
 
