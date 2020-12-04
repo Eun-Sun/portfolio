@@ -55,7 +55,7 @@
             //여러개 한번에 고르려먄 class 설정하는게 좋음
 
             //트래벌싱과 메소드 체이닝
-            $("h1").css({"color":"green","font-size":30}).next().next().css("font-size",50).nextAll().last().css("text-decoration","underline").prevAll().first().css("border","1px solid green");
+            $("h1").css({"color":"green","font-size":30}).next().next().css("font-size",50).nextAll().last().css("text-decoration","underline").prevAll().first().css("border","1px solid green").prevAll("ul").children("li").eq(1).find("li").not("li:eq(1)").css("border","1px solid green");
         });
     </script>
 </head>
