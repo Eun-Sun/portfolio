@@ -4,104 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/Mheader.css">
 
     <title>LOTTE FOOD</title>
+    <style>      
+        body{
+            font-size: 62.5%;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        
+    </style>
 
 </head>
 <body>
     <header>
         <h1 class="hidden">롯데푸드 메인페이지</h1>
-        <div>
-            <h1><img srcset="imgs/icon/lotte-w.png, imgs/icon/lotte-w@2x.png, imgs/icon/lotte-w@3x.png" src="imgs/icon/lotte-w.png" alt="롯데푸드로고"></h1>
-            <dl>
-                <dd class="hidden">언어선택</dd>
-                <dt>KOR</dt>
-                <dt>ENG</dt>
-                <dt>中國語</dt>
-            </dl>
-            <nav>
-                <h1 class="hidden">메인네비게이션</h1>
-                <ul>
-                    <li>
-                        <a href="#">ABOUT</a>
-                        <dl>
-                            <dt><a href="#">롯데푸드</a></dt>
-                            <dd><a href="#">기업소개</a></dd>
-                            <dd><a href="#">기업이념</a></dd>
-                            <dd><a href="#">기업연혁</a></dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <a href="#">BRAND</a>
-                        <div>
-                            <dl>
-                                <dt><a href="#">아이스크림</a></dt>
-                                <dd><a href="#">구구</a></dd>
-                                <dd><a href="#">빠삐코</a></dd>
-                                <dd><a href="#">라베스트</a></dd>
-                                <dd><a href="#">더보기</a></dd>                            
-                            </dl>
-                            <dl>
-                                <dt><a href="#">가정간편식</a></dt>
-                                <dd><a href="#">제로미트</a></dd>
-                                <dd><a href="#">쉐푸드</a></dd>
-                                <dd><a href="#">라퀴진</a></dd>                            
-                            </dl>
-                            <dl>
-                                <dt><a href="#">유가공</a></dt>
-                                <dd><a href="#">파스퇴르</a></dd>
-                                <dd><a href="#">아이생각</a></dd>
-                                <dd><a href="#">쾌변</a></dd>
-                                <dd><a href="#">위드맘</a></dd>                            
-                            </dl>
-                            <dl>
-                                <dt><a href="#">육가공</a></dt>
-                                <dd><a href="#">의성마늘햄</a></dd>
-                                <dd><a href="#">엔네이처</a></dd>
-                                <dd><a href="#">K·로스팜</a></dd>
-                                <dd><a href="#">롯데비엔나</a></dd>                            
-                                <dd><a href="#">키스틱</a></dd>                            
-                            </dl>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#">PRODUCT</a>
-                        <dl>
-                            <dt><a href="#">신제품</a></dt>
-                            <dd><a href="#">전체보기</a></dd>
-                            <dd><a href="#">아이스크림</a></dd>
-                            <dd><a href="#">유가공</a></dd>
-                            <dd><a href="#">육가공</a></dd>                            
-                            <dd><a href="#">원두</a></dd>                            
-                        </dl>
-                    </li>
-                    <li>
-                        <a href="#">COMMUNITY</a>
-                        <div>
-                            <dl>
-                                <dt>공지&보도자료</dt>
-                                <dl>공지사항</dl>
-                                <dl>보도자료</dl>
-                            </dl>
-                            <dl>
-                                <dt>자주찾는질문</dt>
-                            </dl>
-                            <dl>
-                                <dt>고객센터</dt>
-                            </dl>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="https://www.pasteurmall.com/index.do?SSL=Y">MALL</a>
-                    </li>
-                </ul>
-            </nav>
-            <form action="lotteF.jsp">
-                <fieldset>
-                    <input type="search" name="proD" id="proD" placeholder="검색">
-                    <input type="image" srcset="imgs/icon/search-g.png 16w, imgs/icon/search-g@2x.png 31w, imgs/icon/search-g@3x.png 46w" src="imgs/icon/search-g.png" alt="검색">
-                </fieldset>
-            </form>
+        <div class="head">
+                <h1><img srcset="imgs/icon/lotte-w.png, imgs/icon/lotte-w@2x.png, imgs/icon/lotte-w@3x.png" src="imgs/icon/lotte-w.png" alt="롯데푸드로고"></h1>
+                <dl class="lang">
+                    <dt class="hidden">언어선택</dt>
+                    <dd>KOR</dd>
+                    <dd>ENG</dd>
+                    <dd>中國語</dd>
+                </dl>
+                <nav>
+                    <h1 class="hidden">메인네비게이션</h1>
+                    <ul>
+                        <li>
+                            <a href="#">ABOUT</a>
+                            <div>
+                                <dl>
+                                    <dt><a href="#">롯데푸드</a></dt>
+                                    <dd><a href="#">기업소개</a></dd>
+                                    <dd><a href="#">기업이념</a></dd>
+                                    <dd><a href="#">기업연혁</a></dd>
+                                </dl>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">BRAND</a>
+                            <div>
+                                <dl>
+                                    <dt><a href="#">아이스크림</a></dt>
+                                    <dd><a href="#">구구</a></dd>
+                                    <dd><a href="#">빠삐코</a></dd>
+                                    <dd><a href="#">라베스트</a></dd>
+                                    <dd><a href="#">더보기</a></dd>                            
+                                </dl>
+                                <dl>
+                                    <dt><a href="#">가정간편식</a></dt>
+                                    <dd><a href="#">제로미트</a></dd>
+                                    <dd><a href="#">쉐푸드</a></dd>
+                                    <dd><a href="#">라퀴진</a></dd>                            
+                                </dl>
+                                <dl>
+                                    <dt><a href="#">유가공</a></dt>
+                                    <dd><a href="#">파스퇴르</a></dd>
+                                    <dd><a href="#">아이생각</a></dd>
+                                    <dd><a href="#">쾌변</a></dd>
+                                    <dd><a href="#">위드맘</a></dd>                            
+                                </dl>
+                                <dl>
+                                    <dt><a href="#">육가공</a></dt>
+                                    <dd><a href="#">의성마늘햄</a></dd>
+                                    <dd><a href="#">엔네이처</a></dd>
+                                    <dd><a href="#">K·로스팜</a></dd>
+                                    <dd><a href="#">롯데비엔나</a></dd>                            
+                                    <dd><a href="#">키스틱</a></dd>                            
+                                </dl>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">PRODUCT</a>
+                            <div>
+                                <dl>
+                                    <dt><a href="#">신제품</a></dt>
+                                    <dd><a href="#">전체보기</a></dd>
+                                    <dd><a href="#">아이스크림</a></dd>
+                                    <dd><a href="#">유가공</a></dd>
+                                    <dd><a href="#">육가공</a></dd>                            
+                                    <dd><a href="#">원두</a></dd>                            
+                                </dl>
+                            </div>    
+                        </li>
+                        <li>
+                            <a href="#">COMMUNITY</a>
+                            <div>
+                                <dl>
+                                    <dt><a href="#">공지&보도자료</a></dt>
+                                    <dl><a href="#">공지사항</a></dl>
+                                    <dl><a href="#">보도자료</a></dl>
+                                </dl>
+                                <dl>
+                                    <dt><a href="#">자주찾는질문</a></dt>
+                                </dl>
+                                <dl>
+                                    <dt><a href="#">고객센터</a></dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li><a href="https://www.pasteurmall.com/index.do?SSL=Y">MALL</a>
+                        </li>
+                    </ul>
+                </nav>
+                <form action="lotteF.jsp">
+                    <fieldset>
+                        <input type="search" name="proD" id="proD" placeholder="검색">
+                        <input type="image" srcset="imgs/icon/search-g.png 16w, imgs/icon/search-g@2x.png 31w, imgs/icon/search-g@3x.png 46w" src="imgs/icon/search-g.png" alt="검색">
+                    </fieldset>
+                </form> 
         </div>
     </header>
     <main>
