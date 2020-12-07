@@ -1,6 +1,9 @@
-header{
+header{    
+    font-family: 'Noto Sans KR', sans-serif;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 9999;
     width: 100vw;
-    background-color: green;
 }
 header>div.head{
     display: flex;
@@ -8,9 +11,10 @@ header>div.head{
     align-items: center;
     margin: 0 auto;
     padding-top: 3rem;
+    padding-bottom: 3rem;
     width: 132rem;
-    height: 12rem;
-    box-sizing: border-box;
+    height: 6rem;
+    font-weight: 700;
 }
 
 /* 로고&언어유틸메뉴 */
@@ -20,16 +24,20 @@ header div.head h1{
 
 header div.head dl.lang{
     flex: 0 0 auto;
-    padding-left: 2rem;
-    padding-right: 1rem;
+    padding-left: 2.5rem;
+    padding-right: 1.5rem;
     margin-left: 2.5rem;
     margin-top: 1.5rem;
     height: 2.6rem;
     font-size: 1.1rem;
     line-height: 1.6rem;
+    box-sizing: border-box;
     color: #fff;
     background: url(../imgs/icon/global.png) no-repeat 0 0,
-                url(../imgs/icon/arrow-down.png) no-repeat 98% 32% ;
+                url(../imgs/icon/arrow-down.png) no-repeat 5.5rem 25%;
+}
+header div.head dl.lang>dd{
+    width: 5rem;
 }
 header div.head dl.lang>dd:not(:nth-child(2)){
     display: none;
@@ -39,10 +47,10 @@ header div.head dl.lang>dd:not(:nth-child(2)){
 /* 네비게이션 */
 header nav{    
     flex: 1 0 auto;
-    margin-left: 18%;
+    margin-left:15%;
 }
 header nav>ul{
-    width: 52rem;
+    width: 52.5rem;
     display: flex;
     justify-content: space-between;
 }
@@ -70,7 +78,25 @@ header nav>ul>li dl>dd>a{
 
 /* 검색창 */
 header form{}
-header form>fieldset{}
-header form>fieldset>input{}
-header form>fieldset>input[type="search"]{}
-header form>fieldset>input[type="image"]{}
+header form>fieldset{
+    position: relative;
+}
+header form>fieldset>input[type="search"]{
+    appearance: none;
+    border: 0 none;
+    padding: 1rem;
+    width: 13rem;
+    height: 2rem;
+    border-radius: 1.2rem;
+}
+header form>fieldset>input[type="image"]{
+    position: absolute;
+    top: 25%; right: 5%;
+}
+
+
+
+/* 이벤트 */
+header div.head dl.lang:hover>dd{
+    display: block;
+}
