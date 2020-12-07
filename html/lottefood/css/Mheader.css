@@ -9,7 +9,8 @@ header>div.head{
     margin: 0 auto;
     padding-top: 3rem;
     width: 132rem;
-    height: 11.5rem;
+    height: 12rem;
+    box-sizing: border-box;
 }
 
 /* 로고&언어유틸메뉴 */
@@ -22,7 +23,7 @@ header div.head dl.lang{
     padding-left: 2rem;
     padding-right: 1rem;
     margin-left: 2.5rem;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     height: 2.6rem;
     font-size: 1.1rem;
     line-height: 1.6rem;
