@@ -132,7 +132,7 @@ div.brand section h1::after{
     content: "";
     position: absolute;
     bottom: 0; left: 25%;
-    width: 4rem; height: .15rem;
+    width: 4rem; height: .2rem;
     background-color: #e30013;
 }
 div.brand section>p:first-of-type{
