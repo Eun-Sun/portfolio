@@ -25,19 +25,24 @@ header div.head h1{
 header div.head dl.lang{
     flex: 0 0 auto;
     padding-left: 2.5rem;
-    padding-right: 1.5rem;
+    padding-right: 1rem;
     margin-left: 2.5rem;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     height: 2.6rem;
-    font-size: 1.1rem;
-    line-height: 1.6rem;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
     box-sizing: border-box;
     color: #fff;
-    background: url(../imgs/icon/global.png) no-repeat 0 0,
-                url(../imgs/icon/arrow-down.png) no-repeat 5.5rem 25%;
+    background: url(../imgs/SVG/global.svg) no-repeat 0 0;
+    background-size: 22%;
 }
 header div.head dl.lang>dd{
+    padding-left: .5rem;
     width: 5rem;
+}
+header div.head dl.lang>dd:nth-child(2){
+    background: url(../imgs/SVG/arrow-d.svg) no-repeat 88% 50%;
+    background-size: 15%;
 }
 header div.head dl.lang>dd:not(:nth-child(2)){
     display: none;
@@ -84,6 +89,7 @@ header form>fieldset{
 header form>fieldset>input[type="search"]{
     appearance: none;
     border: 0 none;
+    outline: none;
     padding: 1rem;
     width: 13rem;
     height: 2rem;
