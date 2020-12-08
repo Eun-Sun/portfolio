@@ -65,7 +65,7 @@ main aside.banner_F>div>p{
     float: left;
     width: 2.5rem;
     height: 2.5rem;
-    background: url(../imgs/svg/play-b.svg) no-repeat 0 0;
+    background: url(../imgs/SVG/play-b.svg) no-repeat 0 0;
 }
 main aside.banner_F>div>ul{
     width: 17.4rem;
@@ -156,7 +156,7 @@ div.brand section p a{
     font-size: 1.8rem;
     line-height: 4rem;
     color: #e30013;
-    background: url(../imgs/svg/arrow-r.svg) no-repeat 90% 50%;
+    background: url(../imgs/SVG/arrow-r.svg) no-repeat 90% 50%;
     background-size: 3.2rem;
 }
 
