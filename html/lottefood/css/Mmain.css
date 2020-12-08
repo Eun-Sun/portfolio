@@ -1,32 +1,34 @@
 main{
     font-family: 'Noto Sans KR', sans-serif;
 }
+
+/* 배너 */
 main aside.banner_F{
+    position: relative;
+    min-height: 83.3rem;
 }
 main aside.banner_F>ul{
-    position: relative;
-    width: 100vw;
-    min-height: 83.4rem;
 }
-main aside.banner_F>ul li{
+main aside.banner_F>ul>li{
     position: absolute;
     width: 100%;
-    min-height: 83.4rem;
+    min-height: 83.3rem;
     font-weight: 500;
+    opacity: 0;
+    transition: all .3s ease;
 }
-main aside>ul li:first-child{  
-    z-index: 10;  
+main aside>ul>li.ban1{  
+    background: lightpink;
+}
+main aside>ul>li.ban2{  
     background: url(../imgs/kid-milk.jpg) no-repeat center/cover;
-}
-main aside>ul li:nth-child(2){  
-    z-index: 6;
 
 }
-main aside>ul li:nth-child(3){  
-    z-index: 3;
+main aside>ul>li.ban3{  
+    background: lightskyblue;
 
 }
-main aside.banner_F>ul li>div{
+main aside.banner_F>ul.bannerB>li>div{
     margin: 0 auto;
     padding-top: 36.3rem;
     max-width: 132rem;
@@ -36,9 +38,25 @@ main aside.banner_F>ul li>div{
     color: #fff;
 }
 
+main aside.banner_F>ul>li.on{z-index: 10; opacity: 1;}
+
+/* 이전, 다음버튼 */
+main aside.banner_F>p img{
+    position: absolute;
+    z-index: 15;
+    height: 5rem;
+}
+main aside.banner_F p.prev img{
+    top: 50%; left:calc(100vw - 95%);
+}
+main aside.banner_F p.next img{
+    top: 50%; right: calc(100vw - 95%);
+
+}
+/* 배너버튼 */
 main aside.banner_F>div{
     position: absolute;
-    left: calc(100vw - 57%); bottom: 6.8rem;
+    left: calc(100vw - 50% - 11rem); bottom: 6.8rem;
     z-index: 11;
     overflow: hidden;
 }
@@ -49,14 +67,14 @@ main aside.banner_F>div>p{
     height: 2.5rem;
     background: url(../imgs/svg/play-b.svg) no-repeat 0 0;
 }
-main aside.banner_F>div ul{
+main aside.banner_F>div>ul{
     width: 17.4rem;
     height: 2.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-main aside.banner_F>div ul li{
+main aside.banner_F>div>ul>li{
     flex: 0 0 auto;
     width: 5.3rem;
     height: .5rem;
@@ -64,13 +82,14 @@ main aside.banner_F>div ul li{
     border-radius: 2rem;
     box-sizing: border-box;
 }
-main aside.banner_F>div ul li:first-child{
+main aside.banner_F>div>ul>li.ban02{
     background-color: #fff;
 }
 
-main aside.banner_F>p{
+/* 스크롤버튼 */
+main aside.banner_F>p.scroll{
     position: absolute;
-    left: calc(100vw - 54%); bottom: 0;
+    left: calc(100vw - 50% - 5.5rem); bottom: 0;
     z-index: 12;
     width: 11rem; height: 4rem;
     border-radius: .5rem .5rem 0 0;
@@ -84,6 +103,8 @@ main aside.banner_F>p{
     background-color: #e30013;
 
 }
+
+/* 브랜드소개 */
 
 div.brand{
 }
@@ -104,7 +125,7 @@ div.brand section h1::before{
     content: "";
     position: absolute;
     top: 0; left: 25%;
-    width: 4rem; height: .1rem;
+    width: 4rem; height: .2rem;
     background-color: #e30013;
 }
 div.brand section h1::after{
@@ -115,14 +136,15 @@ div.brand section h1::after{
     background-color: #e30013;
 }
 div.brand section>p:first-of-type{
+    margin: 0 auto;
     font-size: 3.2rem;
     line-height: 5.2rem;
     color: #606060;
 }
 div.brand section p:nth-of-type(2){
     display: inline-block;
-    width: 15rem;
-    height: 5rem;
+    width: 14rem;
+    height: 4rem;
     margin-top: 7.6rem;
     border: .1rem solid #e30013;
     box-sizing: border-box;
@@ -130,18 +152,61 @@ div.brand section p:nth-of-type(2){
 }
 div.brand section p a{
     display: block;
-    padding:0 3rem;
+    padding:0 2.5rem;
     font-size: 1.8rem;
-    line-height: 4.8rem;
+    line-height: 4rem;
     color: #e30013;
     background: url(../imgs/svg/arrow-r.svg) no-repeat 90% 50%;
     background-size: 3.2rem;
 }
-div.brand section ul{}
-div.brand section ul li a img{}
 
-div.banner_c{}
-div.banner_c aside{}
+/* 브랜드 3가지 */
+div.brand section ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 10rem;
+    margin-bottom: 9rem;
+    width: 52%;
+}
+
+div.brand section ul li {
+    flex: 0 0 auto;
+    width: 25rem;
+    height: 25rem;
+    text-align: center;
+}
+div.brand section ul li:nth-child(1){
+    background: url(../imgs/milk.jpg) no-repeat 0 0;
+}
+div.brand section ul li:nth-child(2){
+    background: url(../imgs/img_rosfarm.jpg) no-repeat 0 0;
+}
+div.brand section ul li:nth-child(3){
+    background: url(../imgs/img_pigs.jpg) no-repeat 0 0;
+}
+div.brand section ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+div.brand section ul li:not(:last-child) a img{
+    padding-top: 40%;
+}
+div.brand section ul li:last-child a img{
+    padding-top: 30%;
+}
+
+
+/* 파스퇴르 배너 */
+div.banner_c{
+}
+div.banner_c aside{
+    width: 100vw;
+    min-height: 83.3rem;
+    background: url(../imgs/cow-milk.jpg) no-repeat center/cover;
+}
 div.banner_c aside h1 img{}
 div.banner_c aside p{}
 

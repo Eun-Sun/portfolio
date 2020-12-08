@@ -4,19 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">    
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/Mheader.css">
-    <link rel="stylesheet" href="css/Mmain.css">
-
-    <title>LOTTE FOOD</title>
     <style>      
         body{
             font-size: 62.5%;
             font-family: 'Noto Sans KR', sans-serif;
-        }
-        
+        }        
     </style>
+    <link rel="stylesheet" href="css/Mheader.css">
+    <link rel="stylesheet" href="css/Mmain.css">
+
+    <title>LOTTE FOOD</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(".prev").click(function(){
+                $(".bannerB").prepend($(".bannerB").children().last());                
+                $(".bannerB").children("li.on").removeClass("on");
+                $(".bannerB").children("li").eq(1).addClass("on");
+
+                $(".banner").append($(".banner").children().first());
+                $(".banner").children("li.on").removeClass("on");
+                $(".banner").children("li").eq(1).addClass("on");
+                
+            });
+
+            $(".next").click(function(){
+                $(".bannerB").append($(".bannerB").children().first());
+                $(".bannerB").children("li.on").removeClass("on");
+                $(".bannerB").children("li").eq(1).addClass("on");
+
+                $(".banner").prepend($(".banner").children().last());   
+                $(".banner").children("li.on").removeClass("on");
+                $(".banner").children("li").eq(1).addClass("on");
+            });
+        });
+    </script>
 
 </head>
 <body>
@@ -122,26 +146,39 @@
         <h1 class="hidden">메인페이지</h1>
         <aside class="banner_F">
             <h1 class="hidden">메인배너</h1>
-            <ul>
-                <li>
+            <ul class="bannerB">
+                <li class="ban1">
+                    <div>
+                        배너1 <br>
+                        들어갈예정~
+                    </div>
+                    
+                </li>
+                <li class="ban2 on">
                     <div>
                         정직함을 담은 즐거운 먹거리로 <br>
                         풍요로운 식문화 트렌드를 이끌어갑니다.
                     </div>
                 </li>
-                <li></li>
-                <li></li>
+                <li class="ban3">
+                    <div>
+                        배너3 <br>
+                        들어갈예정~
+                    </div>
+                </li>
             </ul>
+            <p class="prev"><img src="imgs/SVG/arrow-prev.svg" alt="이전으로"></p>
+            <p class="next"><img src="imgs/SVG/arrow-next.svg" alt="다음으로"></p>
             <div>
                 <p><span class="hidden">플레이버튼</span></p>
-                <ul>
-                    <li><span class="hidden">0번째 배너</span></li>
-                    <li><span class="hidden">1번째 배너</span></li>
-                    <li><span class="hidden">2번째 배너</span></li>
+                <ul class="banner">
+                    <li class="ban01"><span class="hidden">0번째 배너</span></li>
+                    <li class="ban02 on"><span class="hidden">1번째 배너</span></li>
+                    <li class="ban03"><span class="hidden">2번째 배너</span></li>
                 </ul>
             </div>
             
-            <p>SCROLL</p>
+            <p class="scroll">SCROLL</p>
         </aside>
         <div class="brand">
             <section>
@@ -151,9 +188,9 @@
                 </p>
                 <p><a href="#">MORE</a></p>
                 <ul>
-                    <li><a href="#"><img srcset="imgs/icon/pasteur-line.png, imgs/icon/pasteur-line@2x.png, imgs/icon/pasteur-line@3x.png" src="imgs/icon/" alt="파스퇴르"></a></li>
-                    <li><a href="#"><img src="imgs/icon/kloss.png" alt="K·로스팜"></a></li>
-                    <li><a href="#"><img src="imgs/icon/pigbar.png" alt="돼지바"></a></li>
+                    <li><a href="#"><img srcset="imgs/icon/pasteur-line.png, imgs/icon/pasteur-line@2x.png, imgs/icon/pasteur-line@3x.png" src="imgs/icon/pasteur-line.png" alt="파스퇴르"></a></li>
+                    <li><a href="#"><img srcset="imgs/icon/kloss.png, imgs/icon/kloss@2x.png, imgs/icon/kloss@3x.png" src="imgs/icon/kloss.png" alt="K·로스팜"></a></li>
+                    <li><a href="#"><img srcset="imgs/icon/pigbar.png, imgs/icon/pigbar@2x.png, imgs/icon/pigbar@3x.png" src="imgs/icon/pigbar.png" alt="돼지바"></a></li>
                 </ul>
             </section>
         </div>
