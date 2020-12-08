@@ -104,15 +104,15 @@ main aside.banner_F>p.scroll{
 
 }
 
-/* 브랜드소개 */
+/* 브랜드, 신제품 소개 */
 
 div.brand{
 }
-div.brand section{
+div.common section{
     margin-top: 9rem;
     text-align: center;
 }
-div.brand section h1{
+div.common section h1{
     position: relative;
     display: inline-block;
     margin-bottom: 5.6rem;
@@ -121,27 +121,33 @@ div.brand section h1{
     font-weight: 900;
     color: #e30013;
 }
-div.brand section h1::before{
+div.common section h1::before{
     content: "";
     position: absolute;
-    top: 0; left: 25%;
     width: 4rem; height: .2rem;
     background-color: #e30013;
 }
-div.brand section h1::after{
+div.common section h1::after{
     content: "";
     position: absolute;
     bottom: 0; left: 25%;
     width: 4rem; height: .2rem;
     background-color: #e30013;
 }
-div.brand section>p:first-of-type{
+div.brand section h1::before{
+    top: 0; left: 25%;
+}
+div.brand section h1::after{
+    bottom: 0; left: 25%;
+}
+div.common section>p:first-of-type{
     margin: 0 auto;
     font-size: 3.2rem;
     line-height: 5.2rem;
     color: #606060;
 }
-div.brand section p:nth-of-type(2){
+/* 더보기 */
+div.common section p:nth-of-type(2){
     display: inline-block;
     width: 14rem;
     height: 4rem;
@@ -150,7 +156,7 @@ div.brand section p:nth-of-type(2){
     box-sizing: border-box;
     text-align: start;
 }
-div.brand section p a{
+div.common section p a{
     display: block;
     padding:0 2.5rem;
     font-size: 1.8rem;
@@ -168,7 +174,7 @@ div.brand section ul{
     margin: 0 auto;
     margin-top: 10rem;
     margin-bottom: 9rem;
-    width: 52%;
+    width: 50%;
 }
 
 div.brand section ul li {
@@ -201,25 +207,68 @@ div.brand section ul li:last-child a img{
 
 /* 파스퇴르 배너 */
 div.banner_c{
-}
-div.banner_c aside{
-    width: 100vw;
     min-height: 83.3rem;
     background: url(../imgs/cow-milk.jpg) no-repeat center/cover;
 }
-div.banner_c aside h1 img{}
-div.banner_c aside p{}
+div.banner_c aside{
+    margin: 0 auto;
+    padding-top: 9.5rem;
+    width: 50%;
+}
+div.banner_c aside h1 img{
+    width: 22rem;
+}
+div.banner_c aside p{
+    margin-top: 15rem;
+    font: 400 4.8rem/6rem sans-serif;
+    color: #fff;
+}
 
+/* 신제품 */
 div.product{}
-div.product section{}
-div.product section h1{}
-div.product section p{}
-div.product section p a{}
-div.product section>ul{}
-div.product section>ul>li span{}
-div.product section>ul>li>ul{}
-div.product section>ul>li>ul>li>a img{}
 
+div.product section h1::before{
+    top: 0; left: 35%;
+}
+div.product section h1::after{
+    bottom: 0; left: 35%;
+}
+div.product section>ul{
+    margin: 0 auto;
+    margin-top: 9rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+
+}
+div.product section>ul>li span{
+    font-size: 2.2rem;
+}
+div.product section>ul>li>ul{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 5rem; left: 0;
+}
+div.product section>ul>li>ul>li{
+    flex: 0 0 auto;
+    opacity: 0;
+
+}
+div.product section>ul>li.on>ul>li{
+    opacity: 1; z-index: 100;
+}
+div.product section>ul>li>ul>li{
+    
+
+}
+div.product section>ul>li>ul>li>a img{
+}
+
+
+/* sns */
 div.sns{}
 div.sns section{}
 div.sns section h1{}
