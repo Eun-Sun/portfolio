@@ -130,7 +130,6 @@ div.common section h1::before{
 div.common section h1::after{
     content: "";
     position: absolute;
-    bottom: 0; left: 25%;
     width: 4rem; height: .2rem;
     background-color: #e30013;
 }
@@ -173,14 +172,14 @@ div.brand section ul{
     align-items: center;
     margin: 0 auto;
     margin-top: 10rem;
-    margin-bottom: 9rem;
-    width: 50%;
+    margin-bottom: 10rem;
+    width: 55%;
 }
 
 div.brand section ul li {
     flex: 0 0 auto;
-    width: 25rem;
-    height: 25rem;
+    width: 40rem;
+    height: 40rem;
     text-align: center;
 }
 div.brand section ul li:nth-child(1){
@@ -225,8 +224,8 @@ div.banner_c aside p{
 }
 
 /* 신제품 */
-div.product{}
-
+div.product{
+}
 div.product section h1::before{
     top: 0; left: 35%;
 }
@@ -234,15 +233,20 @@ div.product section h1::after{
     bottom: 0; left: 35%;
 }
 div.product section>ul{
+    position: relative;
     margin: 0 auto;
     margin-top: 9rem;
-    padding-bottom: 1.8rem;
-    position: relative;
+    margin-bottom: 9rem;
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    width: 50%;
-
+    align-items: flex-start;
+    width: 55%;
+    height: 40rem;
+}
+div.product section>ul>li{
+    flex: 1 1 auto;
+    padding-bottom: 2rem;
+    border: 1px solid green;
 }
 div.product section>ul>li span{
     font-size: 2.2rem;
@@ -250,37 +254,102 @@ div.product section>ul>li span{
 }
 div.product section>ul>li>ul{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     position: absolute;
-    top: 8rem; left: 0;
+    top: 10rem; left: 0;
     width: 100%;
 }
 div.product section>ul>li>ul>li{
-    flex: 0 0 auto;
+    flex: 1 0 auto;
     opacity: 0;
 
 }
-div.product section>ul>li.on>ul>li{
+div.product section>ul>li.on1>ul>li{
     opacity: 1; z-index: 100;
 }
-div.product section>ul>li>ul>li{
-    
 
-}
 div.product section>ul>li>ul>li>a img{
-    width: 110%;
 }
 
 
 /* sns */
-div.sns{}
-div.sns section{}
-div.sns section h1{}
-div.sns section>ul{}
-div.sns section>ul>li{}
-div.sns section>ul>li>span{}
-div.sns section>ul>li>ul{}
-div.sns section>ul>li>ul>li{}
-div.sns section>ul>li>ul>li>span{}
-div.sns section>ul>li>ul>li>ul{}
-div.sns section>ul>li>ul>li>ul>li a img{}
+div.sns{
+    background: #EFEFEF;
+    padding-top: .1rem;
+    height: 90rem;
+}
+div.sns section{
+    margin-top: 8.9rem;
+}
+div.sns section h1::before{
+    top: 0; left: 42%;
+}
+div.sns section h1::after{
+    bottom: 0; left: 42%;
+}
+div.sns section>ul{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 55%;
+}
+div.sns section>ul>li{
+    flex: 1 1 auto;
+    padding-bottom: 2rem;
+
+}
+div.sns section>ul>li>span{
+    font: 400 2.2rem/2.2rem sans-serif;
+}
+div.sns section>ul>li>ul{
+    display: flex;
+    margin-top: 5rem;
+    font-size: 1.8rem;
+    line-height: 3.6rem;
+}
+div.sns section>ul>li>ul>li{    
+    flex: 0 1 auto;
+}
+div.sns section>ul>li>ul>li>span{
+    margin-right: 1rem;
+    padding: .6rem 2.8rem;
+    border: .2rem solid #A5A5A5;
+    border-radius: 6rem;
+    color: #606060;
+}
+div.sns section>ul>li>ul>li a{
+    color: #606060;
+    display: block;
+}
+div.sns section>ul>li>ul>li a img{
+    width: 33rem;
+}
+div.sns section>ul>li.blog>ul{
+    position: absolute;
+    top: 14.5rem; left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+div.sns section>ul>li>ul>li>ul{
+    display: flex;
+    position: absolute;
+    top: 18rem; left: 0;
+}
+div.sns section>ul>li>ul>li>ul>li>a{
+    display: block;
+}
+div.sns section>ul>li>ul>li>ul>li>a>img{
+    width: 33rem;
+}
+
+div.sns section>ul>li>ul.links>li>a>span{
+    box-sizing: border-box;
+    margin-right: 1rem;
+    padding: .6rem 2.8rem;
+    border: .2rem solid #A5A5A5;
+    border-radius: 6rem;
+    color: #606060;
+
+}

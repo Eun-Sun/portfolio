@@ -1,3 +1,4 @@
+
 header{    
     font-family: 'Noto Sans KR', sans-serif;
     position: absolute;
@@ -12,18 +13,18 @@ header>div.head{
     margin: 0 auto;
     padding-top: 3rem;
     padding-bottom: 3rem;
-    width: 132rem;
+    width: 1320px;
     height: 6rem;
     font-weight: 700;
 }
 
 /* 로고&언어유틸메뉴 */
 header div.head h1{
-    flex: 0 0 auto;
+    flex: 0 1 auto;
 }
 
 header div.head dl.lang{
-    flex: 0 0 auto;
+    flex: 0 1 auto;
     padding-left: 2.5rem;
     padding-right: 1rem;
     margin-left: 2.5rem;
@@ -51,7 +52,7 @@ header div.head dl.lang>dd:not(:nth-child(2)){
 
 /* 네비게이션 */
 header nav{    
-    flex: 1 0 auto;
+    flex: 1 1 auto;
     margin-left:15%;
 }
 header nav>ul{
@@ -60,7 +61,7 @@ header nav>ul{
     justify-content: space-between;
 }
 header nav>ul>li{
-    flex: 0 0 auto;
+    flex: 0 1 auto;
 }
 header nav>ul>li>a{
     font-size: 1.4rem;
@@ -82,7 +83,9 @@ header nav>ul>li dl>dd>a{
     color: #fff;}
 
 /* 검색창 */
-header form{}
+header form{
+    flex: 0 1 auto;
+}
 header form>fieldset{
     position: relative;
 }
@@ -91,13 +94,13 @@ header form>fieldset>input[type="search"]{
     border: 0 none;
     outline: none;
     padding: 1rem;
-    width: 13rem;
-    height: 2rem;
+    width: 15rem;
+    height: 2.5rem;
     border-radius: 1.2rem;
 }
 header form>fieldset>input[type="image"]{
     position: absolute;
-    top: 25%; right: 5%;
+    top: 20%; right: 8%;
 }
 
 
