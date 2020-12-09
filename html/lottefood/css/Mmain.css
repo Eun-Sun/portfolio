@@ -173,7 +173,7 @@ div.brand section ul{
     margin: 0 auto;
     margin-top: 10rem;
     margin-bottom: 10rem;
-    width: 55%;
+    width: 132rem;
 }
 
 div.brand section ul li {
@@ -276,7 +276,7 @@ div.product section>ul>li>ul>li>a img{
 div.sns{
     background: #EFEFEF;
     padding-top: .1rem;
-    height: 90rem;
+    height: 80rem;
 }
 div.sns section{
     margin-top: 8.9rem;
@@ -292,10 +292,10 @@ div.sns section>ul{
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    width: 55%;
+    width: 132rem;
 }
 div.sns section>ul>li{
-    flex: 1 1 auto;
+    flex: 0 0 auto;
     padding-bottom: 2rem;
 
 }
