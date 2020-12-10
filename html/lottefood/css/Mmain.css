@@ -256,7 +256,8 @@ div.product section>ul>li{
 }
 div.product section>ul>li span{
     font-size: 2.2rem;
-    font-weight: 300;
+    font-weight: 400;
+    color: #606060;
 }
 div.product section>ul>li>ul{
     display: flex;
@@ -311,17 +312,18 @@ div.sns section>ul>li.snsPage{
     flex: 1 1 25%;  
 }
 div.sns section>ul>li{
-    background: url(../imgs/icon/snsbar-off.png) no-repeat 0 50%;
+    background: url(../imgs/icon/snsbar-off.png) no-repeat 0 40%;
 }
 div.sns section>ul>li.on2{
-    background: url(../imgs/icon/snsbar-on.png) no-repeat 0 50%;
+    background: url(../imgs/icon/snsbar-on.png) no-repeat 0 40%;
 }
 div.sns section>ul>li>span{
     font: 400 2.2rem/2.2rem sans-serif;
+    color: #606060;
 }
 div.sns section>ul>li>ul{
     display: flex;
-    margin-top: 5rem;
+    margin-top: 7rem;
     font-size: 1.8rem;
     line-height: 3.6rem;
 }
@@ -335,6 +337,7 @@ div.sns section>ul>li>ul>li>span{
     border: .2rem solid #A5A5A5;
     border-radius: 6rem;
     color: #606060;
+    cursor: pointer;
 }
 div.sns section>ul>li>ul>li a{
     color: #606060;
@@ -372,4 +375,66 @@ div.sns section>ul>li>ul.links>li>a>span{
     border: .2rem solid #A5A5A5;
     border-radius: 6rem;
     color: #606060;
+}
+
+/* 이벤트 */
+div.sns section>ul>li>ul.links>li:hover>a>span{
+    border: .2rem solid #E30013;
+    background-color: #fff;
+}
+
+/* 하단아이콘메뉴 */
+div.iconMenu{
+    background: #797979;
+}
+div.iconMenu>div{
+    margin: 0 auto;
+    width: 132rem;
+}
+div.iconMenu>div>ul.iconUl{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    height: 20rem;
+}
+div.iconMenu>div>ul.iconUl>li{
+    position: relative;
+    flex: 1 1 auto;
+}
+div.iconMenu>div>ul.iconUl>li:not(:last-child)::after{
+    content: "";
+    position: absolute;
+    top: 1rem; right: 0;
+    width: .2rem; height: 12rem;
+    background-color: #fff;
+
+}
+div.iconMenu>div>ul.iconUl>li>a{
+    display: block;
+    font: 700 1.3rem/2rem sans-serif;
+    color: #fff;
+}
+div.iconMenu>div>ul.iconUl>li>a>p{
+    padding-top: 12rem;
+}
+
+div.iconMenu>div>ul.iconUl>li:first-child>a>p{
+    background: url(../imgs/SVG/notice.svg) no-repeat 50% 35%;
+    background-size: 7rem;
+}
+div.iconMenu>div>ul.iconUl>li:nth-child(2)>a>p{
+    background: url(../imgs/SVG/qna.svg) no-repeat 50% 35%;
+    background-size: 7rem;
+}
+div.iconMenu>div>ul.iconUl>li:nth-child(3)>a>p{
+    background: url(../imgs/SVG/news.svg) no-repeat 50% 35%;
+    background-size: 7rem;
+}
+div.iconMenu>div>ul.iconUl>li:nth-child(4)>a>p{
+    background: url(../imgs/SVG/mall.svg) no-repeat 50% 35%;
+    background-size: 7rem;
+}
+div.iconMenu>div>ul.iconUl>li:hover>a{
+    color: #e30013;
 }

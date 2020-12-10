@@ -15,6 +15,7 @@
     </style>
     <link rel="stylesheet" href="css/Mheader.css">
     <link rel="stylesheet" href="css/Mmain.css">
+    <link rel="stylesheet" href="css/Mfooter.css">
 
     <title>LOTTE FOOD</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -121,15 +122,46 @@
             });    
 
             //신제품 사진
-            var product = {idx:0}
+            var product = {idx:0};
+            $(".productUl").children(".on1").children("span").css("color","#e30013");
             $(".productUl").children(".on1").siblings().children("ul").css("display","none");
             $(".productUl").children("li").click(function(){
                 product.idx = $(this).index();                
                 $(".productUl").children("li").eq(product.idx).children("ul").fadeIn(500).parent("li").siblings().children("ul").fadeOut(500);
+                $(".productUl").children("li").eq(product.idx).children("span").css("color","#e30013").parent("li").siblings().children("span").css("color","#606060");
             });
 
             //sns 메뉴바
-            
+            $(".snsPage").click(function(){
+                    var url1 = $(this).css("background-image");
+                    //bg_01_off.jpg ---> 
+                    url1 = url1.replace("-off","-on");
+                    $(this).css({"background-image":url1, "background-position":"0 40%"});
+
+                    $(".snsPage").not(this).each(function(i,v){
+
+                    var url = $(v).css("background-image");
+                    //bg_01_off.jpg ---> 
+                    url = url.replace("-on","-off");
+                    $(v).css({"background-image":url, "background-position":"0 40%"});
+                });
+            });   
+
+            //sns 이미지이동
+            $(".snsUl").children(".on2").children("span").css("color","#e30013");
+            $(".snsUl").children(".on2").siblings().children("ul").css("display","none");
+            var sns = {idx:0};
+            $(".snsUl").children("li").click(function(){
+                sns.idx = $(this).index();                
+                $(".snsUl").children("li").eq(sns.idx).children("ul").fadeIn(500).parent("li").siblings().children("ul").fadeOut(500);
+                $(".snsUl").children("li").eq(sns.idx).children("span").css("color","#e30013").parent("li").siblings().children("span").css("color","#606060");
+            });
+            //유튜브 링크이동
+            $(".snsSelect").children("li").eq(0).children("span").css({"background-color":"#fff","border-color":"#E30013"});
+            $(".snsSelect").children("li").children("span").click(function(){
+                $(this).css({"background-color":"#fff","border-color":"#E30013"}).parents("li").siblings().children("span").css({"background-color":"transparent","border-color":"#A5A5A5"});
+                $(this).next().fadeIn(500).parents("li").siblings().children("ul").fadeOut(500);
+            });
         });
     </script>
 
@@ -352,10 +384,10 @@
         <div class="sns common">
             <section>
                 <h1>LOTTE FOOD SNS</h1>
-                <ul>
+                <ul class="snsUl">
                     <li class="snsPage on2">
                         <span>YOUTUBE</span>
-                        <ul>
+                        <ul class="snsSelect">
                             <li>
                                 <span>롯데푸드</span>
                                 <ul>
@@ -412,9 +444,9 @@
                 </ul>
             </section>
         </div>
-        <div>
+        <div class="iconMenu">
             <div>
-                <ul>
+                <ul class="iconUl">
                     <li>
                         <a href="#">
                             <p>NOTICE</p>
@@ -441,26 +473,31 @@
     </main>
     <footer>
         <div>
-            <div>
-                <ul>
-                    <li><a href="https://www.lottefoods.co.kr/common/pop_up/privacy.asp">개인정보처리방침</a></li>
-                    <li><a href="https://www.lottefoods.co.kr/common/pop_up/cctv.asp">영상정보처리기기 운영 관리·지침</a></li>
-                    <li><a href="https://www.lottefoods.co.kr/common/pop_up/nospam.asp">이메일무단수집거부</a></li>
-                </ul>
+            <div class="footer1">
                 <div>
-                    <form action="#">
-                        <fieldset>
-                            <select name="fm" id="fm">
-                                <option value="http://www.lotte.co.kr">롯데그룹</option>
-                                <option value="http://www.lpoint.com">L.POINT</option>
-                                <option value="http://www.lotteconf.co.kr">롯데제과</option>
-                            </select>
-                        </fieldset>
-                    </form>
-                    <a href="#site" onclick="return goNewSite();" target="_blank"><span class="hidden">사이트로 이동</span><span class=""></span></a>
-                </div>            
+                    <ul>
+                        <li><a href="https://www.lottefoods.co.kr/common/pop_up/privacy.asp">개인정보처리방침</a></li>
+                        <li><a href="https://www.lottefoods.co.kr/common/pop_up/cctv.asp">영상정보처리기기 운영 관리·지침</a></li>
+                        <li><a href="https://www.lottefoods.co.kr/common/pop_up/nospam.asp">이메일무단수집거부</a></li>
+                    </ul>
+                    <div>
+                        <form action="#">
+                            <fieldset>
+                                <select name="fm" id="fm">
+                                    <option>FAMILY SITE</option>
+                                    <option value="http://www.lotte.co.kr">롯데그룹</option>
+                                    <option value="http://www.lpoint.com">L.POINT</option>
+                                    <option value="http://www.lotteconf.co.kr">롯데제과</option>
+                                </select>
+                                
+                                <a href="#" onclick="return goNewSite();" target="_blank"><span>GO</span></a>
+                            </fieldset>
+                            
+                        </form>
+                    </div>
+                </div>        
             </div>
-            <div>
+            <div class="footer2">
                 <p><img srcset="imgs/icon/lotte-g.png, imgs/icon/lotte-g@2x.png, imgs/icon/lotte-g@3x.png" src="imgs/icon/lotte-g.png" alt="롯데푸터로고"></p>
                 <address>
                     <p>서울시 영등포구 양평로 19길 19  |  TEL 02. 3469. 3114  |  FAX 02.3469. 3129  | 대표이사 : 조경수  |  사업자등록번호 : 107. 81. 11210 </p>
