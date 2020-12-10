@@ -4,13 +4,13 @@ header{
     position: absolute;
     top: 0; left: 0;
     z-index: 9999;
-    width: 100vw;
+    width: 100%;
 }
 header>div.head{
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
     padding-top: 3rem;
     padding-bottom: 3rem;
     width: 1320px;

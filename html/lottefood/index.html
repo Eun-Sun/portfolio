@@ -10,6 +10,7 @@
         html,body{
             font-size: 62.5%;
             font-family: 'Noto Sans KR', sans-serif;
+            /* overflow-x: hidden; */
         }        
     </style>
     <link rel="stylesheet" href="css/Mheader.css">
@@ -19,26 +20,116 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(function(){
+
+            //main banner
+            var banner = { idx:0,
+                            len:$(".bannerB").children("li").length,
+                            auto:setInterval(middle,3000)
+                        }
+            function middle(){
+                banner.idx++;
+                if(banner.idx>banner.len-1){
+                    banner.idx = 0;
+                }
+                make();
+            }
+
+            function make(){
+                $(".bannerB").children("li").eq(banner.idx).fadeIn(500).siblings("li").fadeOut(500);
+                $(".banner").children("li").eq(banner.idx).addClass("on").siblings("li").removeClass("on");
+            }
+
             $(".prev").click(function(){
-                $(".bannerB").prepend($(".bannerB").children().last());                
-                $(".bannerB").children("li.on").removeClass("on");
-                $(".bannerB").children("li").eq(1).addClass("on");
-
-                $(".banner").append($(".banner").children().first());
-                $(".banner").children("li.on").removeClass("on");
-                $(".banner").children("li").eq(1).addClass("on");
-                
+                clearInterval(banner.auto);
+                banner.idx--;
+                if(banner.idx<0){
+                    banner.idx = banner.len-1;
+                }
+                make();
+                banner.auto = setInterval(middle,3000);
             });
-
             $(".next").click(function(){
-                $(".bannerB").append($(".bannerB").children().first());
-                $(".bannerB").children("li.on").removeClass("on");
-                $(".bannerB").children("li").eq(1).addClass("on");
-
-                $(".banner").prepend($(".banner").children().last());   
-                $(".banner").children("li.on").removeClass("on");
-                $(".banner").children("li").eq(1).addClass("on");
+                clearInterval(banner.auto);
+                banner.idx++;
+                if(banner.idx>banner.len-1){
+                    banner.idx = 0;
+                }
+                make();
+                banner.auto = setInterval(middle,3000);
             });
+
+            //배너스크롤 눌렀을때 반응
+            $(".banner").children("li").click(function(){
+                clearInterval(banner.auto);
+                banner.idx = $(this).index();
+                make();
+                banner.auto = setInterval(middle,3000);
+                $(".controll_btn").css({"background-image":"url(imgs/SVG/stop-b.svg)"});
+            });
+
+            //정지,재생버튼
+            var controll = true;
+            $(".controll_btn").click(function(){
+                if(controll){
+                    clearInterval(banner.auto);
+                    $(".controll_btn").css({"background-image":"url(imgs/SVG/play-b.svg)"});
+                    controll = !controll;
+                }else{
+                    clearInterval(banner.auto);
+                    $(".controll_btn").css({"background-image":"url(imgs/SVG/stop-b.svg)"});
+                    banner.auto = setInterval(middle,3000);
+                    controll = !controll;
+                    
+                }
+            });
+
+            /* 밑에 선택 바 만들기
+                $('li').click(function(){
+                    var url1 = $(this).css(background-image);
+                    //bg_01_off.jpg ---> 
+                    url1 = url1.replace("_off","_on");
+                    $(this).css("background-image",url1);
+
+                    $("li").not(this).children("img").each(function(i,v){
+
+                    var url = $(v).css("background-image");
+                    //bg_01_off.jpg ---> 
+                    url = url.replace("_on","_off");
+                    $(v).css("background-image",url);
+
+                });
+
+                })
+            
+            */
+
+            //신제품 메뉴바 만들기
+            $(".prod").click(function(){
+                    var url1 = $(this).css("background-image");
+                    //bg_01_off.jpg ---> 
+                    url1 = url1.replace("-off","-on");
+                    $(this).css("background-image",url1);
+
+                    $(".prod").not(this).each(function(i,v){
+
+                    var url = $(v).css("background-image");
+                    //bg_01_off.jpg ---> 
+                    url = url.replace("-on","-off");
+                    $(v).css("background-image",url);
+                });
+
+            });    
+
+            //신제품 사진
+            var product = {idx:0}
+            $(".productUl").children(".on1").siblings().children("ul").css("display","none");
+            $(".productUl").children("li").click(function(){
+                product.idx = $(this).index();                
+                $(".productUl").children("li").eq(product.idx).children("ul").fadeIn(500).parent("li").siblings().children("ul").fadeOut(500);
+            });
+
+            //sns 메뉴바
+            
         });
     </script>
 
@@ -147,18 +238,17 @@
         <aside class="banner_F">
             <h1 class="hidden">메인배너</h1>
             <ul class="bannerB">
-                <li class="ban1">
-                    <div>
-                        배너1 <br>
-                        들어갈예정~
-                    </div>
-                    
-                </li>
-                <li class="ban2 on">
+                <li class="ban1 on">
                     <div>
                         정직함을 담은 즐거운 먹거리로 <br>
                         풍요로운 식문화 트렌드를 이끌어갑니다.
                     </div>
+                </li>
+                <li class="ban2">
+                    <div>
+                        배너2 <br>
+                        들어갈예정~
+                    </div>                    
                 </li>
                 <li class="ban3">
                     <div>
@@ -170,10 +260,10 @@
             <p class="prev"><img src="imgs/SVG/arrow-prev.svg" alt="이전으로"></p>
             <p class="next"><img src="imgs/SVG/arrow-next.svg" alt="다음으로"></p>
             <div>
-                <p><span class="hidden">플레이버튼</span></p>
+                <p class="controll_btn"><span class="hidden">플레이버튼</span></p>
                 <ul class="banner">
-                    <li class="ban01"><span class="hidden">0번째 배너</span></li>
-                    <li class="ban02 on"><span class="hidden">1번째 배너</span></li>
+                    <li class="ban01 on"><span class="hidden">0번째 배너</span></li>
+                    <li class="ban02"><span class="hidden">1번째 배너</span></li>
                     <li class="ban03"><span class="hidden">2번째 배너</span></li>
                 </ul>
             </div>
@@ -210,8 +300,8 @@
                     롯데푸드에서 새롭게 만나보세요.
                 </p>
                 <p><a href="#">MORE</a></p>
-                <ul>
-                    <li class="prod01 on1">
+                <ul class="productUl">
+                    <li class="prod on1">
                         <span>아이스크림</span>
                         <ul>
                             <li><a href="#"><img src="imgs/sweet-potato.jpg" alt="희한한 군고구마"></a></li>
@@ -220,7 +310,7 @@
                             <li><a href="#"><img src="imgs/papico.jpg" alt="빠삐코"></a></li>
                         </ul>
                     </li>
-                    <li class="prod02">
+                    <li class="prod">
                         <span>가정간편식</span>
                         <ul>
                             <li><a href="#"><img src="imgs/giant-roll.jpg" alt="의성마늘 자이언트 롤만두"></a></li>
@@ -229,7 +319,7 @@
                             <li><a href="#"><img src="imgs/crinkle-cut.jpg" alt="감자튀김 크링클컷"></a></li>
                         </ul>
                     </li>
-                    <li class="prod03">
+                    <li class="prod">
                         <span>유가공</span>
                         <ul>
                             <li><a href="#"><img src="imgs/barun-milk.jpg" alt="바른목장 소화가 잘되는 우유"></a></li>
@@ -238,16 +328,16 @@
                             <li><a href="#"><img src="imgs/ithink.jpg" alt="아이생각 100% 유기농주스 백포도"></a></li>
                         </ul>
                     </li>
-                    <li class="prod04">
+                    <li class="prod">
                         <span>육가공</span>
                         <ul>
                             <li><a href="#"><img src="imgs/k-loss.jpg" alt="K·로스팜"></a></li>
                             <li><a href="#"><img src="imgs/grill-bacon.jpg" alt="의성마늘 그릴용 담백한 베이컨"></a></li>
                             <li><a href="#"><img src="imgs/bacon.png" alt="의성마늘 담백한 베이컨"></a></li>
-                            <li><a href="#"><img src="" alt=""></a></li>
+                            <li><a href="#"></a></li>
                         </ul>
                     </li>
-                    <li class="prod05">
+                    <li class="prod">
                         <span>원두커피</span>
                         <ul>
                             <li><a href="#"><img src="imgs/cantataSHB.png" alt="칸타타시그니처 코스타리카SHB"></a></li>
@@ -263,7 +353,7 @@
             <section>
                 <h1>LOTTE FOOD SNS</h1>
                 <ul>
-                    <li>
+                    <li class="snsPage on2">
                         <span>YOUTUBE</span>
                         <ul>
                             <li>
@@ -296,7 +386,7 @@
                             
                         </ul>
                     </li>
-                    <li class="blog">
+                    <li class="snsPage blog">
                         <span>BLOG</span>
                         <ul>
                             <li><a href="http://blog.naver.com/lottesamkang/222160654411"><img src="imgs/blog1.png" alt="[파스퇴르 우유 종이의 집] 내가 만드는 나만의 작은 아지트"></a></li>
@@ -305,14 +395,14 @@
                             <li><a href="http://blog.naver.com/lottesamkang/222158669733"><img src="imgs/blog4.png" alt="한돈X롯데푸드 레시피 콘테스트 이벤트"></a></li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="snsPage">
                         <span>INSTAGRAM</span>
                         <ul class="links">
                             <li><a href="#"><span>롯데푸드</span></a></li>
                             <li><a href="#"><span>파스퇴르</span></a></li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="snsPage">
                         <span>FACEBOOK</span>
                         <ul class="links">
                             <li><a href="#"><span>롯데푸드</span></a></li>

@@ -11,17 +11,16 @@ main aside.banner_F>ul{
 }
 main aside.banner_F>ul>li{
     position: absolute;
+    top: 0; left: 0;
     width: 100%;
     min-height: 83.3rem;
     font-weight: 500;
-    opacity: 0;
-    transition: all .3s ease;
 }
 main aside>ul>li.ban1{  
-    background: lightpink;
+    background: url(../imgs/kid-milk.jpg) no-repeat center/cover;
 }
 main aside>ul>li.ban2{  
-    background: url(../imgs/kid-milk.jpg) no-repeat center/cover;
+    background: lightpink;
 
 }
 main aside>ul>li.ban3{  
@@ -38,7 +37,9 @@ main aside.banner_F>ul.bannerB>li>div{
     color: #fff;
 }
 
-main aside.banner_F>ul>li.on{z-index: 10; opacity: 1;}
+main aside.banner_F>ul>li.on{
+    display: block;
+    z-index: 10;}
 
 /* 이전, 다음버튼 */
 main aside.banner_F>p img{
@@ -47,16 +48,16 @@ main aside.banner_F>p img{
     height: 5rem;
 }
 main aside.banner_F p.prev img{
-    top: 50%; left:calc(100vw - 95%);
+    top: 50%; left:calc(100vw - 85%);
 }
 main aside.banner_F p.next img{
-    top: 50%; right: calc(100vw - 95%);
+    top: 50%; right: calc(100vw - 85%);
 
 }
 /* 배너버튼 */
 main aside.banner_F>div{
     position: absolute;
-    left: calc(100vw - 50% - 11rem); bottom: 6.8rem;
+    left: calc(100vw - 50% - 14.5rem); bottom: 6.8rem;
     z-index: 11;
     overflow: hidden;
 }
@@ -65,7 +66,7 @@ main aside.banner_F>div>p{
     float: left;
     width: 2.5rem;
     height: 2.5rem;
-    background: url(../imgs/SVG/play-b.svg) no-repeat 0 0;
+    background: url(../imgs/SVG/stop-b.svg) no-repeat 0 0;
 }
 main aside.banner_F>div>ul{
     width: 17.4rem;
@@ -82,14 +83,14 @@ main aside.banner_F>div>ul>li{
     border-radius: 2rem;
     box-sizing: border-box;
 }
-main aside.banner_F>div>ul>li.ban02{
+main aside.banner_F>div>ul>li.on{
     background-color: #fff;
 }
 
 /* 스크롤버튼 */
 main aside.banner_F>p.scroll{
     position: absolute;
-    left: calc(100vw - 50% - 5.5rem); bottom: 0;
+    left: calc(100vw - 50% - 7.8rem); bottom: 0;
     z-index: 12;
     width: 11rem; height: 4rem;
     border-radius: .5rem .5rem 0 0;
@@ -196,6 +197,11 @@ div.brand section ul li a{
     width: 100%;
     height: 100%;
 }
+
+div.brand section ul li:hover a{
+    background: #2c2c2c44;
+    transition: all .5s ease-in;
+}
 div.brand section ul li:not(:last-child) a img{
     padding-top: 40%;
 }
@@ -240,13 +246,13 @@ div.product section>ul{
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    width: 55%;
+    width: 132rem;
     height: 40rem;
 }
 div.product section>ul>li{
-    flex: 1 1 auto;
-    padding-bottom: 2rem;
-    border: 1px solid green;
+    flex: 1 1 12rem;
+    padding-bottom: 4rem;
+    background: url(../imgs/icon/bar-off.png) no-repeat 0 100%;
 }
 div.product section>ul>li span{
     font-size: 2.2rem;
@@ -255,28 +261,34 @@ div.product section>ul>li span{
 div.product section>ul>li>ul{
     display: flex;
     justify-content: space-around;
+    align-items: center;
     position: absolute;
     top: 10rem; left: 0;
     width: 100%;
 }
+div.product section>ul>li.on1{
+    background: url(../imgs/icon/bar-on.png) no-repeat 0 100%;
+}
 div.product section>ul>li>ul>li{
     flex: 1 0 auto;
-    opacity: 0;
-
 }
-div.product section>ul>li.on1>ul>li{
-    opacity: 1; z-index: 100;
+div.product section>ul>li.on1>ul>li{    
 }
 
 div.product section>ul>li>ul>li>a img{
+    width: 80%;
 }
+div.product section>ul>li:nth-child(4)>ul>li>a img{
+    width: 60%;
+}
+
 
 
 /* sns */
 div.sns{
     background: #EFEFEF;
     padding-top: .1rem;
-    height: 80rem;
+    min-height: 83.4rem;
 }
 div.sns section{
     margin-top: 8.9rem;
@@ -293,11 +305,16 @@ div.sns section>ul{
     justify-content: space-between;
     margin: 0 auto;
     width: 132rem;
+    text-align: center;
+}
+div.sns section>ul>li.snsPage{
+    flex: 1 1 25%;  
 }
 div.sns section>ul>li{
-    flex: 0 0 auto;
-    padding-bottom: 2rem;
-
+    background: url(../imgs/icon/snsbar-off.png) no-repeat 0 50%;
+}
+div.sns section>ul>li.on2{
+    background: url(../imgs/icon/snsbar-on.png) no-repeat 0 50%;
 }
 div.sns section>ul>li>span{
     font: 400 2.2rem/2.2rem sans-serif;
@@ -312,8 +329,9 @@ div.sns section>ul>li>ul>li{
     flex: 0 1 auto;
 }
 div.sns section>ul>li>ul>li>span{
+    margin-top: 3rem;
     margin-right: 1rem;
-    padding: .6rem 2.8rem;
+    padding: .3rem 1.4rem;
     border: .2rem solid #A5A5A5;
     border-radius: 6rem;
     color: #606060;
@@ -344,12 +362,14 @@ div.sns section>ul>li>ul>li>ul>li>a>img{
     width: 33rem;
 }
 
+/* 인스타그램,페이스북 */
+div.sns section>ul>li>ul.links>li{
+    margin-left: 5rem;
+}
 div.sns section>ul>li>ul.links>li>a>span{
-    box-sizing: border-box;
     margin-right: 1rem;
-    padding: .6rem 2.8rem;
+    padding: .3rem 1.4rem;
     border: .2rem solid #A5A5A5;
     border-radius: 6rem;
     color: #606060;
-
 }
