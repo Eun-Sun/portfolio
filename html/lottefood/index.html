@@ -197,17 +197,23 @@
             });   
 
             //sns 이미지이동
+
+            var sns = {idx:0, 
+                child : $(".snsUl").children("li"),
+                select : $(".snsSelect").children("li")        
+            };
+
             $(".snsUl").children(".on2").children("span").css("color","#e30013");
             $(".snsUl").children(".on2").siblings().children("ul").css("display","none");
-            var sns = {idx:0};
+            
             $(".snsUl").children("li").click(function(){
                 sns.idx = $(this).index();                
-                $(".snsUl").children("li").eq(sns.idx).children("ul").fadeIn(500).parent("li").siblings().children("ul").fadeOut(500);
-                $(".snsUl").children("li").eq(sns.idx).children("span").css("color","#e30013").parent("li").siblings().children("span").css("color","#606060");
+                sns.child.eq(sns.idx).children("ul").fadeIn(500).parent("li").siblings().children("ul").fadeOut(500);
+                sns.child.eq(sns.idx).children("span").css("color","#e30013").parent("li").siblings().children("span").css("color","#606060");
             });
             //유튜브 링크이동
-            $(".snsSelect").children("li").eq(0).children("span").css({"background-color":"#fff","border-color":"#E30013"});
-            $(".snsSelect").children("li").children("span").click(function(){
+            sns.select.eq(0).children("span").css({"background-color":"#fff","border-color":"#E30013"});
+            sns.select.children("span").click(function(){
                 $(this).css({"background-color":"#fff","border-color":"#E30013"}).parents("li").siblings().children("span").css({"background-color":"transparent","border-color":"#A5A5A5"});
                 $(this).next().fadeIn(500).parents("li").siblings().children("ul").fadeOut(500);
             });
