@@ -367,7 +367,7 @@ div.sns section>ul>li>ul>li>ul>li>a>img{
 
 /* 인스타그램,페이스북 */
 div.sns section>ul>li>ul.links>li{
-    margin-left: 5rem;
+    margin-left: 4rem;
 }
 div.sns section>ul>li>ul.links>li>a>span{
     margin-right: 1rem;
