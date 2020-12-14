@@ -56,9 +56,10 @@ header nav{
     margin-left:15%;
 }
 header nav>ul{
+    position: relative;
     width: 52.5rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 header nav>ul>li{
     flex: 0 1 auto;
@@ -67,20 +68,44 @@ header nav>ul>li>a{
     font-size: 1.4rem;
     color: #fff;
 }
+header nav>ul>li:nth-of-type(1)>div{
+    display: block;
+    position: absolute;
+    top: 6.5rem; left: 0;
+    width: 52.5rem;
+    height: 30rem;
+    background: rgba(255,255,255,.5);
+    border-top: .3rem solid;
+    border-image: linear-gradient(to right, #911D23,#D72226,#EA683B,#EA683B,#D72226,#911D23);
+    border-image-slice: 1;
+}
+
 header nav>ul>li>div{
     display: none;
-    position: absolute;
 }
-header nav>ul>li dl{}
-header nav>ul>li dl>dt{}
+header nav>ul>li dl{
+    display: none;
+}
+header nav>ul>li dl.on{
+    display: block;
+}
+header nav>ul>li dl{
+    position: relative;
+
+}
+header nav>ul>li dl>dt{
+
+}
 header nav>ul>li dl>dt>a{
     font-size: 1.2rem;
-    color: #fff;
+    color: #3A3A3A;
 }
-header nav>ul>li dl>dd{}
+header nav>ul>li dl>dd:nth-of-type(1){
+    float: right;
+}
 header nav>ul>li dl>dd>a{
     font-size: 1rem;
-    color: #fff;}
+    color: #3A3A3A;}
 
 /* 검색창 */
 header form{
@@ -103,9 +128,3 @@ header form>fieldset>input[type="image"]{
     top: 20%; right: 8%;
 }
 
-
-
-/* 이벤트 */
-header div.head dl.lang:hover>dd{
-    display: block;
-}

@@ -22,6 +22,21 @@
     <script>
         $(function(){
 
+            //언어유틸메뉴
+            var flag_lang = true;
+            $(".lang").children("dd").eq(0).click(function(){
+                if(flag_lang){
+                    $(this).siblings().slideDown(500);
+                    flag_lang =!flag_lang;
+                }else{
+                    $(this).siblings().slideUp(500);
+                    flag_lang =!flag_lang;
+                }   
+            });
+
+            //nav
+
+
             //main banner
             var banner = { idx:0,
                             len:$(".bannerB").children("li").length,
@@ -48,6 +63,7 @@
                 }
                 make();
                 banner.auto = setInterval(middle,3000);
+                stopB();
             });
             $(".next").click(function(){
                 clearInterval(banner.auto);
@@ -57,6 +73,7 @@
                 }
                 make();
                 banner.auto = setInterval(middle,3000);
+                stopB();
             });
 
             //배너스크롤 눌렀을때 반응
@@ -65,9 +82,13 @@
                 banner.idx = $(this).index();
                 make();
                 banner.auto = setInterval(middle,3000);
-                $(".controll_btn").css({"background-image":"url(imgs/SVG/stop-b.svg)"});
+                stopB();
             });
 
+            //정지이미지로 변환
+            function stopB(){
+                $(".controll_btn").css({"background-image":"url(imgs/SVG/stop-b.svg)"});
+            }
             //정지,재생버튼
             var controll = true;
             $(".controll_btn").click(function(){
@@ -77,7 +98,7 @@
                     controll = !controll;
                 }else{
                     clearInterval(banner.auto);
-                    $(".controll_btn").css({"background-image":"url(imgs/SVG/stop-b.svg)"});
+                    stopB();
                     banner.auto = setInterval(middle,3000);
                     controll = !controll;
                     
@@ -183,7 +204,7 @@
                         <li>
                             <a href="#">ABOUT</a>
                             <div>
-                                <dl>
+                                <dl class="on">
                                     <dt><a href="#">롯데푸드</a></dt>
                                     <dd><a href="#">기업소개</a></dd>
                                     <dd><a href="#">기업이념</a></dd>
@@ -242,8 +263,8 @@
                             <div>
                                 <dl>
                                     <dt><a href="#">공지&보도자료</a></dt>
-                                    <dl><a href="#">공지사항</a></dl>
-                                    <dl><a href="#">보도자료</a></dl>
+                                    <dd><a href="#">공지사항</a></dd>
+                                    <dd><a href="#">보도자료</a></dd>
                                 </dl>
                                 <dl>
                                     <dt><a href="#">자주찾는질문</a></dt>
