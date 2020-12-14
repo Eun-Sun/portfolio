@@ -35,7 +35,13 @@
             });
 
             //nav
+            $(".navUl").children("li").mouseenter(function(){
+                $(this).children("div").addClass("on").slideDown(500).parents("li").siblings().children("div").removeClass("on").slideUp(500);
+            }).mouseleave(function(){
+                $(this).children("div").css("display","none");
+            });
 
+            //na
 
             //main banner
             var banner = { idx:0,
@@ -200,78 +206,96 @@
                 </dl>
                 <nav>
                     <h1 class="hidden">메인네비게이션</h1>
-                    <ul>
+                    <ul class="navUl">
                         <li>
                             <a href="#">ABOUT</a>
                             <div>
-                                <dl class="on">
-                                    <dt><a href="#">롯데푸드</a></dt>
-                                    <dd><a href="#">기업소개</a></dd>
-                                    <dd><a href="#">기업이념</a></dd>
-                                    <dd><a href="#">기업연혁</a></dd>
-                                </dl>
+                                <ul>
+                                    <li>
+                                        <a href="#">롯데푸드</a>
+                                        <ul>
+                                            <li><a href="#">기업소개</a></li>
+                                            <li><a href="#">기업이념</a></li>
+                                            <li><a href="#">기업연혁</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
                             </div>
                         </li>
                         <li>
                             <a href="#">BRAND</a>
                             <div>
-                                <dl>
-                                    <dt><a href="#">아이스크림</a></dt>
-                                    <dd><a href="#">구구</a></dd>
-                                    <dd><a href="#">빠삐코</a></dd>
-                                    <dd><a href="#">라베스트</a></dd>
-                                    <dd><a href="#">더보기</a></dd>                            
-                                </dl>
-                                <dl>
-                                    <dt><a href="#">가정간편식</a></dt>
-                                    <dd><a href="#">제로미트</a></dd>
-                                    <dd><a href="#">쉐푸드</a></dd>
-                                    <dd><a href="#">라퀴진</a></dd>                            
-                                </dl>
-                                <dl>
-                                    <dt><a href="#">유가공</a></dt>
-                                    <dd><a href="#">파스퇴르</a></dd>
-                                    <dd><a href="#">아이생각</a></dd>
-                                    <dd><a href="#">쾌변</a></dd>
-                                    <dd><a href="#">위드맘</a></dd>                            
-                                </dl>
-                                <dl>
-                                    <dt><a href="#">육가공</a></dt>
-                                    <dd><a href="#">의성마늘햄</a></dd>
-                                    <dd><a href="#">엔네이처</a></dd>
-                                    <dd><a href="#">K·로스팜</a></dd>
-                                    <dd><a href="#">롯데비엔나</a></dd>                            
-                                    <dd><a href="#">키스틱</a></dd>                            
-                                </dl>
+                                <ul>
+                                    <li>
+                                        <a href="#">아이스크림</a>
+                                        <ul>
+                                            <li><a href="#">구구</a></li>
+                                            <li><a href="#">빠삐코</a></li>
+                                            <li><a href="#">라베스트</a></li>
+                                            <li><a href="#">더보기</a></li>   
+                                        </ul>
+                                    </li> 
+                                    <li>
+                                        <a href="#">가정간편식</a>
+                                        <ul>
+                                            <li><a href="#">제로미트</a></li>
+                                            <li><a href="#">쉐푸드</a></li>
+                                            <li><a href="#">라퀴진</a></li>                            
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">유가공</a>
+                                        <ul>
+                                            <li><a href="#">파스퇴르</a></li>
+                                            <li><a href="#">아이생각</a></li>
+                                            <li><a href="#">쾌변</a></li>
+                                            <li><a href="#">위드맘</a></li>                            
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">육가공</a>
+                                        <ul>
+                                            <li><a href="#">의성마늘햄</a></li>
+                                            <li><a href="#">엔네이처</a></li>
+                                            <li><a href="#">K·로스팜</a></li>
+                                            <li><a href="#">롯데비엔나</a></li>                            
+                                            <li><a href="#">키스틱</a></li>                            
+                                        </ul>
+                                    </li>
+                                </ul>
                             </div>
                         </li>
                         <li>
                             <a href="#">PRODUCT</a>
                             <div>
-                                <dl>
-                                    <dt><a href="#">신제품</a></dt>
-                                    <dd><a href="#">전체보기</a></dd>
-                                    <dd><a href="#">아이스크림</a></dd>
-                                    <dd><a href="#">유가공</a></dd>
-                                    <dd><a href="#">육가공</a></dd>                            
-                                    <dd><a href="#">원두</a></dd>                            
-                                </dl>
+                                <ul>
+                                    <li>
+                                        <a href="#">신제품</a>
+                                        <ul>
+                                            <li><a href="#">전체보기</a></li>
+                                            <li><a href="#">아이스크림</a></li>
+                                            <li><a href="#">유가공</a></li>
+                                            <li><a href="#">육가공</a></li>                            
+                                            <li><a href="#">원두</a></li>                            
+                                        </ul>
+                                    </li>
+                                </ul>
                             </div>    
                         </li>
                         <li>
                             <a href="#">COMMUNITY</a>
                             <div>
-                                <dl>
-                                    <dt><a href="#">공지&보도자료</a></dt>
-                                    <dd><a href="#">공지사항</a></dd>
-                                    <dd><a href="#">보도자료</a></dd>
-                                </dl>
-                                <dl>
-                                    <dt><a href="#">자주찾는질문</a></dt>
-                                </dl>
-                                <dl>
-                                    <dt><a href="#">고객센터</a></dt>
-                                </dl>
+                                <ul>
+                                    <li>
+                                        <a href="#">공지&보도자료</a>
+                                        <ul>
+                                            <li><a href="#">공지사항</a></li>
+                                            <li><a href="#">보도자료</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">자주찾는질문</a></li>
+                                    <li><a href="#">고객센터</a></li>
+                                </ul>
                             </div>
                         </li>
                         <li><a href="https://www.pasteurmall.com/index.do?SSL=Y">MALL</a>
