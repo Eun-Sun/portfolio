@@ -6,8 +6,8 @@ header{
     z-index: 9999;
     width: 100%;
     height: 6rem;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding: 3rem 0;
+    transition: all .3s ease;
 }
 header>div.head{
     margin: 0 auto;
@@ -92,7 +92,7 @@ header nav>ul>li>div.on{
     top: 6.5rem; left: 0;
     width: 52.5rem;
     height: 30rem;
-    background: rgba(255,255,255,.8);
+    background: rgba(243, 243, 243, 0.8);
     border-top: .3rem solid;
     border-image: linear-gradient(to right, #911D23,#D72226,#EA683B,#EA683B,#D72226,#911D23);
     border-image-slice: 1;
@@ -136,9 +136,16 @@ header nav>ul>li>div>ul:hover>li>ul>li{
     display: block;
 }
 
+
+/* 상단메뉴 이동시 추가 */
 header.sticky{
     position: fixed;
-    height: ;
+    padding: .5rem 0;
+    background: #fff;
+    box-shadow: 0 .2rem .2rem rgba(0,0,0,.3);
+}
+header.sticky nav>ul>li>a{
+    color: #3A3A3A;
 }
 /* 검색창 */
 header form{
@@ -161,3 +168,6 @@ header form>fieldset>input[type="image"]{
     top: 20%; right: 8%;
 }
 
+header.sticky form>fieldset>input[type="search"]{
+    border: .1rem solid #c7c7c7;
+}

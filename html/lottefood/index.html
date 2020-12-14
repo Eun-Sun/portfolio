@@ -48,7 +48,20 @@
             });
 
             //스크롤 이동시 상단메뉴 고정
-
+            var $header = $("header");
+            var $img = $(".head").children("h1").find("img");
+            $(window).scroll(function(){                
+                var src = $(".head").children("h1").find("img").attr("src");;
+                if($(this).scrollTop()>0){
+                    $header.addClass("sticky");
+                    src = src.replace("e-w","e-r");
+                    $img.attr("src",src);
+                }else{
+                    $header.removeClass("sticky");
+                    src = src.replace("e-r","e-w");
+                    $img.attr("src",src);
+                }
+            });
 
 
 
@@ -206,7 +219,7 @@
     <header>
         <h1 class="hidden">롯데푸드 메인페이지</h1>
         <div class="head">
-                <h1><img srcset="imgs/icon/lotte-w.png, imgs/icon/lotte-w@2x.png, imgs/icon/lotte-w@3x.png" src="imgs/icon/lotte-w.png" alt="롯데푸드로고"></h1>
+                <h1><a href="#"><img src="imgs/icon/lotte-w.png" alt="롯데푸드로고"></a></h1>
                 <dl class="lang">
                     <dt class="hidden">언어선택</dt>
                     <dd>KOR</dd>
