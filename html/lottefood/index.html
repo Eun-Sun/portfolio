@@ -56,10 +56,13 @@
                     $header.addClass("sticky");
                     src = src.replace("e-w","e-r");
                     $img.attr("src",src);
+                    $img.css({"width":'80%',"margin-top":".8rem"});
+                    
                 }else{
                     $header.removeClass("sticky");
                     src = src.replace("e-r","e-w");
                     $img.attr("src",src);
+                    $img.css({"width":'100%',"margin-top":0});
                 }
             });
 
