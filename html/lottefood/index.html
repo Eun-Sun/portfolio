@@ -35,13 +35,22 @@
             });
 
             //nav
+            $(".being").children("ul").css("display","none");
             $(".navUl").children("li").mouseenter(function(){
                 $(this).children("div").addClass("on").slideDown(500).parents("li").siblings().children("div").removeClass("on").slideUp(500);
+                $(".being").mouseenter(function(){
+                    $(this).children("ul").slideDown(300);
+                }).mouseleave(function(){
+                    $(this).children("ul").slideUp(100);
+                });
             }).mouseleave(function(){
                 $(this).children("div").css("display","none");
             });
 
-            //na
+            //스크롤 이동시 상단메뉴 고정
+
+
+
 
             //main banner
             var banner = { idx:0,
@@ -211,7 +220,7 @@
                             <a href="#">ABOUT</a>
                             <div>
                                 <ul>
-                                    <li>
+                                    <li class="being">
                                         <a href="#">롯데푸드</a>
                                         <ul>
                                             <li><a href="#">기업소개</a></li>
@@ -226,7 +235,7 @@
                             <a href="#">BRAND</a>
                             <div>
                                 <ul>
-                                    <li>
+                                    <li class="being">
                                         <a href="#">아이스크림</a>
                                         <ul>
                                             <li><a href="#">구구</a></li>
@@ -235,7 +244,7 @@
                                             <li><a href="#">더보기</a></li>   
                                         </ul>
                                     </li> 
-                                    <li>
+                                    <li class="being">
                                         <a href="#">가정간편식</a>
                                         <ul>
                                             <li><a href="#">제로미트</a></li>
@@ -243,7 +252,7 @@
                                             <li><a href="#">라퀴진</a></li>                            
                                         </ul>
                                     </li>
-                                    <li>
+                                    <li class="being">
                                         <a href="#">유가공</a>
                                         <ul>
                                             <li><a href="#">파스퇴르</a></li>
@@ -252,7 +261,7 @@
                                             <li><a href="#">위드맘</a></li>                            
                                         </ul>
                                     </li>
-                                    <li>
+                                    <li class="being">
                                         <a href="#">육가공</a>
                                         <ul>
                                             <li><a href="#">의성마늘햄</a></li>
@@ -269,7 +278,7 @@
                             <a href="#">PRODUCT</a>
                             <div>
                                 <ul>
-                                    <li>
+                                    <li class="being">
                                         <a href="#">신제품</a>
                                         <ul>
                                             <li><a href="#">전체보기</a></li>
@@ -286,7 +295,7 @@
                             <a href="#">COMMUNITY</a>
                             <div>
                                 <ul>
-                                    <li>
+                                    <li class="being">
                                         <a href="#">공지&보도자료</a>
                                         <ul>
                                             <li><a href="#">공지사항</a></li>
