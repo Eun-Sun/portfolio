@@ -185,14 +185,14 @@
                     var url1 = $(this).css("background-image");
                     //bg_01_off.jpg ---> 
                     url1 = url1.replace("-off","-on");
-                    $(this).css({"background-image":url1, "background-position":"0 40%"});
+                    $(this).css({"background-image":url1});
 
                     $(".snsPage").not(this).each(function(i,v){
 
                     var url = $(v).css("background-image");
                     //bg_01_off.jpg ---> 
                     url = url.replace("-on","-off");
-                    $(v).css({"background-image":url, "background-position":"0 40%"});
+                    $(v).css({"background-image":url});
                 });
             });   
 
@@ -487,11 +487,16 @@
                     </li>
                     <li class="snsPage blog">
                         <span>BLOG</span>
-                        <ul>
-                            <li><a href="http://blog.naver.com/lottesamkang/222160654411"><img src="imgs/blog1.png" alt="[파스퇴르 우유 종이의 집] 내가 만드는 나만의 작은 아지트"></a></li>
-                            <li><a href="http://blog.naver.com/lottesamkang/222160307926"><img src="imgs/blog2.png" alt="열심히 활동한 자, 경품이 쏟아진다! 12월 안내"></a></li>
-                            <li><a href="http://blog.naver.com/lottesamkang/222159249697"><img src="imgs/blog3.png" alt="2020년의 마지막 달, 12월 출석체크 이벤트 안내"></a></li>
-                            <li><a href="http://blog.naver.com/lottesamkang/222158669733"><img src="imgs/blog4.png" alt="한돈X롯데푸드 레시피 콘테스트 이벤트"></a></li>
+                        <ul class="snsSelect">
+                            <li>
+                                <span>블로그</span>
+                                <ul>
+                                    <li><a href="http://blog.naver.com/lottesamkang/222160654411"><img src="imgs/blog1.png" alt="[파스퇴르 우유 종이의 집] 내가 만드는 나만의 작은 아지트"></a></li>
+                                    <li><a href="http://blog.naver.com/lottesamkang/222160307926"><img src="imgs/blog2.png" alt="열심히 활동한 자, 경품이 쏟아진다! 12월 안내"></a></li>
+                                    <li><a href="http://blog.naver.com/lottesamkang/222159249697"><img src="imgs/blog3.png" alt="2020년의 마지막 달, 12월 출석체크 이벤트 안내"></a></li>
+                                    <li><a href="http://blog.naver.com/lottesamkang/222158669733"><img src="imgs/blog4.png" alt="한돈X롯데푸드 레시피 콘테스트 이벤트"></a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                     <li class="snsPage">

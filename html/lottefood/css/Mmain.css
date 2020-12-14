@@ -346,13 +346,13 @@ div.sns section>ul>li>ul>li a{
 div.sns section>ul>li>ul>li a img{
     width: 33rem;
 }
-div.sns section>ul>li.blog>ul{
+/* div.sns section>ul>li.blog>ul{
     position: absolute;
     top: 14.5rem; left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
+} */
 div.sns section>ul>li>ul>li>ul{
     display: flex;
     position: absolute;
