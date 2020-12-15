@@ -28,12 +28,11 @@ main aside>ul>li.ban3{
 }
 main aside.banner_F>ul.bannerB>li>div{
     margin: 0 auto;
-    margin-top: 45rem;
-    max-width: 120rem;
-    min-height: 60rem;
+    margin-top: 30rem;
+    min-height: 50rem;
     text-align: center;
-    font-size: 2.5rem;
-    line-height: 5rem;
+    font-size: 2rem;
+    line-height: 4rem;
     color: #fff;
 }
 
@@ -58,7 +57,7 @@ main aside.banner_F p.next img{
 /* 배너버튼 */
 main aside.banner_F>div{
     position: absolute;
-    left: calc(50% - 11rem); bottom: 6.8rem;
+    left: calc(50% - 11rem); bottom: 10rem;
     z-index: 11;
     overflow: hidden;
     cursor: pointer;
@@ -92,7 +91,7 @@ main aside.banner_F>div>ul>li.on{
 /* 스크롤버튼 */
 main aside.banner_F>p.scroll{
     position: absolute;
-    left: calc(50% - 5.5rem); bottom: 0;
+    left: calc(50% - 5.5rem); bottom: 3.3rem;
     z-index: 12;
     width: 11rem; height: 4rem;
     border-radius: .5rem .5rem 0 0;
@@ -110,14 +109,14 @@ main aside.banner_F>p.scroll{
 /* 브랜드, 신제품 소개 */
 
 div.common section{
-    margin-top: 9rem;
+    margin-top: 4rem;
     text-align: center;
 }
 div.common section h1{
     position: relative;
     display: inline-block;
-    margin-bottom: 5.6rem;
-    font-size: 2.3rem;
+    margin-bottom: 5rem;
+    font-size: 2.1rem;
     line-height: 5.8rem;
     font-weight: 900;
     color: #e30013;
@@ -142,7 +141,7 @@ div.brand section h1::after{
 }
 div.common section>p:first-of-type{
     margin: 0 auto;
-    font-size: 3.2rem;
+    font-size: 2.4rem;
     line-height: 5.2rem;
     color: #606060;
 }
@@ -151,7 +150,7 @@ div.common section p:nth-of-type(2){
     display: inline-block;
     width: 14rem;
     height: 4rem;
-    margin-top: 7.6rem;
+    margin-top: 5rem;
     border: .1rem solid #e30013;
     box-sizing: border-box;
     text-align: start;
@@ -168,20 +167,23 @@ div.common section p a{
 
 /* 브랜드 3가지 */
 div.brand section ul{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
     margin: 0 auto;
     margin-top: 10rem;
     margin-bottom: 10rem;
-    width: 132rem;
+    width: 40rem;
+    height: 40rem;
 }
 
 div.brand section ul li {
-    flex: 0 0 auto;
+    position: absolute;
+    top: 0; left: 0;
     width: 40rem;
     height: 40rem;
     text-align: center;
+}
+div.brand section ul li.on{
+    z-index: 5;
 }
 div.brand section ul li:nth-child(1){
     background: url(../imgs/milk.jpg) no-repeat 0 0;
@@ -198,10 +200,6 @@ div.brand section ul li a{
     height: 100%;
 }
 
-div.brand section ul li:hover a{
-    background: #2c2c2c44;
-    transition: all .5s ease-in;
-}
 div.brand section ul li:not(:last-child) a img{
     padding-top: 40%;
 }
@@ -212,25 +210,26 @@ div.brand section ul li:last-child a img{
 
 /* 파스퇴르 배너 */
 div.banner_c{
-    min-height: 83.3rem;
+    min-height: 60rem;
     background: url(../imgs/cow-milk.jpg) no-repeat center/cover;
 }
 div.banner_c aside{
     margin: 0 auto;
-    padding-top: 9.5rem;
-    width: 50%;
+    padding-top: 4rem;
+    width: 60%;
 }
 div.banner_c aside h1 img{
-    width: 22rem;
+    width: 18rem;
 }
 div.banner_c aside p{
-    margin-top: 15rem;
-    font: 400 4.8rem/6rem sans-serif;
+    margin-top: 3rem;
+    font: 500 2.5rem/4rem sans-serif;
     color: #fff;
 }
 
 /* 신제품 */
 div.product{
+    overflow: hidden;
 }
 div.product section h1::before{
     top: 0; left: 35%;
@@ -290,7 +289,7 @@ div.product section>ul>li:nth-child(4)>ul>li>a img{
 div.sns{
     background: #EFEFEF;
     padding-top: .1rem;
-    min-height: 83.4rem;
+    min-height: 70rem;
 }
 div.sns section{
     margin-top: 8.9rem;
@@ -391,7 +390,6 @@ div.iconMenu{
 }
 div.iconMenu>div{
     margin: 0 auto;
-    width: 132rem;
 }
 div.iconMenu>div>ul.iconUl{
     display: flex;
@@ -403,14 +401,6 @@ div.iconMenu>div>ul.iconUl{
 div.iconMenu>div>ul.iconUl>li{
     position: relative;
     flex: 1 1 auto;
-}
-div.iconMenu>div>ul.iconUl>li:not(:last-child)::after{
-    content: "";
-    position: absolute;
-    top: 1rem; right: 0;
-    width: .2rem; height: 12rem;
-    background-color: #fff;
-
 }
 div.iconMenu>div>ul.iconUl>li>a{
     display: block;

@@ -8,7 +8,6 @@ footer>div>div.footer1>div{
     position: relative;
     display: flex;
     margin: 0 auto;
-    width: 132rem;
 }
 footer>div>div.footer1>div>ul{
     padding: 3rem 0;
@@ -18,7 +17,7 @@ footer>div>div.footer1>div>ul>li{
     position: relative;
     float: left;
 }
-footer>div>div.footer1>div>ul>li:not(:first-child){
+footer>div>div.footer1>div>ul>li{
     padding-left: 2rem;
 }
 footer>div>div.footer1>div>ul>li:not(:first-child)::after{
@@ -37,7 +36,7 @@ footer>div>div.footer1>div>ul>li>a{
 }
 footer>div>div.footer1>div>div{
     position: absolute;
-    right: 1rem; top:3rem;
+    right: 1rem; bottom:3rem;
 }
 footer>div>div.footer1>div>div fieldset{
 
@@ -66,16 +65,20 @@ footer>div>div.footer2{
     margin: 0 auto;
     margin-top: 3rem;
     margin-bottom: 3rem;
-    width: 132rem;
+    padding-right:4rem;
     overflow: hidden;
 }
 footer>div>div.footer2>p{
+    margin-left: 4rem;
     float: left;
 }
-footer>div>div.footer2>p>img{}
+footer>div>div.footer2>p>img{
+    width: 80%;
+}
 footer>div>div.footer2>address{
     float: left;
     margin-left: 4rem;
+    max-width: 50rem;
 }
 footer>div>div.footer2>address>p{
     font: 400 1.3rem/3rem sans-serif;

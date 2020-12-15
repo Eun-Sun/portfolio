@@ -28,7 +28,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(function(){
-
+            
             //언어유틸메뉴
             var flag_lang = true;
             $(".lang").children("dd").eq(0).click(function(){
@@ -44,15 +44,15 @@
             //nav
             $(".being").children("ul").css("display","none");
             $(".navUl").children("li").mouseenter(function(){
-                $(this).children("div").addClass("on").slideDown(500).parents("li").siblings().children("div").removeClass("on").slideUp(500);
-                $(".being").mouseenter(function(){
-                    $(this).children("ul").slideDown(300);
-                }).mouseleave(function(){
-                    $(this).children("ul").slideUp(100);
-                });
-            }).mouseleave(function(){
-                $(this).children("div").css("display","none");
-            });
+                    $(this).children("div").addClass("on").slideDown(500).parents("li").siblings().children("div").removeClass("on").slideUp(500);
+                    $(".being").mouseenter(function(){
+                        $(this).children("ul").slideDown(300);
+                    }).mouseleave(function(){
+                        $(this).children("ul").slideUp(100);
+                    });
+                    }).mouseleave(function(){
+                        $(this).children("div").css("display","none");
+                    });
 
             //스크롤 이동시 상단메뉴 고정
             var $header = $("header");
@@ -236,13 +236,14 @@
             });
         });
     </script>
+    <script src="js/mobile.js"></script>
 
 </head>
 <body>
     <header>
         <h1 class="hidden">롯데푸드 메인페이지</h1>
         <div class="head">
-                <p class="mobile btn"><span class="hidden">메뉴버튼</span></p>
+                <p class="mobile btnB"><span class="hidden">메뉴버튼</span></p>
                 <h1><a href="#"><img src="imgs/icon/lotte-w.png" alt="롯데푸드로고"></a></h1>
                 <dl class="lang">
                     <dt class="hidden">언어선택</dt>
@@ -250,8 +251,10 @@
                     <dd>ENG</dd>
                     <dd>中國語</dd>
                 </dl>
+                <div class="mobile curtain"><span class="hidden">메뉴배경</span></div>
                 <nav>
                     <h1 class="hidden">메인네비게이션</h1>
+                    <p class="mobileX"><span class="hidden">닫기버튼</span>X</p>
                     <ul class="navUl">
                         <li>
                             <a href="#">ABOUT</a>
@@ -348,10 +351,10 @@
                         </li>
                     </ul>
                 </nav>
-                <form action="lotteF.jsp">
+                <form action="lotteF.jsp" class="form">
                     <fieldset>
                         <input type="search" name="proD" id="proD" placeholder="검색">
-                        <input type="image" srcset="imgs/icon/search-g.png 16w, imgs/icon/search-g@2x.png 31w, imgs/icon/search-g@3x.png 46w" src="imgs/icon/search-g.png" alt="검색">
+                        <input type="image" srcset="imgs/icon/search-g.png, imgs/icon/search-g@2x.png, imgs/icon/search-g@3x.png" src="imgs/icon/search-g.png" alt="검색" class="img">
                     </fieldset>
                 </form> 
         </div>
@@ -400,8 +403,8 @@
                     롯데푸드의 브랜드를 소개합니다.
                 </p>
                 <p><a href="#">MORE</a></p>
-                <ul>
-                    <li><a href="#"><img srcset="imgs/icon/pasteur-line.png, imgs/icon/pasteur-line@2x.png, imgs/icon/pasteur-line@3x.png" src="imgs/icon/pasteur-line.png" alt="파스퇴르"></a></li>
+                <ul class="brandList">
+                    <li class="on"><a href="#"><img srcset="imgs/icon/pasteur-line.png, imgs/icon/pasteur-line@2x.png, imgs/icon/pasteur-line@3x.png" src="imgs/icon/pasteur-line.png" alt="파스퇴르"></a></li>
                     <li><a href="#"><img srcset="imgs/icon/kloss.png, imgs/icon/kloss@2x.png, imgs/icon/kloss@3x.png" src="imgs/icon/kloss.png" alt="K·로스팜"></a></li>
                     <li><a href="#"><img srcset="imgs/icon/pigbar.png, imgs/icon/pigbar@2x.png, imgs/icon/pigbar@3x.png" src="imgs/icon/pigbar.png" alt="돼지바"></a></li>
                 </ul>
