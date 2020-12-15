@@ -1,0 +1,199 @@
+
+header{    
+    font-family: 'Noto Sans KR', sans-serif;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 6rem;
+    padding: 3rem 0;
+    transition: all .3s ease;
+}
+header>div.head{
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1320px;
+    font-weight: 700;
+}
+
+/* 로고&언어유틸메뉴 */
+header div.head h1{
+    flex: 0 1 auto;
+}
+header div.head h1 img{
+    width: 80%;
+}
+
+header div.head dl.lang{
+    flex: 0 1 auto;
+    padding-left: 2.5rem;
+    padding-right: 1rem;
+    margin-left: 2.5rem;
+    margin-top: 1rem;
+    height: 2.6rem;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    box-sizing: border-box;
+    color: #fff;
+    background: url(../imgs/icon/global-w.png) no-repeat 0 0;
+    background-size: 22%;
+}
+header div.head dl.lang>dd{
+    padding-left: .5rem;
+    width: 5rem;
+}
+header div.head dl.lang>dd:nth-child(2){
+    background: url(../imgs/SVG/arrow-d.svg) no-repeat 88% 50%;
+    background-size: 15%;
+}
+header div.head dl.lang>dd:not(:nth-child(2)){
+    display: none;
+}
+
+
+header.sticky div.head dl.lang{
+    flex: 0 1 auto;
+    padding-left: 2.5rem;
+    padding-right: 1rem;
+    margin-left: 2.5rem;
+    margin-top: 1.7rem;
+    height: 2.6rem;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    color: #3a3a3a;
+    background: url(../imgs/icon/global-g.png) no-repeat 0 0;
+    background-size: 22%;
+}
+header.sticky  div.head dl.lang>dd:nth-child(2){
+    background: url(../imgs/icon/arrow-d-g@2x.png) no-repeat 88% 50%;
+    background-size: 15%;
+}
+
+/* 네비게이션 */
+header nav{    
+    flex: 1 1 auto;
+    margin-left:8%;
+}
+header nav>ul{
+    display: none;
+    position: relative;
+    width: 50.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+header nav>ul>li{
+    flex: 0 1 auto;
+}
+header nav>ul>li>a{
+    position: relative;
+    font-size: 1.6rem;
+    color: #fff;
+    padding-bottom: 5rem;
+}
+header nav>ul>li:not(:last-of-type)>a::after{
+    display: none;
+    content: "";
+    position: absolute;
+    z-index: 30;
+    bottom: -.2rem; left: calc(50% - 1rem);
+    width: 2.04rem;
+    height: 1.24rem;
+    background: url(../imgs/icon/red-arrow.png) no-repeat 0 0;
+    background-size: 100%;    
+}
+header nav>ul>li:hover>a::after{
+    display: block;
+}
+header nav>ul>li>div.on{
+    display: block;
+    position: absolute;
+    top: 6.8rem; left: 0;
+    width: 52.5rem;
+    height: 30rem;
+    background: rgba(243, 243, 243, 0.85);
+    border-top: .3rem solid;
+    border-image: linear-gradient(to right, #911D23,#D72226,#EA683B,#EA683B,#D72226,#911D23);
+    border-image-slice: 1;
+}
+header nav>ul>li>div{
+    display: none;    
+}
+
+header nav>ul>li>div>ul{
+    position: absolute;
+    top: 2rem; left: 3.5rem;
+    width: 48.5rem;
+}
+header nav>ul>li>div>ul>li::after{
+    display: none;
+    content: "";
+    position: absolute;
+    top: .5rem; left: 25rem;
+    width: .1rem; height: 24.5rem;
+    background-color: #c7c7c7;
+}
+header nav>ul>li>div>ul>li>a{
+    color: #3A3A3A;
+    font: 500 2rem/4rem sans-serif;
+}
+header nav>ul>li>div>ul>li>ul{
+    position:  absolute;
+    left: 30rem; top: .5rem;
+}
+header nav>ul>li>div>ul>li>ul>li>a{
+    color: #3A3A3A;
+    font: 400 1.8rem/3rem sans-serif;
+
+}
+
+
+header nav>ul>li>div>ul>li.being:hover:after{
+    display: block;
+}
+header nav>ul>li>div>ul:hover>li>ul>li{
+    display: block;
+}
+
+
+/* 상단메뉴 이동시 추가 */
+header.sticky{
+    position: fixed;
+    padding: .5rem 0;
+    background: #fff;
+    box-shadow: 0 .2rem .2rem rgba(0,0,0,.3);
+}
+header.sticky nav>ul>li>a{
+    color: #3A3A3A;
+}
+
+
+/* 검색창 */
+header form{
+    position: absolute;
+    top: 25%; right: 12rem; 
+    flex: 0 1 auto;
+}
+header form>fieldset{
+    position: relative;
+}
+header form>fieldset>input[type="search"]{
+    appearance: none;
+    border: 0 none;
+    outline: none;
+    padding: 1rem;
+    width: 15rem;
+    height: 2.5rem;
+    border-radius: 1.2rem;
+}
+header form>fieldset>input[type="image"]{
+    position: absolute;
+    top: 20%; right: 8%;
+}
+
+header.sticky form>fieldset>input[type="search"]{
+    border: .1rem solid #c7c7c7;
+}

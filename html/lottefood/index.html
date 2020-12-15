@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">    
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <style>      
         html,body{
             font-size: 62.5%;
@@ -13,9 +11,18 @@
             /* overflow-x: hidden; */
         }        
     </style>
-    <link rel="stylesheet" href="css/Mheader.css">
-    <link rel="stylesheet" href="css/Mmain.css">
-    <link rel="stylesheet" href="css/Mfooter.css">
+    <link rel="stylesheet" media="only screen and (min-width:1200px)" href="css/Mheader_web.css">         
+    <link rel="stylesheet" media="only screen and (max-width:1199px)" href="css/Mheader_mobile.css">  
+    
+    
+    <link rel="stylesheet" media="only screen and (min-width:1200px)" href="css/Mmain_web.css">      
+    <link rel="stylesheet" media="only screen and (max-width:1199px)" href="css/Mmain_mobile.css">  
+    
+    <link rel="stylesheet" media="only screen and (min-width:1200px)" href="css/Mfooter_web.css">      
+    <link rel="stylesheet" media="only screen and (max-width:1199px)" href="css/Mfooter_mobile.css">  
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
     <title>LOTTE FOOD</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -56,13 +63,20 @@
                     $header.addClass("sticky");
                     src = src.replace("e-w","e-r");
                     $img.attr("src",src);
-                    $img.css({"width":'80%',"margin-top":".8rem"});
-                    
+                    if($(window).width>=1200){
+                        $img.css({"width":'80%',"margin-top":".8rem"});
+                    }else{
+                        $img.css({"width":'15rem',"margin-top":".8rem"});
+                    }
                 }else{
                     $header.removeClass("sticky");
                     src = src.replace("e-r","e-w");
                     $img.attr("src",src);
-                    $img.css({"width":'100%',"margin-top":0});
+                    if($(window).width>=1320){
+                        $img.css({"width":'100%',"margin-top":0});
+                    }else{
+                        $img.css({"width":'15rem',"margin-top":0});
+                    }
                 }
             });
 
@@ -228,6 +242,7 @@
     <header>
         <h1 class="hidden">롯데푸드 메인페이지</h1>
         <div class="head">
+                <p class="mobile btn"><span class="hidden">메뉴버튼</span></p>
                 <h1><a href="#"><img src="imgs/icon/lotte-w.png" alt="롯데푸드로고"></a></h1>
                 <dl class="lang">
                     <dt class="hidden">언어선택</dt>
