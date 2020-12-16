@@ -14,6 +14,7 @@ header{
 header>div.head{
     position: relative;
     margin: 0 auto;
+    padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -176,7 +177,7 @@ header.sticky nav>ul>li>a{
 /* 검색창 */
 header form{
     position: absolute;
-    top: 25%; right: 0; 
+    top: 25%; right: 2rem; 
     flex: 0 1 auto;
 }
 header form>fieldset{
