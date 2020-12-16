@@ -20,6 +20,7 @@ $(function(){
                 }
             });
 
+            //모바일 브랜드 이미지 자동함수
             // var brand = {idx:0,len:$(".brandList").children("li").length,list:$(".brandList").children("li"),
             // auto:setInterval(brandMiddle,3000)}
             // function brandMiddle(){
