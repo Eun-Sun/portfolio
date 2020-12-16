@@ -5,7 +5,7 @@ main{
 /* 배너 */
 main aside.banner_F{
     position: relative;
-    min-height: 83.3rem;
+    min-height: 70rem;
 }
 main aside.banner_F>ul{
 }
@@ -19,7 +19,7 @@ main aside>ul>li.ban1{
     background: url(../imgs/kid-milk.jpg) no-repeat center/cover;
 }
 main aside>ul>li.ban2{  
-    background: lightpink;
+    background: url(../imgs/banner_1.png) no-repeat center/cover;
 
 }
 main aside>ul>li.ban3{  
@@ -29,7 +29,7 @@ main aside>ul>li.ban3{
 main aside.banner_F>ul.bannerB>li>div{
     margin: 0 auto;
     margin-top: 30rem;
-    min-height: 50rem;
+    min-height: 40rem;
     text-align: center;
     font-size: 2rem;
     line-height: 4rem;
@@ -57,7 +57,7 @@ main aside.banner_F p.next img{
 /* 배너버튼 */
 main aside.banner_F>div{
     position: absolute;
-    left: calc(50% - 11rem); bottom: 10rem;
+    left: calc(50% - 11rem); bottom: 5rem;
     z-index: 11;
     overflow: hidden;
     cursor: pointer;
@@ -91,7 +91,7 @@ main aside.banner_F>div>ul>li.on{
 /* 스크롤버튼 */
 main aside.banner_F>p.scroll{
     position: absolute;
-    left: calc(50% - 5.5rem); bottom: 3.3rem;
+    left: calc(50% - 5.5rem); bottom: 0;
     z-index: 12;
     width: 11rem; height: 4rem;
     border-radius: .5rem .5rem 0 0;

@@ -20,8 +20,7 @@ main aside>ul>li.ban1{
     background: url(../imgs/kid-milk.jpg) no-repeat center/cover;
 }
 main aside>ul>li.ban2{  
-    background: lightpink;
-
+    background: url(../imgs/banner_1.png) no-repeat 0 0/cover;
 }
 main aside>ul>li.ban3{  
     background: lightskyblue;
