@@ -188,6 +188,7 @@ header>div.head>p.btnB:active ~ ul.navUl{
 header.sticky{
     position: fixed;
     background: #fff;
+    padding: .5rem 0;
     box-shadow: 0 .2rem .2rem rgba(0,0,0,.3);
 }
 header.sticky nav>ul>li>a{

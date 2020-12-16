@@ -20,24 +20,24 @@ $(function(){
                 }
             });
 
-            var brand = {idx:0,len:$(".brandList").children("li").length,list:$(".brandList").children("li"),
-            auto:setInterval(brandMiddle,3000)}
-            function brandMiddle(){
-                brand.idx++;
-                if(brand.idx>brand.len-1){
-                    brand.idx = 0;
-                }
-                brandMake();
-            }
+            // var brand = {idx:0,len:$(".brandList").children("li").length,list:$(".brandList").children("li"),
+            // auto:setInterval(brandMiddle,3000)}
+            // function brandMiddle(){
+            //     brand.idx++;
+            //     if(brand.idx>brand.len-1){
+            //         brand.idx = 0;
+            //     }
+            //     brandMake();
+            // }
 
-            function brandMake(){
-                brand.list.eq(brand.idx).fadeIn(500).siblings("li").fadeOut(500);
-                brand.list.eq(brand.idx).addClass("on").siblings("li").removeClass("on");
-            }
-            $(window).scroll(function(){
-                clearInterval(brand.auto);
-                brand.auto = setInterval(brandMiddle,3000);
-            });
+            // function brandMake(){
+            //     brand.list.eq(brand.idx).fadeIn(500).siblings("li").fadeOut(500);
+            //     brand.list.eq(brand.idx).addClass("on").siblings("li").removeClass("on");
+            // }
+            // $(window).scroll(function(){
+            //     clearInterval(brand.auto);
+            //     brand.auto = setInterval(brandMiddle,3000);
+            // });
         // }
 
     // });

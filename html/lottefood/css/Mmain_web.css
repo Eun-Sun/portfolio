@@ -104,7 +104,17 @@ main aside.banner_F>p.scroll{
     background: url(../imgs/SVG/arrow-d-l.svg) no-repeat 50% 90%;
     background-size: 1rem ;
     background-color: #e30013;
+    transition: all .3s ease;
 
+}
+.fixed{
+    position: fixed;
+    bottom: 0; right: 0;
+    width: 10rem; height: 10rem;
+    border-radius: .5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 10rem;
 }
 
 /* 브랜드, 신제품 소개 */
