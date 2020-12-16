@@ -23,8 +23,7 @@ main aside>ul>li.ban2{
 
 }
 main aside>ul>li.ban3{  
-    background: lightskyblue;
-
+    background: url(../imgs/banner_2.png) no-repeat center/cover;
 }
 main aside.banner_F>ul.bannerB>li>div{
     margin: 0 auto;
