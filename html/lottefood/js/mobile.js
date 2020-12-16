@@ -1,6 +1,6 @@
 $(function(){
     $(".btnB").click(function(){
-        $(".navUl").css("left","0px")
+        $(".navUl").css("display","block")
     });
     $(".mobileX").click(function(){
         $(this).parent().css("display","none");
