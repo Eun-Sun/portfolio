@@ -30,8 +30,8 @@ main aside.banner_F>ul.bannerB>li>div{
     margin-top: 30rem;
     min-height: 40rem;
     text-align: center;
-    font-size: 2rem;
-    line-height: 4rem;
+    font-size: 2.1rem;
+    line-height: 4.2rem;
     color: #fff;
 }
 
@@ -140,8 +140,8 @@ div.brand section h1::after{
 }
 div.common section>p:first-of-type{
     margin: 0 auto;
-    font-size: 2.4rem;
-    line-height: 5.2rem;
+    font-size: 2.1rem;
+    line-height: 5rem;
     color: #606060;
 }
 /* 더보기 */
