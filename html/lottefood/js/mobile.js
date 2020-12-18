@@ -1,46 +1,57 @@
 $(function(){
+    var flag = {nav:true, x:true, form:true}
+    
     $(".btnB").click(function(){
-        $(".navUl").css("display","block")
+        if(flag.nav){
+            $("nav").css("left",0);
+            flag.nav = false;
+        }else{
+            $("nav").css("left","-70vw");
+            flag.nav = true;
+        }
     });
+    
     $(".mobileX").click(function(){
-        $(this).parent().css("display","none");
+        if(flag.x){
+            $("nav").css("left","-70vw");
+            flag.x = true;
+        }
     });
-    // $(window).resize(function(){
-    //     if($(window).width()<1200){
-            var flag_form = true;
+    $(window).resize(function(){
+        if($(window).width()<1200){
             var $form = $(".form").children();
             $(".img").click(function(e){
                 e.preventDefault();
-                if(flag_form){
+                if(flag.form){
                     $("#proD").css("display","block");
-                    flag_form = !flag_form;
+                    flag.form = false;
                 }else{
                     $("#proD").css("display","none");
-                    flag_form = !flag_form;
+                    flag.form = true;
                 }
             });
 
             //모바일 브랜드 이미지 자동함수
-            // var brand = {idx:0,len:$(".brandList").children("li").length,list:$(".brandList").children("li"),
-            // auto:setInterval(brandMiddle,3000)}
-            // function brandMiddle(){
-            //     brand.idx++;
-            //     if(brand.idx>brand.len-1){
-            //         brand.idx = 0;
-            //     }
-            //     brandMake();
-            // }
+            var brand = {idx:0,len:$(".mobile").children("li").length,list:$(".mobile").children("li"),
+            auto:setInterval(brandMiddle,3000)}
+            function brandMiddle(){
+                brand.idx++;
+                if(brand.idx>brand.len-1){
+                    brand.idx = 0;
+                }
+                brandMake();
+            }
 
-            // function brandMake(){
-            //     brand.list.eq(brand.idx).fadeIn(500).siblings("li").fadeOut(500);
-            //     brand.list.eq(brand.idx).addClass("on").siblings("li").removeClass("on");
-            // }
-            // $(window).scroll(function(){
-            //     clearInterval(brand.auto);
-            //     brand.auto = setInterval(brandMiddle,3000);
-            // });
-        // }
+            function brandMake(){
+                brand.list.eq(brand.idx).fadeIn(500).siblings("li").fadeOut(500);
+                brand.list.eq(brand.idx).addClass("on").siblings("li").removeClass("on");
+            }
+            $(window).scroll(function(){
+                clearInterval(brand.auto);
+                brand.auto = setInterval(brandMiddle,3000);
+            });
+        }
 
-    // });
+    });
     
 });
