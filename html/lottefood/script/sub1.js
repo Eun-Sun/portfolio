@@ -43,7 +43,7 @@ $(function(){
         if(sct>=2400){
             $(".scroll9").children("ul").children("li").eq(1).fadeIn(1000);
         }
-        if(sct>=2500){
+        if(sct>=2450){
             $(".scroll9").children("ul").children("li").eq(2).fadeIn(1000);
         }
     });
