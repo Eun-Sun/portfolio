@@ -1,0 +1,235 @@
+main{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.mobile{
+    display: none;
+}
+.scroll1,.scroll2,.scroll3{
+    display: none;
+}
+/* 배너 */
+main aside.banner_F{
+    position: relative;
+    min-height: 100rem;
+    width: 100%;
+    background: url(../imgs/goo_logo.png) no-repeat 50% 30%,
+    url(../imgs/sub2_bg.png) no-repeat center/cover;
+}
+main aside>ul{
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%; height: 37rem;
+    background: rgba(98,97,97,.4);
+    
+}
+main aside.banner_F>ul>li{
+    margin: 0 auto;
+    width: 40%; height: 37rem;
+    background: rgba(98,97,97,.4);
+}
+
+main aside.banner_F>ul.bannerB>li>div{
+    position: absolute;
+    top: 3.5rem; left: calc(50% - 15rem);
+    width: 30rem; height: 30rem;
+    border: .2rem solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    font: 500 4.5rem/6rem sans-serif;
+    color: #fff;
+}
+main aside.banner_F>ul.bannerB>li>div>p{
+    margin-top: 7.3rem;
+    font:400 4rem/rem sans-serif;
+}
+
+
+/* 스크롤버튼 */
+main aside.banner_F>p{
+    position: absolute;
+    right: calc(50% - 5.5rem); bottom: 37rem;
+    z-index: 12;
+    width: 11rem; height: 4rem;
+    border-radius: .5rem .5rem 0 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 4rem;
+    color: #fff;
+    text-align: center;
+    background: url(../imgs/SVG/arrow-d-l.svg) no-repeat 50% 90%;
+    background-size: 1rem ;
+    background-color: #e30013;
+    transition: all .5s linear;
+
+}
+main aside.banner_F>p.fixed{
+    position: fixed;
+    bottom: 2rem; right: 2rem;
+    width: 5rem; height: 5rem;
+    background-image:none;
+    border-radius: .5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 5rem;
+}
+main aside.banner_F>p.fixed>a{    
+    color: #fff;
+}
+
+/* 구구 소개 */
+div.gooInt section{
+    margin: 0 auto;
+    margin-top: 8rem;
+    margin-bottom: 7rem;
+    text-align: center;
+    color: #606060;
+}
+/* div.gooInt section>p.scroll1{
+    display: none;
+} */
+
+div.gooInt section>h1{
+    font-size: 4rem;
+    line-height: 4.5rem;
+}
+div.gooInt section>p:nth-child(3){
+    margin-top: 4.5rem;
+    font: 300 2.2rem/3.8rem sans-serif;
+}
+span.color{
+    color: #e30013;
+}
+span.line{
+    display: inline-block;
+    margin-top: 4.5rem;
+    width: .1rem;
+    height: 3rem;
+    background: #e30013;
+}
+div.gooInt section>p:last-child{
+    margin-top: 5rem;
+    margin-left: 15rem;
+}
+div.gooInt section>p:last-child>img{
+    width: 75rem;
+}
+/* 구구 히스토리 */
+div.gooHis{
+}
+div.gooHis>section:nth-child(1){
+    /* display: none; */
+    border-top: 2.5rem solid #E6A228;
+    background: #EDC363;
+    text-align: center;
+}
+div.gooHis>section>h1{
+    margin-top: 8rem;
+    font: 700 3.5rem/4rem sans-serif;
+
+}
+div.gooHis>section>p>span.lineW{
+    display: inline-block;
+    margin-top: 4.5rem;
+    width: .2rem;
+    height: 3rem;
+    background: #fff;
+}
+div.gooHis>section>div.goocon{
+    margin-top: 7rem;
+}
+div.gooHis>section>div.goocon>ul{
+    margin: 0 auto;
+    padding-bottom: 9rem;
+    width: 92rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+div.gooHis>section>div.goocon>ul>li{
+    flex: 0 1 auto;
+}
+div.gooHis>section>div.goocon>ul>li>img{
+    margin-bottom: 8rem;
+    transition: all .5s ease;
+}
+div.gooHis>section>div.goocon>ul>li>span{
+    font: 600 3rem/5rem sans-serif;
+    color: #fff;
+    transition: all .5s ease;
+}
+div.gooHis>section>div.goocon>ul>li>img:hover{
+    transform: scale(1.2);
+}
+div.gooHis>section>div.goocon>ul>li:hover>span{
+    color: #e30013;
+}
+
+/* 구구패키지 */
+div.gooHis>section:nth-child(2){
+    text-align: center;
+    font: 400 3.5rem/4rem sans-serif;
+    color: #606060;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+}
+div.gooHis>section>div.gooRetro>p>img{
+    margin-top: 7rem;
+}
+
+/* 상품더보기 */
+div.productList{
+    background: #EFEFEF;
+}
+div.productList>div{
+    margin: 0 auto;
+    width: 92rem;
+}
+div.productList>div>p{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    color: #606060;
+}
+div.productList>div>p:nth-of-type(1){
+    float: left;
+    font: 600 3.5rem/5rem sans-serif;
+}
+div.productList>div>p:nth-of-type(2){
+    float: right;
+    width: 10rem; height: 4rem;
+    text-align: center;
+    border: .1rem solid #606060;
+    font: 400 2rem/4.1rem sans-serif;
+}
+div.productList>div>p>a{
+    display: block;
+    color: #606060;
+    transition: all .5s ease;
+}
+div.productList>div>p:hover>a{
+    background: #606060;
+    color: #fff;
+}
+
+
+div.productList>div>ul{
+    clear: both;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+    width: 92rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+div.productList>div>ul>li{
+    flex: 0 1 28.1rem;
+    text-align: center;
+    cursor: pointer;
+}
+div.productList>div>ul>li>img{
+    margin-bottom: 3rem;
+}
+div.productList>div>ul>li>span{
+    display: inline-block;
+    font: 300 2.4rem/5rem sans-serif;
+    color: #606060;
+}

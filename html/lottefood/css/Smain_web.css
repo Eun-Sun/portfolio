@@ -202,7 +202,7 @@ div.lotte_int2>section:nth-child(2)>div>ul>li{
     font: 500 3.6rem/5rem sans-serif;
     color: #fff;
     background-size: 300%;
-    transition: all .5s ease;
+    transition: all .3s ease;
 }
 div.lotte_int2>section:nth-child(2)>div>ul>li:nth-child(1){
     display: none;

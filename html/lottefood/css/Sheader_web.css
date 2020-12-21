@@ -222,7 +222,8 @@ header div.sub_utill>ul{
     text-align: right;
 }
 header div.sub_utill>ul>li{
-    flex: 0 1 5%;
+    flex: 0 1 auto;
+    padding: 0 1rem;
     font: 400 1.4rem sans-serif;
 }
 header div.sub_utill>ul>li>a{
