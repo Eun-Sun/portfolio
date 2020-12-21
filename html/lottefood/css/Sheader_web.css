@@ -5,13 +5,14 @@ header{
     font-family: 'Noto Sans KR', sans-serif;
     position: absolute;
     top: 0; left: 0;
-    z-index: 9999;
+    z-index: 9000;
     width: 100%;
     height: 6rem;
     padding: 3rem 0;
     transition: all .3s ease;
 }
 header>div.head{
+    z-index: 9001;
     position: relative;
     margin: 0 auto;
     padding: 0 2rem;
@@ -113,6 +114,7 @@ header nav>ul>li:hover>a::after{
 }
 header nav>ul>li>div.on{
     display: block;
+    z-index: 900;
     position: absolute;
     top: 4.5rem; left: 0;
     width: 52.5rem;
@@ -130,11 +132,13 @@ header nav>ul>li>div>ul{
     position: absolute;
     top: 2rem; left: 3.5rem;
     width: 48.5rem;
+    z-index: 901;
 }
 header nav>ul>li>div>ul>li::after{
     display: none;
     content: "";
     position: absolute;
+    z-index: 901;
     top: .5rem; left: 25rem;
     width: .1rem; height: 24.5rem;
     background-color: #c7c7c7;
@@ -145,6 +149,7 @@ header nav>ul>li>div>ul>li>a{
 }
 header nav>ul>li>div>ul>li>ul{
     position:  absolute;
+    z-index: 902;
     left: 30rem; top: .5rem;
 }
 header nav>ul>li>div>ul>li>ul>li>a{
@@ -167,7 +172,6 @@ header.sticky{
     position: fixed;
     padding: .5rem 0;
     background: #fff;
-    box-shadow: 0 .2rem .2rem rgba(0,0,0,.3);
 }
 header.sticky nav>ul>li>a{
     color: #3A3A3A;
@@ -201,13 +205,15 @@ header.sticky form>fieldset>input[type="search"]{
     border: .1rem solid #c7c7c7;
 }
 
-header div:last-child{
+/* 네브유틸메뉴 */
+header div.sub_utill{
     position: absolute;
+    left: 0;
     bottom: -2rem;
     width: 100%;
 }
 
-header div:last-child>ul{
+header div.sub_utill>ul{
     margin: 0 auto;
     display: flex;
     justify-content:flex-end;
@@ -215,22 +221,39 @@ header div:last-child>ul{
     width: 132rem;
     text-align: right;
 }
-header div:last-child>ul>li{
+header div.sub_utill>ul>li{
     flex: 0 1 5%;
     font: 400 1.4rem sans-serif;
 }
-header div:last-child>ul>li>a{
+header div.sub_utill>ul>li>a{
     display: block;
     position: relative;
     color: #fff;
     opacity: .5;
 }
-header div:last-child>ul>li:not(:last-child)>a:after{
+header div.sub_utill>ul>li:not(:last-child)>a:after{
     position: absolute;
-    top: .3rem; right: -.6rem;
+    top: .1rem; right: -1rem;
     content: "";
     width: .1rem;
     height: 1.4rem;
     background: #fff;
-
+}
+header.sticky div.sub_utill{
+    z-index: 1;
+    bottom: -4rem;
+    height: 4rem;
+    background:#EFEFEF ;
+    box-shadow: 0 .2rem .2rem rgba(0,0,0,.3);
+}
+header.sticky div.sub_utill>ul>li>a{
+    color: #3A3A3A;
+    line-height: 4rem;
+}
+header.sticky div.sub_utill>ul>li:not(:last-child)>a:after{
+    top: 1.2rem; right: -1rem;
+    content: "";
+    width: .1rem;
+    height: 1.4rem;
+    background: #3a3a3a;
 }

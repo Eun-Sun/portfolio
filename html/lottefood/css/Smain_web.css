@@ -1,0 +1,228 @@
+main{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.mobile{
+    display: none;
+}
+/* 배너 */
+main aside.banner_F{
+    position: relative;
+    min-height: 83.3rem;
+}
+main aside.banner_F>ul>li{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    min-height: 83.3rem;
+    font-weight: 500;
+}
+main aside>ul>li.ban1{  
+    background: url(../imgs/kid-milk.jpg) no-repeat center/cover;
+}
+
+main aside.banner_F>ul.bannerB>li>div{
+    margin: 0 auto;
+    padding-top: 36.3rem;
+    max-width: 132rem;
+    text-align: center;
+    font: 500 4.5rem/6rem sans-serif;
+    color: #fff;
+}
+main aside.banner_F>ul.bannerB>li>div>p:last-child{
+    margin-top: 2rem;
+    font:400 3rem/4rem sans-serif;
+}
+
+
+/* 스크롤버튼 */
+main aside.banner_F>p:last-child{
+    position: absolute;
+    right: calc(50% - 5.5rem); bottom: 0;
+    z-index: 12;
+    width: 11rem; height: 4rem;
+    border-radius: .5rem .5rem 0 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 4rem;
+    color: #fff;
+    text-align: center;
+    background: url(../imgs/SVG/arrow-d-l.svg) no-repeat 50% 90%;
+    background-size: 1rem ;
+    background-color: #e30013;
+    transition: all .5s linear;
+
+}
+main aside.banner_F>p.fixed{
+    position: fixed;
+    bottom: 2rem; right: 2rem;
+    width: 5rem; height: 5rem;
+    background-image:none;
+    border-radius: .5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 5rem;
+}
+main aside.banner_F>p.fixed>a{    
+    color: #fff;
+}
+
+/* 롯데푸드소개 */
+div.common section{
+    margin-top: 12.5rem;
+    margin-bottom: 7rem;
+    text-align: center;
+}
+div.common section>p.scroll1{
+    display: none;
+}
+div.common section>p{
+    margin: 0 auto;
+    font-size: 3.2rem;
+    line-height: 4.5rem;
+    color: #606060;
+}
+span.color{
+    color: #e30013;
+}
+div.common section>p>span.line{
+    display: inline-block;
+    margin: 0 auto;
+    margin-top: 4.5rem;
+    width: .1rem;
+    height: 3rem;
+    background: #e30013;
+}
+
+/* 롯데푸드 설명 */
+div.intro>section{
+    display: none;
+    width: 100%;
+    height: 40rem;
+}
+
+div.intro>section>div.lotte_int{
+    width: 50%;
+    height: 40rem;
+    background: #EFEFEF;
+}
+div.intro>section:nth-of-type(1)>div.lotte_int{
+    float: left;
+}
+div.intro>section:nth-of-type(2)>div.lotte_int{
+    float: right;
+}
+div.intro>section:nth-of-type(3)>div.lotte_int{
+    float: left;
+}
+div.intro>section>div.lotte_int>ul{
+    margin-top: 10rem;
+    font: 400 2rem/3.5rem sans-serif;
+    color: #606060;
+}
+div.intro>section>div.lotte_int>ul>li:nth-child(1){
+    font: 500 3rem/8rem sans-serif;
+}
+div.intro>section:not(:nth-of-type(2))>div.lotte_int>ul{
+    margin-left: 30%;
+}
+div.intro>section:nth-of-type(2)>div.lotte_int>ul{
+    text-align: right;
+    margin-right: 30%;
+}
+
+div.intro>section>div.lotte_intBG{
+    width: 50%;
+    height: 40rem;
+}
+div.intro>section:nth-of-type(1)>div.lotte_intBG{
+    float: right;
+    background: url(../imgs/lotte_intBG_1.png) no-repeat 0 0/cover;
+}
+div.intro>section:nth-of-type(2)>div.lotte_intBG{
+    float: left;
+    background: url(../imgs/lotte_intBG_2.png) no-repeat 0 0/cover;
+}
+div.intro>section:nth-of-type(3)>div.lotte_intBG{
+    float: right;
+    background: url(../imgs/lotte_intBG_3.png) no-repeat 0 0/cover;
+}
+
+/* 롯데푸드설명2 */
+div.lotte_int2>section>p{
+    display: none;
+}
+div.lotte_int2>section:nth-child(1){
+    margin-bottom: 0;
+}
+
+div.lotte_int2>section>p>span.cir1{
+    display: inline-block;
+    width: .6rem; height: .6rem;
+    border-radius: 50%;
+    vertical-align: middle;
+    background: #e30013;
+}
+
+div.lotte_int2>section:nth-child(2){
+    position: relative;
+    margin-top: 5rem;
+    padding-top: 10rem;
+    width: 100%;
+    height: 68rem;
+}
+div.lotte_int2>section:nth-child(2)>div{
+    display: none;
+    margin: 0 auto;
+    margin-top: 5rem;
+    width: 48rem;
+    height: 48rem;
+    border-radius: 50%;
+    border: .2rem solid #CECDCC;
+}
+div.lotte_int2>section:nth-child(2)>div>p{
+    display: none;
+    margin:0 auto;
+    margin-top: 17rem;
+    font: 600 3.3rem/5rem sans-serif;
+    color: #606060;
+}
+div.lotte_int2>section:nth-child(2)>div>ul{
+    position: absolute;
+    top: 0; left: 0;  
+    width: 100%;
+    height: 68rem;  
+}
+div.lotte_int2>section:nth-child(2)>div>ul>li{
+    position: absolute;
+    box-sizing: border-box;
+    padding-top: 10rem;
+    width: 28rem;
+    height: 28rem;
+    border-radius: 50%;
+    font: 500 3.6rem/5rem sans-serif;
+    color: #fff;
+    background-size: 300%;
+    transition: all .5s ease;
+}
+div.lotte_int2>section:nth-child(2)>div>ul>li:nth-child(1){
+    display: none;
+    padding-top: 12rem;
+    top: 0;
+    left: calc(50% - 14rem);
+    background: linear-gradient(45deg,#E39967,#EE715D);
+}
+div.lotte_int2>section:nth-child(2)>div>ul>li:nth-child(2){
+    display: none;
+    bottom: 0;
+    left: calc(50% - 38rem);
+    background: linear-gradient(-45deg,#7DAAAA,#5790B0);
+}
+div.lotte_int2>section:nth-child(2)>div>ul>li:nth-child(3){
+    display: none;
+    bottom: 0;
+    right: calc(50% - 38rem);
+    background: linear-gradient(-20deg,#799432,#B6D487);
+}
+div.lotte_int2>section:nth-child(2)>div>ul>li:hover{
+    transform: scale(1.1);
+}
