@@ -1,6 +1,5 @@
 $(function(){
     //main 스크롤 반응
-
     $(window).on("scroll",function(){
         //$("html, body").animate({"scrollTop":0},1);
         var sct = $(window).scrollTop();
@@ -16,6 +15,14 @@ $(function(){
         if(sct>=2000){
             $(".scroll3").fadeIn(1000);
         }
+
+        // $(".hide1").each(function(e){
+        //     var bottomObject = $(this).offset().top + $(this).outerHeight();
+        //     var bottomWindow = $(window).scrollTop() + $(window).height();
+        //     if(bottomWindow > bottomObject/3){
+        //         $(this).animate({'opacity':1},1000);
+        //     }
+        // })
     });
 
 
