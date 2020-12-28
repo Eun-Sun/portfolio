@@ -1,0 +1,86 @@
+
+html,body{
+    height: 100%;
+}
+header{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    z-index: 999;
+    transition: all .5s ease;
+}
+header>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 4rem;
+    margin: 0 auto;
+    width: 128rem;
+    box-sizing: border-box;
+    transition: all 1s ease;
+}
+header>div>h1 img{
+    margin-right: 2rem;
+    width: 18rem;
+}
+header>div>nav{
+    width: 70rem;
+    text-align: center;
+}
+header>div>nav>ul{
+    display: flex;
+    justify-content: space-between;
+}
+header>div>nav>ul>li{
+    flex: 0 1 25%;
+}
+header>div>nav>ul>li>a{
+    font: 600 1.8rem/3.5rem 'Open Sans', sans-serif;
+    color: #fff;
+}
+header>div>nav>ul>li>ul{
+    display: none;
+    margin-top: 5rem;
+    transition: all .5s ease;
+}
+header>div>nav>ul>li>ul>li{
+    margin: 3rem 0;
+}
+header>div>nav>ul>li>ul>li>a{
+    display: block;
+    font: 600 1.6rem/3rem 'Noto Sans', sans-serif;
+    color: #fff;
+    opacity: .5;
+    transition: all .5s ease;
+}
+header>div>nav>ul>li>ul>li:hover>a{
+    opacity: 1;
+}
+header>div>form>fieldset{
+    position: relative;
+}
+header>div>form>fieldset>input[type="search"]{
+    appearance: none;
+    outline: none;
+    border: 0 none;
+    opacity: 0;
+    border-radius: 4rem;
+    padding:  1rem;
+    width: 15rem; height: 2.5rem;
+}
+header>div>form>fieldset>input[type="image"]{
+    position: absolute;
+    top: .3rem; right: .2rem;
+    width: 1.7rem;
+}
+
+header.sticky{
+    position: fixed;
+    z-index: 9999;
+    opacity: 0;
+    transition: all .5s ease;
+}
+header.sticky:hover{
+    opacity: 1;
+}
+/* 이벤트 */
