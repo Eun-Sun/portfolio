@@ -54,11 +54,11 @@ section.box1>div>ul{
     text-align: center;
 }
 section.box1>div>ul>li:nth-of-type(1){
-    font: 700 5rem/6rem sans-serif;
+    font: 700 5rem/6rem 'Noto sans KR',sans-serif;
     color: #fff;
 }
 section.box1>div>ul>li:nth-of-type(2){
-    font: 500 2.3rem/2.8rem sans-serif;
+    font: 500 2.3rem/2.8rem 'Noto sans KR',sans-serif;
     color: #fff;
 }
 section.box1>div>ul>li:nth-of-type(3){
@@ -70,7 +70,7 @@ section.box1>div>ul>li:nth-of-type(3)>a{
     height: 5.4rem;
     border: .2rem solid  rgba(223,190,106,1);
     border-radius: .6rem;
-    font: 400 2.3rem/5.4rem sans-serif;
+    font: 400 2.3rem/5.4rem 'Noto sans KR',sans-serif;
     color: rgba(223,190,106,1);
     text-transform: uppercase;
     transition: all 0.7s ease-out;
@@ -93,7 +93,7 @@ section.box1>div.banner_btn{
 section.box1>div.banner_btn>p{
     display: inline-block;
     width: 10rem; height: 6.5rem;
-    font: 400 1.4rem/2rem sans-serif;
+    font: 400 1.3rem/2rem 'Noto sans KR',sans-serif;
     color: #fff;
     cursor: pointer;
 }
@@ -141,7 +141,7 @@ section.box2>div>p:nth-of-type(2)>img{
     display: block;
 }
 section.box2>div>p:nth-of-type(3){
-    font: 500 3rem sans-serif;
+    font: 500 3rem/3rem 'Noto sans KR',sans-serif;
     color: #fff;
 }
 
@@ -155,6 +155,8 @@ section.box3{
     background: url(../imgs/Mbg_Thirbg.png) no-repeat center/cover;
 }
 section.box3>div{
+    overflow: hidden;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -163,7 +165,7 @@ section.box3>div{
     text-align: center;
 }
 section.box3>div>p{
-    font: 700 5rem/6rem sans-serif;
+    font: 700 5rem/6rem 'Noto sans KR',sans-serif;
     color: #fff;
 }
 section.box3>div>ul{
@@ -200,7 +202,7 @@ section.box3>div>ul>li>span{
 }
 section.box3>div>div.leftWing{
     position: absolute;
-    top: -100%; left: -100%;
+    top: 0; left: -100%;
     width: 106rem; height: 73rem;
     border: .2rem solid rgba(223,190,106,1);
     background: #fff;
@@ -209,7 +211,7 @@ section.box3>div>div.leftWing{
 }
 section.box3>div>div.rightWing{
     position: absolute;
-    top: 100%; left: 100%;
+    top: 0; left: 100%;
     width: 106rem; height: 73rem;
     border: .2rem solid rgba(223,190,106,1);
     background: #fff;
@@ -234,7 +236,7 @@ section.box4>div{
 }
 section.box4>div>p{
     flex-shrink: 1;
-    font: 400 2.2rem/2.5rem sans-serif;
+    font: 400 2.2rem/2.5rem 'Noto sans KR',sans-serif;
     color: #fff;
     transition: all .4s linear;
 }
@@ -244,7 +246,7 @@ section.box4>div>p.mechineOn:hover{
     font-weight: 500;
 }
 section.box4>div>p:nth-of-type(1){
-    font: 700 5rem/6rem sans-serif;
+    font: 700 5rem/6rem 'Noto sans KR',sans-serif;
     color: #fff;
 }
 section.box4>div>p>span.line{
@@ -259,7 +261,7 @@ section.box4>div>p>a{
     height: 6rem;
     border: .2rem solid  rgba(223,190,106,1);
     border-radius: .6rem;
-    font: 400 2.3rem/6rem sans-serif;
+    font: 400 2.3rem/6rem 'Noto sans KR',sans-serif;
     color: rgba(223,190,106,1);
     text-transform: uppercase;
     transition: all 0.7s ease-out;
@@ -348,18 +350,18 @@ div.mechine>ul>li>img{
     margin-top: 2rem;
 }
 div.mechine>ul>li>ul>li:nth-of-type(1){
-    font: 600 2.4rem/4rem sans-serif;
+    font: 600 2.4rem/4rem 'Noto sans KR',sans-serif;
 }
 div.mechine>ul>li>ul>li:nth-of-type(2){
     font: 400 1.4rem sans-serif;
     text-decoration: line-through red;
 }
 div.mechine>ul>li>ul>li:nth-of-type(3){
-    font: 500 2.2rem/2.8rem sans-serif;
+    font: 500 2.2rem/2.8rem 'Noto sans KR',sans-serif;
 
 }
 div.mechine>ul>li>ul>li:nth-of-type(4){
-    font: 400 1.3rem/3rem sans-serif;
+    font: 400 1.3rem/3rem 'Noto sans KR',sans-serif;
 }
 
 div.mechine>ul>li:last-child>a{
@@ -385,15 +387,18 @@ section.box5>div{
     height: 50%;
 }
 section.box5>div>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: relative;
     margin: 0 auto;
     width: 80vw;
-    padding-top: 5rem;
+    padding: 5vh;
 }
 section.box5>div>div>h2{
     width: 12rem; height: 5.2rem;
     color: #fff;
-    font: 500 2.5rem/5.3rem sans-serif;
+    font: 500 2.5rem/5.3rem 'Noto sans KR',sans-serif;
     text-align: center;
 }
 
@@ -406,7 +411,7 @@ section.box5>div:nth-of-type(1)>div>h2{
 }
 section.box5>div:nth-of-type(1)>div>h3{
     color: #fff;
-    font: 500 2.2rem/5rem sans-serif;
+    font: 500 2.2rem/5rem 'Noto sans KR',sans-serif;
 }
 section.box5>div:nth-of-type(1)>div>p.plus{
     position: absolute;
@@ -415,7 +420,7 @@ section.box5>div:nth-of-type(1)>div>p.plus{
     width: 3rem; height: 3rem;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.173);
-    font: 700 3rem sans-serif;
+    font: 700 3rem/3rem 'Noto sans KR',sans-serif;
     text-align: center;
     transition: all 1s ease;
 }
@@ -429,6 +434,7 @@ section.box5>div:nth-of-type(1)>div>ul{
     border: .1rem solid #a8925d;
 }
 section.box5>div:nth-of-type(1)>div>ul>li:not(:last-child){
+    box-sizing: border-box;
     border-bottom: .1rem solid #a8925d;
 
 }
@@ -436,8 +442,8 @@ section.box5>div:nth-of-type(1)>div>ul>li{
     color: #fff;
 }
 section.box5>div:nth-of-type(1)>div>ul>li>h4{
-    padding: .8rem 1.5rem;
-    font: 400 1.6rem/3.5rem sans-serif;
+    padding:.1rem 1.5rem;
+    font: 400 1.6rem/3.5rem 'Noto sans KR',sans-serif;
     opacity: .5;
     transition: all 1s ease;
 }
@@ -452,7 +458,7 @@ section.box5>div:nth-of-type(1)>div>ul>li>h4.on{
 section.box5>div:nth-of-type(1)>div>ul>li>p{
     display: none;
     padding: .8rem 1.5rem;
-    font: 400 1.3rem/2rem sans-serif;
+    font: 400 1.3rem/2rem 'Noto sans KR',sans-serif;
     opacity: 1;
 }
 section.box5>div:nth-of-type(1)>div>ul>li>p>a{
@@ -487,11 +493,11 @@ section.box5>div:nth-of-type(2)>div>ul>li:hover{
 }
 section.box5>div:nth-of-type(2)>div>ul>li>p:first-child{
     margin-top: 2rem;
-    font: 500 2.5rem/4rem sans-serif;
+    font: 500 2.5rem/4rem 'Noto sans KR',sans-serif;
 }
 section.box5>div:nth-of-type(2)>div>ul>li>p:last-child{
     margin-top: 2rem;
-    font: 300 1.8rem/2.5rem sans-serif;
+    font: 300 1.8rem/2.5rem 'Noto sans KR',sans-serif;
 }
 
 /* 여섯번째 섹션 */
@@ -524,7 +530,7 @@ div.quick>ul{
     text-align: end;
 }
 div.quick>ul>li{
-    font:400 1.4rem sans-serif;
+    font:400 1.4rem 'Noto sans KR',sans-serif;
 }
 div.quick>ul>li:not(:last-child){
     margin-bottom: 1rem;
