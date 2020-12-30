@@ -46,7 +46,11 @@ section.box1>div.banner03{
 /* 배너 멘트 */
 section.box1>div>ul{
     margin: 0 auto;
-    margin-top: calc(50vh - 18rem);
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 60vh;
     text-align: center;
 }
 section.box1>div>ul>li:nth-of-type(1){
@@ -54,13 +58,11 @@ section.box1>div>ul>li:nth-of-type(1){
     color: #fff;
 }
 section.box1>div>ul>li:nth-of-type(2){
-    margin-top: 7.3rem;
     font: 500 2.3rem/2.8rem sans-serif;
     color: #fff;
 }
 section.box1>div>ul>li:nth-of-type(3){
     margin: 0 auto;
-    margin-top: 7rem;
 }
 section.box1>div>ul>li:nth-of-type(3)>a{
     display: inline-block;
@@ -86,7 +88,7 @@ section.box1>div>ul>li:nth-of-type(3)>a:hover{
 section.box1>div.banner_btn{
     position: absolute;
     z-index: 30;
-    bottom: 8rem; left: calc(50% - 18.7rem);
+    bottom: 5%; left: calc(50% - 18.7rem);
 }
 section.box1>div.banner_btn>p{
     display: inline-block;
@@ -116,19 +118,29 @@ section.box2{
     background: url(../imgs/Mbg_Sebg.png) no-repeat center/cover;
 }
 section.box2>div{
-    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10vh 0;
+    height: 80vh;
     text-align: center;
+    overflow: hidden;
+}
+section.box2>div>p{
+    flex: 0 1 auto;
 }
 section.box2>div>p:nth-of-type(1)>img{
     width: 40rem;
 }
 section.box2>div>p:nth-of-type(2){
-    margin-top: 10rem;
+    margin: 0 auto;
+}
+section.box2>div>p:nth-of-type(2)>img{
     animation: rotates 10s linear infinite;
     transform-origin: 50% 50%;
+    display: block;
 }
 section.box2>div>p:nth-of-type(3){
-    margin-top: 13rem;
     font: 500 3rem sans-serif;
     color: #fff;
 }
@@ -143,7 +155,9 @@ section.box3{
     background: url(../imgs/Mbg_Thirbg.png) no-repeat center/cover;
 }
 section.box3>div{
-    margin-top: 16rem;
+    padding-top: 10vh;
+    margin-bottom: 10vh;
+    height: 80vh;
     text-align: center;
 }
 section.box3>div>p{
@@ -152,7 +166,7 @@ section.box3>div>p{
 }
 section.box3>div>ul{
     margin: 0 auto;
-    margin-top: 22rem;
+    margin-top: 20vh;
     width: 93rem; height: 17.5rem;
 }
 section.box3>div>ul>li{
@@ -163,7 +177,7 @@ section.box3>div>ul>li:nth-child(1){
     width: 25rem;
 }
 section.box3>div>ul>li:nth-child(2){
-    margin-top: .6rem;
+    margin-top: 2vh;
     margin-left: 34.5rem;
     width: 32.7rem;
 }
@@ -190,11 +204,17 @@ section.box4{
     background: url(../imgs/Mbg_Fourbg.png) no-repeat center/cover;
 }
 section.box4>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 80vh;
+    width: 100%;
+    padding-top: 10vh;
+    margin-bottom: 10vh;
     text-align: center;
-    margin-top: 22rem;
 }
 section.box4>div>p{
-    margin: 2rem 0;
+    flex-shrink: 1;
     font: 400 2.2rem/2.5rem sans-serif;
     color: #fff;
     transition: all .4s linear;
@@ -205,7 +225,6 @@ section.box4>div>p.mechineOn:hover{
     font-weight: 500;
 }
 section.box4>div>p:nth-of-type(1){
-    margin-bottom: 9.5rem;
     font: 700 5rem/6rem sans-serif;
     color: #fff;
 }
@@ -217,7 +236,6 @@ section.box4>div>p>span.line{
 }
 section.box4>div>p>a{
     display: inline-block;
-    margin-top: 10rem;
     width: 19.6rem;
     height: 6rem;
     border: .2rem solid  rgba(223,190,106,1);
