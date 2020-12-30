@@ -5,10 +5,12 @@ $(function(){
     var flag = {imgs:true, mechine:true}
 
     $("nav").mouseenter(function(){
-        $("header>div").css("background-color","  rgba(18,18,18,.9)");
+        $("header").css("border","none");
+        $("header>div").css("background-color","rgba(18,18,18,.9)");
         $("nav>ul>li>ul").css("display","block");
 
     }).mouseleave(function(){
+        $("header").css("border-bottom",".1rem solid rgba(255, 255, 255, .2)");
         $("header>div").css("background-color","transparent");
         $("nav>ul>li>ul").css("display","none");
     });//네브 여닫기 end

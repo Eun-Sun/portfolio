@@ -5,9 +5,11 @@ html,body{
 header{
     position: absolute;
     top: 0; left: 0;
+    padding-bottom: 3rem;
     width: 100%;
     z-index: 999;
     transition: all .5s ease;
+    border-bottom: .1rem solid rgba(255, 255, 255, .2);
 }
 header>div{
     display: flex;
@@ -40,7 +42,7 @@ header>div>nav>ul>li>a{
 }
 header>div>nav>ul>li>ul{
     display: none;
-    margin-top: 5rem;
+    margin-top: 3rem;
     transition: all .5s ease;
 }
 header>div>nav>ul>li>ul>li{
