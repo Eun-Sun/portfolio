@@ -155,8 +155,10 @@ section.box3{
     background: url(../imgs/Mbg_Thirbg.png) no-repeat center/cover;
 }
 section.box3>div{
-    padding-top: 10vh;
-    margin-bottom: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10vh;
     height: 80vh;
     text-align: center;
 }
@@ -165,9 +167,9 @@ section.box3>div>p{
     color: #fff;
 }
 section.box3>div>ul{
+    flex: 0 1 auto;
     margin: 0 auto;
-    margin-top: 20vh;
-    width: 93rem; height: 17.5rem;
+    width: 93rem; height: 30rem;
 }
 section.box3>div>ul>li{
     float: left;
@@ -177,7 +179,7 @@ section.box3>div>ul>li:nth-child(1){
     width: 25rem;
 }
 section.box3>div>ul>li:nth-child(2){
-    margin-top: 2vh;
+    margin-top: 1rem;
     margin-left: 34.5rem;
     width: 32.7rem;
 }
@@ -196,7 +198,24 @@ section.box3>div>ul>li>span{
     font-style: italic;
     color: #fff;
 }
-section.box3>div>div{}
+section.box3>div>div.leftWing{
+    position: absolute;
+    top: -100%; left: -100%;
+    width: 106rem; height: 73rem;
+    border: .2rem solid rgba(223,190,106,1);
+    background: #fff;
+    box-sizing: border-box;
+    transition: all 1s ease;
+}
+section.box3>div>div.rightWing{
+    position: absolute;
+    top: 100%; left: 100%;
+    width: 106rem; height: 73rem;
+    border: .2rem solid rgba(223,190,106,1);
+    background: #fff;
+    box-sizing: border-box;
+    transition: all 1s ease;
+}
 
 /* 네번째 섹션 */
 section.box4{
