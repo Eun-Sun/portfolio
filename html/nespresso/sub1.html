@@ -4,32 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <link rel="stylesheet" href="../css/reset.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <style>
         html,body{
             font-size: 62.5%;
             font-family: 'Noto Sans KR', sans-serif;
         }
     </style>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">    
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="script/swiper/css/swiper.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/sub1.css">
+    <link rel="stylesheet" href="css/footer.css">
     <title>NESPRESSO</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="script/jquery-ui.min.js"></script>
     <script src="script/jquery.mousewheel.min.js"></script>
     <script src="script/imagesloaded.pkgd.min.js"></script>
-    <script src="script/swiper.js"></script>
-    <script src="script/main.js"></script>
-    <script>
-        $(function(){
-        });
-    </script>
+    <script src="script/header.js"></script>
+    <script src="script/sub1.js"></script>
 </head>
-<body>
+<body id="top">
     <header>
         <div>
             <h1><a href="index.html"><img src="imgs/logo-white.svg" alt="nespresso"></a></h1>
@@ -37,9 +34,9 @@
                 <h1 class="hidden">상단네브</h1>
                 <ul>
                     <li>
-                        <a href="#">NESPRESSO</a>
+                        <a href="sub1.html">NESPRESSO</a>
                         <ul>
-                            <li><a href="#">네스프레소 커피</a></li>
+                            <li><a href="sub1.html">네스프레소 커피</a></li>
                             <li><a href="#">커피의 기원</a></li>
                             <li><a href="#">커피의 여정</a></li>
                         </ul>
@@ -78,21 +75,231 @@
             </form> 
         </div>
     </header>
+    <nav class="sideTab">
+        <h1 class="hidden">사이드메뉴</h1>
+        <ul>
+            <li><a href="#top">TOP</a></li>
+            <li class="on"><a href="#">네스프레소<br>커피</a></li>
+            <li><a href="#">커피의<br>기원</a></li>
+            <li><a href="#">커피의 여정<br>커피</a></li>
+        </ul>
+    </nav>
     <main>
-        <section>
-            <video
-                controls="controls"
-                autoplay="autoplay"
-                loop="loop"
-                muteds="muteds"
-                preload="preload"
-                width="100%">
-                <source src="imgs/media/SELECTION VINTAGE TIME.mp4" type="video/mp4">
+        <section class="mainVideo">
+            <h1 class="hidden">메인비디오</h1>
+            <video autoplay loop muted>
+                <source src="imgs/media/Nespresso.mp4" type="video/mp4">
             </video>
         </section>
-        <section>
-
+        <section class="masterOrigin">
+            <h1 class="hidden">마스터 오리진</h1>
+            <div>
+                <p><img src="imgs/svg/logo.svg" alt="마스터 오리진"></p>
+                <p><img src="imgs/shape_L.png" alt="마스터 오리진"></p>
+                <p>커피가 태어난 땅으로부터 영감 받아 장인이 완성하다</p>
+            </div>
+        </section>
+        <section class="swiper-container original">
+            <h1 class="hidden">오리지날</h1>
+            <p>ORIGINAL</p>
+            <p>클래식한 에스프레소 고압 추출 커피</p>            
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div>
+                        <p><img src="imgs/capsule-01.png" alt="이스피라치오네 이탈리아나"></p>
+                        <p><img src="imgs/svg/ispirazione-italiana.svg" alt="이스피라치오네 이탈리아나"></p>
+                    </div>
+                    <div>
+                        <p><img src="imgs/coffee_detail-01.png" alt="리스트레토 25ml"><span>리스트레토 25ml</span></p>
+                        <p><img src="imgs/coffee_detail-02.png" alt="에스프레소 40ml"><span>에스프레소 40ml</span></p>
+                        <p><img src="imgs/coffee_detail-03.png" alt="강도 8-12"><span>강도 8-12</span></p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <p><img src="imgs/capsule-02.png" alt="에스프레소 룽고"></p>
+                        <p><img src="imgs/svg/espresso-lungo.svg" alt="에스프레소 룽고"></p>
+                    </div>
+                    <div>
+                        <p><img src="imgs/coffee_detail-02.png" alt="에스프레소 40ml"><span>에스프레소 40ml</span></p>
+                        <p><img src="imgs/coffee_detail-03.png" alt="강도 5-6"><span>강도 5-6</span></p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <p><img src="imgs/capsule-03.png" alt="마스터 오리진"></p>
+                        <p><img src="imgs/svg/master-origins.svg" alt="마스터 오리진"></p>
+                    </div>
+                    <div>
+                        <p><img src="imgs/coffee_detail-01.png" alt="에스프레소 40ml"><span>에스프레소 40ml</span></p>
+                        <p><img src="imgs/coffee_detail-02.png" alt="룽고 110ml"><span>룽고 110ml</span></p>
+                        <p><img src="imgs/coffee_detail-03.png" alt="강도 5-11"><span>강도 5-11</span></p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <p><img src="imgs/capsule-04.png" alt="바리스타 크리에이션"></p>
+                        <p><img src="imgs/svg/barista-creation.svg" alt="바리스타 크리에이션"></p>
+                    </div>
+                    <div>
+                        <p><img src="imgs/coffee_detail-04.png" alt="플레이버"><span>플레이버</span></p>
+                        <p class="milk"><img src="imgs/coffee_detail-05.png" alt="For 밀크 레시피"><span>For 밀크 레시피</span></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </section>
+        <section class="coffee1">
+            <h1>세계 각지에서 찾은 특별한 맛과 향의 커피</h1>
+            <div>
+                <ul class="brand">
+                    <li><img src="imgs/vl_colombia_L.png" alt="콜롬비아"></li>
+                    <li>콜롬비아</li>
+                    <li>달콤한 과일향과 산뜻한 산미</li>
+                </ul>
+                <ul class="brand">
+                    <li><img src="imgs/vl_mexico_L.png" alt="멕시코"></li>
+                    <li>멕시코</li>
+                    <li>진한 풍미와 스파이시향</li>
+                </ul>
+                <ul class="brand">
+                    <li><img src="imgs/ol_india_L.png" alt="인디아"></li>
+                    <li>인디아</li>
+                    <li>아로마와 스파이시향</li>
+                </ul>
+            </div>
+        </section>
+        <section class="swiper-container vertuo">
+            <h1 class="hidden">버츄오</h1>
+            <p>VERTUO</p>
+            <p>혁신적인 회전 추출로 탄생한 풍성한 크레마와 깊은 바디감</p>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div>
+                        <p><img src="imgs/vertuocapsule-01.png" alt="에스프레소 & 더블 에스프레소"></p>
+                        <p><img src="imgs/svg/espresso-and-double-espresso.svg" alt="에스프레소 & 더블 에스프레소"></p>
+                    </div>
+                    <div>
+                        <p><img src="imgs/coffee_detail-06.png" alt="리스트레토 25ml"><span>에스프레소 40ml</span></p>
+                        <p><img src="imgs/coffee_detail-07.png" alt="에스프레소 40ml"><span>더블 에스프레소 80ml</span></p>
+                        <p><img src="imgs/coffee_detail-08.png" alt="강도 4-11"><span>강도 4-11</span></p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <p><img src="imgs/vertuocapsule-02.png" alt="그랑 룽고"></p>
+                        <p><img src="imgs/svg/gran-lungo.svg" alt="그랑 룽고"></p>
+                    </div>
+                    <div>
+                        <p><img src="imgs/coffee_detail-06.png" alt="에스프레소 40ml"><span>에스프레소 150ml</span></p>
+                        <p><img src="imgs/coffee_detail-08.png" alt="강도 5-6"><span>강도 5-6</span></p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <p><img src="imgs/vertuocapsule-03.png" alt="머그 & 일토"></p>
+                        <p><img src="imgs/svg/mug-and-alto.svg" alt="머그 & 일토"></p>
+                    </div>
+                    <div>
+                        <p><img src="imgs/coffee_detail-06.png" alt="에스프레소 230ml"><span>에스프레소 230ml</span></p>
+                        <p><img src="imgs/coffee_detail-11.png" alt="알토 110ml"><span>알토 110ml</span></p>
+                        <p><img src="imgs/coffee_detail-08.png" alt="강도 2-9"><span>강도 2-9</span></p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <p><img src="imgs/vertuocapsule-04.png" alt="마스터 오리진"></p>
+                        <p><img src="imgs/svg/master-origins.svg" alt="마스터 오리진"></p>
+                    </div>
+                    <div>
+                        <p><img src="imgs/coffee_detail-11.png" alt="머그 230ml"><span>머그 230ml</span></p>
+                        <p><img src="imgs/coffee_detail-08.png" alt="강도 5-7"><span>강도 5-7</span></p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <p><img src="imgs/vertuocapsule-05.png" alt="바리스타 크리에이션"></p>
+                        <p><img src="imgs/svg/barista-creation.svg" alt="바리스타 크리에이션"></p>
+                    </div>
+                    <div>
+                        <p><img src="imgs/coffee_detail-09.png" alt="플레이버"><span>플레이버</span></p>
+                        <p><img src="imgs/coffee_detail-10.png" alt="For 밀크 레시피"><span>For 밀크 레시피</span></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </section>
+        <section class="coffee2">
+            <h1>세계 각지 커피 장인의 손길로 탄생한 뛰어나고 특별한 맛과 향의 커피</h1>
+            <div>
+                <ul class="brand">
+                    <li><img src="imgs/ol_ethiopia_L.png" alt="에티오피아"></li>
+                    <li>에티오피아</li>
+                    <li>꽃향과 산미</li>
+                </ul>
+                <ul class="brand">
+                    <li><img src="imgs/ol_indonesia_L.png" alt="인도네시아"></li>
+                    <li>인도네시아</li>
+                    <li>깊은 풍미와 우디향</li>
+                </ul>
+                <ul class="brand">
+                    <li><img src="imgs/ol_nicaragua_L.png" alt="니카라과"></li>
+                    <li>니카라과</li>
+                    <li>달콤하고 조화로운 풍미</li>
+                </ul>
+                <ul class="brand">
+                    <li><img src="imgs/ol_colombia_L.png" alt="콜롬비아"></li>
+                    <li>콜롬비아</li>
+                    <li>과일향과 산뜻한 산미</li>
+                </ul>
+            </div>
         </section>
     </main>
+    <footer>
+        <div>
+            <ul>
+                <li><a href="#">판매이용약관</a></li>
+                <li><a href="#">개인정보 처리방침</a></li>
+                <li><a href="#">쿠키</a></li>
+                <li><a href="#">고객지원</a></li>
+                <li><a href="#">네스프레소 프로페셔널</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">커피 레시피</a></li>
+                <li><a href="#">용어찾기</a></li>
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">채용</a></li>
+                <li><a href="#">사이트맵</a></li>
+                <li><a href="#">웹 접근성</a></li>
+            </ul>
+            <ul>
+                <li>
+                    <p>네스프레소 계정을 팔로우하세요.</p>
+                </li>
+                <li><a href="#"><img src="imgs/svg/insta.svg" alt="인스타그램"></a></li>
+                <li><a href="#"><img src="imgs/svg/facebook.svg" alt="페이스북"></a></li>
+                <li><a href="#"><img src="imgs/svg/youtube.svg" alt="유튜브"></a></li>
+                <li><a href="#"><img src="imgs/svg/twitter.svg" alt="트위터"></a></li>
+                <li><a href="#"><img src="imgs/svg/pinterest.svg" alt="핀터레스트"></a></li>
+            </ul>
+            <address>
+                <p>상호 : 네슬레코리아 유한책임회사 대표자 : 카스텐 퀴메 사업자 들옥번호 : 110-86-10100</p>
+                <p>대표번호 : 080-734-1111 이메일 : club.korea@nespresso.com 주소 : 서울시 서대문구 충정로70 웨스트게이트타워 16층</p>
+            </address>
+        </div>
+    </footer>
+    
+    <script src="script/swiper/js/swiper.js"></script>
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: {
+            el: '.swiper-pagination',
+            clickable : true,
+            type: 'bullets',
+        },
+    });
+    </script>
 </body>
 </html>

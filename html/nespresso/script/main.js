@@ -2,38 +2,6 @@ $(function(){
 
     $("html, body").animate({ "scrollTop": 0 }, "slow");
 
-    var flag = {imgs:true, mechine:true}
-
-    $("nav").mouseenter(function(){
-        $("header").css("border","none");
-        $("header>div").css("background-color","rgba(18,18,18,.9)");
-        $("nav>ul>li>ul").css("display","block");
-
-    }).mouseleave(function(){
-        $("header").css("border-bottom",".1rem solid rgba(255, 255, 255, .2)");
-        $("header>div").css("background-color","transparent");
-        $("nav>ul>li>ul").css("display","none");
-    });//네브 여닫기 end
-
-    $(".imgS").click(function(e){
-        e.preventDefault();
-        if(flag.imgs){
-            $(this).prev().css("opacity",1);
-            flag.imgs =!flag.imgs;
-        }else{
-            $(this).prev().css("opacity",0);
-            flag.imgs =!flag.imgs;
-        }
-    });//검색 온오프
-
-    $(window).scroll(function(){
-        if($(window).scrollTop()>1){
-            $("header").addClass("sticky");
-        }else{
-            $("header").removeClass("sticky");
-        }        
-    });//header sticky
-
     var banner = {  idx:0, 
                     len:$(".box1").children("div").length, 
                     auto:setInterval(middle,4000) }
@@ -58,9 +26,9 @@ $(function(){
     });//배너 버튼 클릭
 
     $(".box2").children("div").find("p").eq(1).children("img").mouseenter(function(){
-        $(this).parent().css("animation-play-state","paused");
+        $(this).css("animation-play-state","paused");
     }).mouseleave(function(){
-        $(this).parent().css("animation-play-state","running")
+        $(this).css("animation-play-state","running");
     });//컵 애니메이션 호버
 
     $(".mechineOn").click(function(){

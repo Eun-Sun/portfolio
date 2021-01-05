@@ -1,0 +1,356 @@
+html, body {
+position: relative;
+width: 100%;
+height: 100%;
+}
+
+body>nav.sideTab{
+    position: fixed;
+    top: 35%;
+    right: 5rem;
+    width: 10rem;
+    height: 6rem;
+    z-index: 9998;
+    border-radius: 1rem;
+    transition: all .5s ease;
+}
+
+body>nav.sticky{
+    top: 90%;
+    box-shadow: 1rem 1rem 1rem rgba(18, 18, 18, .5);
+    overflow: hidden;
+}
+/* body>nav.sideTab:hover{
+    overflow: visible;
+    box-shadow:none;
+    top: 35%;
+} */
+body>nav.sideTab>ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 10rem;
+    border-radius: 1rem;
+    background: #fff;
+    opacity: .5;
+    text-align: center;
+    transition: all 1s ease;
+    box-shadow: 1rem 1rem 1rem rgba(18, 18, 18, .8);
+}
+body>nav.sideTab>ul>li:not(:last-child){
+    border-bottom: .1rem solid #160c0688;
+}
+body>nav.sideTab>ul>li{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font: 600 1.4rem / 2rem 'Noto Sans KR', sans-serif ;
+    letter-spacing: -.1rem;
+    box-sizing: border-box;
+}
+body>nav.sideTab>ul>li>a{
+    color: #160c06;
+}
+body>nav.sideTab>ul>li.on>a{
+    color: #550000;
+}
+body>nav.sideTab>ul>li>a:hover{
+    color: #6f0016;
+}
+
+.mainVideo{
+    font-size: 0;
+    line-height: 0;
+}
+.mainVideo>video{
+    width: 100%;
+}
+
+.masterOrigin{
+    width: 100%;
+    height: 100%;
+    background: url(../imgs/vl_mexico_L.jpg) no-repeat 0 50%;    
+    animation: flow 20s linear infinite paused;
+}
+.masterOrigin>div{
+    opacity: 0;
+    text-align: center;
+    transition: all 3s ease;
+}
+@keyframes flow{
+    10%{background-position: 10% 50%;}
+    20%{background-position: 20% 50%;}
+    30%{background-position: 30% 50%;}
+    40%{background-position: 40% 50%;}
+    50%{background-position: 50% 50%;}
+    60%{background-position: 40% 50%;}
+    70%{background-position: 30% 50%;}
+    80%{background-position: 20% 50%;}
+    90%{background-position: 10% 50%;}
+    100%{background-position: 0 50%;}
+}
+.masterOrigin>div>p:nth-child(1){
+    position: relative;
+    height: 18rem;
+
+}
+.masterOrigin>div>p:nth-child(1)>img{   
+    position: absolute;
+    top: 2rem; left: 25%; 
+    margin-top: 10rem;
+    width: 50%;
+}
+
+.masterOrigin>div>p:nth-child(2)>img{
+    line-height: 0;
+    font-size: 0;
+}
+.masterOrigin>div>p:nth-child(3){
+    font: 500 3.6rem/5rem  'Noto Sans KR', sans-serif;
+    color: #fff;
+    margin-top: 5rem;
+    padding-bottom: 15rem;
+}
+.original{
+    text-align: center;
+    color: #fff;
+    background: #160c06;
+    opacity: 0;
+    transition: all 3s ease;
+}
+
+.original>p:nth-child(2){
+    margin-top: 5rem;
+    font: 400 4rem/8rem 'Open Sans',sans-serif;
+    font-style: italic;
+}
+.original>p:nth-child(3){
+    font: 400 3.4rem/4rem 'Noto Sans KR', sans-serif;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    flex-direction: column;
+}
+.swiper-slide>div:nth-child(1){
+    margin-top: 10rem;
+    position: relative;
+}
+.swiper-slide>div:nth-child(1)>p:nth-child(1)>img{
+    animation: round 30s linear infinite;
+    height: 50rem;
+}
+@keyframes round{
+    100%{transform: rotate(360deg);}
+}
+.swiper-slide>div:nth-child(1)>p:nth-child(2){
+    position: absolute;
+    top: 18.6rem; left: calc(50% - 15rem);
+}
+.swiper-slide>div:nth-child(2){
+    display: flex;
+    justify-content: space-around;
+    margin: 9rem 0 6rem 0;
+}
+.swiper-slide>div:nth-child(2)>p{
+    flex: 0 1 6rem;
+}
+.swiper-slide>div:nth-child(2)>p>img{
+    padding-bottom: 3.8rem;
+
+}
+.swiper-slide>div:nth-child(2)>p>span{
+    display: inline-block;
+    width: 10rem;
+    font: 300 1.2rem/2rem 'Noto Sans KR', sans-serif;
+    color: #fff;
+    
+}
+.swiper-wrapper>div:last-child>div:last-child>p:last-child>img{
+    padding-bottom: .8rem;
+}
+
+.coffee1{
+    width: 100%;
+    padding-top: 19rem;
+    background: url(../imgs/woodtexture_L.jpg) no-repeat  center/cover;
+    text-align: center;
+}
+.coffee1>h1{
+    margin-bottom: 13rem;
+    font: 500 5rem/6rem 'Noto Sans KR', sans-serif;
+    color: #fff;
+}
+.coffee1>div{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 15rem;
+}
+.coffee1>div>ul.brand{
+    position: relative;
+    flex: 0 1 auto;
+}
+.coffee1>div>ul>li>img{
+    opacity: 1;
+    transition: all 1s ease;
+}
+.coffee1>div>ul>li:nth-child(2){
+    opacity: 0;
+}
+.coffee1>div>ul:nth-child(1)>li:nth-child(2){
+    position: absolute;
+    top: 40%; left: calc(50% - 6.4rem);
+    font: 400 3.5rem/4rem 'Noto Sans KR', sans-serif;
+    color: #fff;
+}
+.coffee1>div>ul>li:nth-child(2){
+    position: absolute;
+    top: 40%; left: calc(50% - 4.8rem);
+    font: 400 3.5rem/4rem 'Noto Sans KR', sans-serif;
+    color: #fff;
+    transition: all .5s ease;
+}
+.coffee1>div>ul>li:nth-child(3){
+    position: absolute;
+    top: 55%; left: calc(50% - 9rem);
+    font: 300 2rem/3rem 'Noto Sans KR', sans-serif;
+    color: #fff;
+    transition: all .5s ease;
+    opacity: 0;
+}
+.coffee1>div>ul:hover>li>img{
+    opacity: .3;
+    transform: scale(1.2);
+}
+.coffee1>div>ul:hover>li:not(:first-child){
+    opacity: 1;
+}
+.vertuo{
+    text-align: center;
+    color: #442b17;
+    background: #feecc7;
+    opacity: 0;
+    transition: all 3s ease;
+}
+
+.vertuo>p:nth-child(2){
+    margin-top: 5rem;
+    font: 500 4rem/8rem 'Open Sans',sans-serif;
+    font-style: italic;
+}
+.vertuo>p:nth-child(3){
+    font: 400 3.4rem/4rem 'Noto Sans KR', sans-serif;
+    margin-bottom: 2rem;
+}
+.vertuo>.swiper-wrapper>.swiper-slide>div:nth-child(1)>p:nth-child(2)>img{
+    filter: invert(0%) sepia(80%) saturate(20%) hue-rotate(10deg) brightness(60%) contrast(80%);
+}
+
+.vertuo>.swiper-wrapper>.swiper-slide>div:nth-child(2){
+    display: flex;
+    justify-content: space-around;
+    margin: 12rem 0 5rem 0;
+}
+.vertuo>.swiper-wrapper>.swiper-slide>div:nth-child(2)>p{
+    flex: 0 1 6rem;
+}
+.vertuo>.swiper-wrapper>.swiper-slide>div:nth-child(2)>p>img{
+    padding-bottom: 3.8rem;
+    vertical-align: bottom;
+}
+.vertuo>.swiper-wrapper>.swiper-slide>div:nth-child(2)>p>span{
+    display: inline-block;
+    width: 11.5rem;
+    font: 400 1.2rem/2rem 'Noto Sans KR', sans-serif;
+    color: #442b17;    
+}
+.vertuo>.swiper-wrapper>.swiper-slide:not(:last-child)>div:nth-child(2)>p:last-child{
+    margin-top: 1.3rem;
+}
+.vertuo>.swiper-wrapper>.swiper-wrapper>div:last-child>div:last-child>p:last-child>img{
+    padding-bottom: .8rem;
+}
+.coffee2{
+    width: 100%;
+    padding-top: 19rem;
+    background: url(../imgs/ol_ethiopia_L.jpg) no-repeat center/cover;
+    text-align: center;
+}
+.coffee2>h1{
+    margin-bottom: 13rem;
+    font: 500 5rem/6rem 'Noto Sans KR', sans-serif;
+    color: #fff;
+}
+.coffee2>div{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 15rem;
+}
+.coffee2>div>ul.brand{
+    position: relative;
+    flex: 0 1 auto;
+}
+.coffee2>div>ul>li>img{
+    opacity: 1;
+    transition: all 1s ease;
+}
+.coffee2>div>ul>li:nth-child(2){
+    opacity: 0;
+}
+.coffee2>div>ul{
+    font: 400 3.5rem/4rem 'Noto Sans KR', sans-serif;
+    color: #fff;
+}
+.coffee2>div>ul>li{
+    transition: all .5s ease;
+
+}
+.coffee2>div>ul:nth-child(1)>li:nth-child(2){
+    position: absolute;
+    top: 40%; left: calc(50% - 8rem);
+}
+.coffee2>div>ul:nth-child(2)>li:nth-child(2){
+    position: absolute;
+    top: 40%; left: calc(50% - 8rem);
+}
+.coffee2>div>ul>li:nth-child(2){
+    position: absolute;
+    top: 40%; left: calc(50% - 6.4rem);
+}
+.coffee2>div>ul>li:nth-child(3){
+    position: absolute;
+    top: 55%; left: calc(50% - 9rem);
+    font: 300 2rem/3rem 'Noto Sans KR', sans-serif;
+    opacity: 0;
+}
+.coffee2>div>ul:nth-child(1)>li:last-child{    
+    top: 55%; left: calc(50% - 4.8rem);
+}
+.coffee2>div>ul:nth-child(2)>li:last-child{    
+    top: 55%; left: calc(50% - 7.9rem);
+}
+.coffee2>div>ul:hover>li>img{
+    opacity: .3;
+    transform: scale(1.2);
+}
+.coffee2>div>ul:hover>li:not(:first-child){
+    opacity: 1;
+}
