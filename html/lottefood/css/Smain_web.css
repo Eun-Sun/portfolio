@@ -17,7 +17,7 @@ main aside.banner_F>ul>li{
     font-weight: 500;
 }
 main aside>ul>li.ban1{  
-    background: url(../imgs/kid-milk.jpg) no-repeat center/cover;
+    background: url(../imgs/danonino-danone-kid.jpg) no-repeat center/cover;
 }
 
 main aside.banner_F>ul.bannerB>li>div{
@@ -25,12 +25,12 @@ main aside.banner_F>ul.bannerB>li>div{
     padding-top: 36.3rem;
     max-width: 132rem;
     text-align: center;
-    font: 500 4.5rem/6rem sans-serif;
+    font: 500 4.5rem/6rem 'Noto Sans KR', sans-serif;
     color: #fff;
 }
 main aside.banner_F>ul.bannerB>li>div>p:last-child{
     margin-top: 2rem;
-    font:400 3rem/4rem sans-serif;
+    font:400 3rem/4rem 'Noto Sans KR', sans-serif;
 }
 
 
@@ -116,11 +116,11 @@ div.intro>section:nth-of-type(3)>div.lotte_int{
 }
 div.intro>section>div.lotte_int>ul{
     margin-top: 10rem;
-    font: 400 2rem/3.5rem sans-serif;
+    font: 400 2rem/3.5rem 'Noto Sans KR', sans-serif;
     color: #606060;
 }
 div.intro>section>div.lotte_int>ul>li:nth-child(1){
-    font: 500 3rem/8rem sans-serif;
+    font: 500 3rem/8rem 'Noto Sans KR', sans-serif;
 }
 div.intro>section:not(:nth-of-type(2))>div.lotte_int>ul{
     margin-left: 30%;
@@ -183,7 +183,7 @@ div.lotte_int2>section:nth-child(2)>div>p{
     display: none;
     margin:0 auto;
     margin-top: 17rem;
-    font: 600 3.3rem/5rem sans-serif;
+    font: 600 3.3rem/5rem 'Noto Sans KR', sans-serif;
     color: #606060;
 }
 div.lotte_int2>section:nth-child(2)>div>ul{
@@ -199,7 +199,7 @@ div.lotte_int2>section:nth-child(2)>div>ul>li{
     width: 28rem;
     height: 28rem;
     border-radius: 50%;
-    font: 500 3.6rem/5rem sans-serif;
+    font: 500 3.6rem/5rem 'Noto Sans KR', sans-serif;
     color: #fff;
     background-size: 300%;
     transition: all .3s ease;

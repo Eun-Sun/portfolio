@@ -164,7 +164,7 @@ header nav>ul>li>div>ul>li{
 }
 header nav>ul>li>div>ul>li>a{
     color: #3A3A3A;
-    font: 600 1.5rem/4rem sans-serif;
+    font: 600 1.5rem/4rem 'Noto Sans KR', sans-serif;
 }
 /* header nav>ul>li>div>ul>li>ul{
     position:  absolute;
@@ -172,7 +172,7 @@ header nav>ul>li>div>ul>li>a{
 } */
 header nav>ul>li>div>ul>li>ul>li>a{
     color: #3A3A3A;
-    font: 500 1.3rem/3rem sans-serif;
+    font: 500 1.3rem/3rem 'Noto Sans KR', sans-serif;
 
 }
 header nav>ul>li:active>div{
@@ -186,7 +186,7 @@ header nav > p.mobileX{
     position: absolute;
     right: 3rem; top: 3rem;
     color: #3A3A3A;
-    font: 600 2rem sans-serif;
+    font: 600 2rem 'Noto Sans KR', sans-serif;
     cursor: pointer;
 }
 

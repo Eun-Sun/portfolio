@@ -141,7 +141,7 @@ header nav>ul>li>div>ul>li::after{
 }
 header nav>ul>li>div>ul>li>a{
     color: #3A3A3A;
-    font: 600 1.6rem/5rem sans-serif;
+    font: 600 1.6rem/5rem 'Noto Sans KR', sans-serif;
 }
 header nav>ul>li>div>ul>li>ul{
     position:  absolute;
@@ -149,7 +149,7 @@ header nav>ul>li>div>ul>li>ul{
 }
 header nav>ul>li>div>ul>li>ul>li>a{
     color: #3A3A3A;
-    font: 500 1.5rem/4rem sans-serif;
+    font: 500 1.5rem/4rem 'Noto Sans KR', sans-serif;
 
 }
 

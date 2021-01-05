@@ -31,7 +31,7 @@ footer>div>div.footer1>div>ul>li:first-child>a{
     color: #E30013;;
 }
 footer>div>div.footer1>div>ul>li>a{
-    font: 300 1.3rem / 2rem sans-serif;
+    font: 300 1.3rem / 2rem 'Noto Sans KR', sans-serif;
     color: #606060;
 }
 footer>div>div.footer1>div>div{
@@ -55,7 +55,7 @@ footer>div>div.footer1>div>div fieldset>select>option{}
 footer>div>div.footer1>div>div fieldset>a{
     float: right;
     width: 3.8rem; height: 2.2rem;
-    font: 400 1.2rem/2.3rem sans-serif;
+    font: 400 1.2rem/2.3rem 'Noto Sans KR', sans-serif;
     color: #fff;
     text-align: center;
     background: #606060;
@@ -81,7 +81,7 @@ footer>div>div.footer2>address{
     max-width: 50rem;
 }
 footer>div>div.footer2>address>p{
-    font: 400 1.3rem/3rem sans-serif;
+    font: 400 1.3rem/3rem 'Noto Sans KR', sans-serif;
     color: #C6C6C6;
 
 }

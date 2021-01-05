@@ -240,7 +240,7 @@ div.banner_c aside h1 img{
 }
 div.banner_c aside p{
     margin-top: 15rem;
-    font: 400 4.8rem/6rem sans-serif;
+    font: 400 4.8rem/6rem 'Noto Sans KR', sans-serif;
     color: #fff;
 }
 
@@ -335,7 +335,7 @@ div.sns section>ul>li.on2{
     background: url(../imgs/icon/snsbar-on.png) no-repeat 0 40%;
 }
 div.sns section>ul>li>span{
-    font: 400 2.2rem/2.2rem sans-serif;
+    font: 400 2.2rem/2.2rem 'Noto Sans KR', sans-serif;
     color: #606060;
 }
 div.sns section>ul>li>ul{
@@ -429,7 +429,7 @@ div.iconMenu>div>ul.iconUl>li:not(:last-child)::after{
 }
 div.iconMenu>div>ul.iconUl>li>a{
     display: block;
-    font: 700 1.3rem/2rem sans-serif;
+    font: 700 1.3rem/2rem 'Noto Sans KR', sans-serif;
     color: #fff;
 }
 div.iconMenu>div>ul.iconUl>li>a>p{

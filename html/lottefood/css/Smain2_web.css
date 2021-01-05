@@ -35,12 +35,12 @@ main aside.banner_F>ul.bannerB>li>div{
     border: .2rem solid #fff;
     border-radius: 50%;
     text-align: center;
-    font: 500 4.5rem/6rem sans-serif;
+    font: 500 4.5rem/6rem 'Noto Sans KR', sans-serif;
     color: #fff;
 }
 main aside.banner_F>ul.bannerB>li>div>p{
     margin-top: 7.3rem;
-    font:400 4rem/rem sans-serif;
+    font:400 4rem/rem 'Noto Sans KR', sans-serif;
 }
 
 
@@ -94,7 +94,7 @@ div.gooInt section>h1{
 }
 div.gooInt section>p:nth-child(3){
     margin-top: 4.5rem;
-    font: 300 2.2rem/3.8rem sans-serif;
+    font: 300 2.2rem/3.8rem 'Noto Sans KR', sans-serif;
 }
 span.color{
     color: #e30013;
@@ -124,7 +124,7 @@ div.gooHis>section:nth-child(1){
 }
 div.gooHis>section>h1{
     margin-top: 8rem;
-    font: 700 3.5rem/4rem sans-serif;
+    font: 700 3.5rem/4rem 'Noto Sans KR', sans-serif;
 
 }
 div.gooHis>section>p>span.lineW{
@@ -153,7 +153,7 @@ div.gooHis>section>div.goocon>ul>li>img{
     transition: all .5s ease;
 }
 div.gooHis>section>div.goocon>ul>li>span{
-    font: 600 3rem/5rem sans-serif;
+    font: 600 3rem/5rem 'Noto Sans KR', sans-serif;
     color: #fff;
     transition: all .5s ease;
 }
@@ -167,7 +167,7 @@ div.gooHis>section>div.goocon>ul>li:hover>span{
 /* 구구패키지 */
 div.gooHis>section:nth-child(2){
     text-align: center;
-    font: 400 3.5rem/4rem sans-serif;
+    font: 400 3.5rem/4rem 'Noto Sans KR', sans-serif;
     color: #606060;
     margin-top: 8rem;
     margin-bottom: 8rem;
@@ -191,14 +191,14 @@ div.productList>div>p{
 }
 div.productList>div>p:nth-of-type(1){
     float: left;
-    font: 600 3.5rem/5rem sans-serif;
+    font: 600 3.5rem/5rem 'Noto Sans KR', sans-serif;
 }
 div.productList>div>p:nth-of-type(2){
     float: right;
     width: 10rem; height: 4rem;
     text-align: center;
     border: .1rem solid #606060;
-    font: 400 2rem/4.1rem sans-serif;
+    font: 400 2rem/4.1rem 'Noto Sans KR', sans-serif;
 }
 div.productList>div>p>a{
     display: block;
@@ -230,6 +230,6 @@ div.productList>div>ul>li>img{
 }
 div.productList>div>ul>li>span{
     display: inline-block;
-    font: 300 2.4rem/5rem sans-serif;
+    font: 300 2.4rem/5rem 'Noto Sans KR', sans-serif;
     color: #606060;
 }
