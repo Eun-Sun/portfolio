@@ -53,11 +53,11 @@
             }
         </style>
         <script>
-            window.onresize = function() {
-                if (window.innerWidth < 300 || window.innerHeight < 600) {
+            $(function(){
+                $(window).load(function(){
                     window.resizeTo(375,812);
-                }
-            };
+                });        
+            });
         </script>
     </head>
     <body id="bobo">
