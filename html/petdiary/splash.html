@@ -52,6 +52,18 @@
                 100%{transform: rotate(10deg);}
             }
         </style>
+        <script>
+        $(function(){
+            $(window).resize(function(){
+                window.resizeTo(375,812);
+            });        
+        });
+        window.onresize = function() {
+            if (window.innerWidth < 300 || window.innerHeight < 600) {
+                window.resizeTo(375,812);
+            }
+        };
+        </script>
     </head>
     <body id="bobo">
         <h1 class="hidden">splash</h1>
