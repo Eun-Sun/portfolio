@@ -1,6 +1,6 @@
 $(function(){
 
-    var flag = {imgs:true, mechine:true}
+    var flag_img = true;
 
     $("header>div>nav").mouseenter(function(){
         $("header").css("border","none");
@@ -15,12 +15,12 @@ $(function(){
 
     $(".imgS").click(function(e){
         e.preventDefault();
-        if(flag.imgs){
+        if(flag_img){
             $(this).prev().css("opacity",1);
-            flag.imgs =!flag.imgs;
+            flag_img =!flag_img;
         }else{
             $(this).prev().css("opacity",0);
-            flag.imgs =!flag.imgs;
+            flag_img =!flag_img;
         }
     });//검색 온오프
 

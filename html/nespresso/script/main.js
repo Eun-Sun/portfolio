@@ -31,17 +31,18 @@ $(function(){
         $(this).css("animation-play-state","running");
     });//컵 애니메이션 호버
 
+    var flag_mechine = true;
     $(".mechineOn").click(function(){
-        if(flag.mechine){
+        if(flag_mechine){
             $(".mechine").addClass("on");
-            flag.mechine = true;
+            flag_mechine = true;
         }else{
             $(".mechine").removeClass("on");
-            flag.mechine = true;
+            flag_mechine = true;
         }
         $(".close").click(function(){
             $(".mechine").removeClass("on");
-            flag.mechine = true;
+            flag_mechine = true;
         });
 
         $(".choice").children("span").click(function(){
