@@ -112,7 +112,7 @@ main aside.banner_F>p:last-child{
 
 main aside.banner_F>p.fixed{
     position: fixed;
-    bottom: 0; right: 0;
+    bottom: 2rem; right: 2rem;
     width: 4rem; height: 4rem;
     background-image:none;
     border-radius: .5rem;
@@ -302,7 +302,7 @@ div.sns{
     background: #EFEFEF;
     padding-top: .1rem;
     width: 100vw;
-    min-height: 51rem;
+    min-height: 55rem;
 }
 div.sns section h1::before{
     top: 0; left: 42%;
