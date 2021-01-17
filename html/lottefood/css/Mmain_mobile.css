@@ -1,3 +1,6 @@
+html{
+    overflow-x: hidden;
+}
 main{
     font-family: 'Noto Sans KR', sans-serif;
 }
@@ -193,7 +196,7 @@ div.brand section ul{
 div.brand section ul li {
     position: absolute;
     top: 0; left: 0;
-    width: 40rem;
+    width: 100vw;
     height: 40rem;
     text-align: center;
 }
@@ -211,7 +214,7 @@ div.brand section ul li:nth-child(3){
 }
 div.brand section ul li a{
     display: block;
-    width: 100%;
+    width: 100vw;
     height: 100%;
 }
 
@@ -253,49 +256,43 @@ div.product section h1::after{
     bottom: 0; left: 35%;
 }
 div.product section>ul{
-    position: relative;
     margin: 0 auto;
+    position: relative;
     margin-top: 9rem;
     margin-bottom: 9rem;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    width: 132rem;
-    height: 40rem;
+    width: 90vw;
+    height: 42vh;
 }
 div.product section>ul>li{
-    flex: 1 1 12rem;
-    padding-bottom: 4rem;
-    background: url(../imgs/icon/bar-off.png) no-repeat 0 100%;
+    flex: 1 1 auto;
+    padding-bottom: 2rem;
+    border-bottom:.2rem solid #606060 ;
     cursor: pointer;
 }
 div.product section>ul>li span{
-    font-size: 2.2rem;
+    font-size: 1.5rem;
     font-weight: 400;
     color: #606060;
 }
 div.product section>ul>li>ul{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 60% 60%;
     position: absolute;
-    top: 10rem; left: 0;
-    width: 100%;
+    top: 7rem; left: 0;
+    width: 90vw;
 }
-div.product section>ul>li.on1{
-    background: url(../imgs/icon/bar-on.png) no-repeat 0 100%;
+div.product section>ul.productUlM>li.on{
+    border-bottom:.2rem solid #E30013 ;
 }
 div.product section>ul>li>ul>li{
     flex: 1 0 auto;
 }
-div.product section>ul>li.on1>ul>li{    
-}
-
 div.product section>ul>li>ul>li>a img{
-    width: 80%;
-}
-div.product section>ul>li:nth-child(4)>ul>li>a img{
-    width: 60%;
+    width: 90%;
 }
 
 
@@ -304,10 +301,8 @@ div.product section>ul>li:nth-child(4)>ul>li>a img{
 div.sns{
     background: #EFEFEF;
     padding-top: .1rem;
-    min-height: 70rem;
-}
-div.sns section{
-    margin-top: 8.9rem;
+    width: 100vw;
+    min-height: 51rem;
 }
 div.sns section h1::before{
     top: 0; left: 42%;
@@ -318,33 +313,36 @@ div.sns section h1::after{
 div.sns section>ul{
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 90vw;
     margin: 0 auto;
-    width: 132rem;
     text-align: center;
 }
-div.sns section>ul>li.snsPage{
-    flex: 1 1 25%;  
+div.sns section>ul>li{
+    border-bottom: .2rem solid #606060;
+    padding-bottom: 1rem;
+    flex: 1 1 auto;  
     cursor: pointer;
 }
-div.sns section>ul>li{
-    background: url(../imgs/icon/snsbar-off.png) no-repeat 0 40%;
+div.sns section>ul>li.on{
+    border-bottom: .2rem solid #E30013;
+
 }
-div.sns section>ul>li.on2{
-    background: url(../imgs/icon/snsbar-on.png) no-repeat 0 40%;
-}
-div.sns section>ul>li>span{
-    font: 400 2.2rem/2.2rem sans-serif;
+div.sns section>ul>li span{
+    font: 400 1.5rem/1.5rem sans-serif;
     color: #606060;
 }
 div.sns section>ul>li>ul{
     display: flex;
-    margin-top: 7rem;
     font-size: 1.8rem;
-    line-height: 3.6rem;
+}
+div.sns section>ul>li:nth-child(2)>ul{
+    display: none;
 }
 div.sns section>ul>li>ul>li{    
-    flex: 0 1 auto;
+    position: absolute;
+    top: 5rem; left: 0;
 }
 div.sns section>ul>li>ul>li>span{
     margin-top: 3rem;
@@ -360,7 +358,7 @@ div.sns section>ul>li>ul>li a{
     display: block;
 }
 div.sns section>ul>li>ul>li a img{
-    width: 33rem;
+    width: 90vw;
 }
 /* div.sns section>ul>li.blog>ul{
     position: absolute;
@@ -381,23 +379,7 @@ div.sns section>ul>li>ul>li>ul>li>a>img{
     width: 33rem;
 }
 
-/* 인스타그램,페이스북 */
-div.sns section>ul>li>ul.links>li{
-    margin-left: 4rem;
-}
-div.sns section>ul>li>ul.links>li>a>span{
-    margin-right: 1rem;
-    padding: .3rem 1.4rem;
-    border: .2rem solid #A5A5A5;
-    border-radius: 6rem;
-    color: #606060;
-}
 
-/* 이벤트 */
-div.sns section>ul>li>ul.links>li:hover>a>span{
-    border: .2rem solid #E30013;
-    background-color: #fff;
-}
 
 /* 하단아이콘메뉴 */
 div.iconMenu{

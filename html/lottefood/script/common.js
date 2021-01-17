@@ -213,6 +213,7 @@ $(function(){
         sns.child.eq(sns.idx).children("ul").fadeIn(500).parent("li").siblings().children("ul").fadeOut(500);
         sns.child.eq(sns.idx).children("span").css("color","#e30013").parent("li").siblings().children("span").css("color","#606060");
     });
+    
     //유튜브 링크이동
     sns.select.eq(0).children("span").css({"background-color":"#fff","border-color":"#E30013"});
     sns.select.children("span").click(function(){
