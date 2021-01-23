@@ -17,23 +17,18 @@ $(function(){
             flag.x = true;
         }
     });
-    $(window).resize(function(){
-        if($(window).width()<1200){
-            var $form = $(".form").children();
-            $(".img").click(function(e){
-                e.preventDefault();
-                if(flag.form){
-                    $("#proD").css("display","block");
-                    flag.form = false;
-                }else{
-                    $("#proD").css("display","none");
-                    flag.form = true;
-                }
-            });
 
+    var $form = $(".form").children();
+    $(".img").click(function(e){
+        e.preventDefault();
+        if(flag.form){
+            $("#proD").css("display","block");
+            flag.form = false;
+        }else{
+            $("#proD").css("display","none");
+            flag.form = true;
         }
-
-    });
+    });//검색창
 
     //모바일 브랜드 이미지 자동함수
     var brand = {idx:0,len:$(".mobile").children("li").length,list:$(".mobile").children("li"),

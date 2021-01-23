@@ -1,4 +1,7 @@
 
+.web{
+    display: none;
+}
 header{    
     font-family: 'Noto Sans KR', sans-serif;
     position: absolute;

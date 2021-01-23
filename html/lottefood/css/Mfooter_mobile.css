@@ -2,6 +2,7 @@ footer{}
 footer>div{
 }
 footer>div>div.footer1{
+    border-top:  .1rem solid #DFDFDF;
     border-bottom: .1rem solid #DFDFDF;
 }
 footer>div>div.footer1>div{
