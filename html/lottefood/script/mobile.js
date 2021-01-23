@@ -82,4 +82,10 @@ $(function(){
         sns.child.eq(sns.idx).children("span").css("color","#e30013").parent("li").siblings().children("span").css("color","#606060");
     });
     
+    $(".insta").click(function(){
+        window.open("https://www.instagram.com/lottefoods/");
+    });
+    $(".faceB").click(function(){
+        window.open("https://www.facebook.com/LOTTEFOODS");
+    });
 });

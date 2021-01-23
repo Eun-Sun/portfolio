@@ -265,8 +265,8 @@ div.product section h1::after{
 div.product section>ul{
     margin: 0 auto;
     position: relative;
-    margin-top: 9rem;
-    margin-bottom: 9rem;
+    margin-top:6rem;
+    margin-bottom: 11rem;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
@@ -309,7 +309,7 @@ div.sns{
     background: #EFEFEF;
     padding-top: .1rem;
     width: 100vw;
-    min-height: 55rem;
+    min-height: 50rem;
 }
 div.sns section h1::before{
     top: 0; left: 42%;
@@ -322,8 +322,8 @@ div.sns section>ul{
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    width: 90vw;
     margin: 0 auto;
+    width: 90vw;
     text-align: center;
 }
 div.sns section>ul>li{
@@ -349,7 +349,7 @@ div.sns section>ul>li:nth-child(2)>ul{
 }
 div.sns section>ul>li>ul>li{    
     position: absolute;
-    top: 5rem; left: 0;
+    top: 6rem; left: 0;
 }
 div.sns section>ul>li>ul>li>span{
     margin-top: 3rem;
